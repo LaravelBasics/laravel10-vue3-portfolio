@@ -91,11 +91,11 @@
             .sidebar {
                 /* position: static; */
                 /* スクロール追従を解除 */
-                height: auto;
+                /* height: auto; */
                 /* 高さを自動に設定 */
                 display: none;
                 /* スマホサイズなどはサイドバー非表示 */
-                overflow-y: auto;
+                /* overflow-y: auto; */
             }
 
             .navbar-toggler {
@@ -151,6 +151,13 @@
                 /* スクロールしても画面の上に固定 */
                 z-index: 100;
                 /* 他の要素より上に表示 */
+            }
+
+            .col-md-10 {
+                width: 100% !important;
+                /* フル幅に変更 */
+                padding: 0;
+                /* 余白がある場合は調整 */
             }
         }
 
