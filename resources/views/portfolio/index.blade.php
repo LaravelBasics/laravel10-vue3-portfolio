@@ -750,14 +750,14 @@
 
         <p class="gray-bg">
 
-          <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+          <!-- <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
             <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリをネット上に公開する挑戦(´・ω・｀)？
           </strong>
 
           <span style="margin-right: 5rem;"></span>
           <button type="button" class="btn btn-link" @click="showHelpModal1"
             style="font-size: 1.5rem; position: relative; right: 0.75rem;"> <i class="fa-solid fa-desktop"></i>詳細画面へ
-          </button>
+          </button> -->
 
         </p>
 
@@ -776,31 +776,31 @@
           </a>
 
           <span style="margin-right: 5rem;"></span>
-          
+
           <a href="https://laravel10-vue3-client-manager-c6bcq8axa-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> 二次制作の画面
           </a>
 
           <span style="margin-right: 5rem;"></span>
-          
+
           <a href="https://laravel10-vue3-client-manager-xqe6jqrai-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> 三次制作の画面
           </a>
 
           <span style="margin-right: 5rem;"></span>
-          
+
           <a href="https://laravel10-vue3-client-manager-7gtumsjgf-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> 四次制作の画面
           </a>
 
           <span style="margin-right: 5rem;"></span>
-          
+
           <a href="https://laravel10-vue3-client-manager.vercel.app/" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> 五次制作の画面
           </a>
 
           <span style="margin-right: 5rem;"></span>
-          
+
           <a href="#" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> 現在の画面
           </a>
@@ -860,9 +860,9 @@
     </h5>
 
     <p class="gray-bg">
-      10月&ensp;1日〜&ensp;1月19日: Java基礎、アルゴリズム、2次元配列、例外処理、ファイル入出力など（約4ヶ月）
+      10月&ensp;1日&ensp;〜&ensp;1月19日: Java基礎、アルゴリズム、2次元配列、例外処理、ファイル入出力など（約4ヶ月）
       <br>
-      &ensp;1月22日〜&ensp;2月13日: エクリプス上で動くブラック・ジャックを制作（約3週間）
+      &ensp;1月22日&ensp;〜&ensp;2月13日: エクリプス上で動くブラック・ジャックを制作（約3週間）
     </p>
 
     <div class="double-space2"></div>
@@ -872,22 +872,22 @@
     </h5>
 
     <p class="gray-bg">
-      &ensp;2月15日〜&ensp;3月14日: PHP基礎, アルゴリズム基礎15問, 応用15問
+      &ensp;2月15日&ensp;〜&ensp;3月14日: PHP基礎, アルゴリズム基礎15問, 応用15問
       <br>
-      &ensp;3月15日〜&ensp;3月16日: HTML,CSS,JavaScript
+      &ensp;3月15日&ensp;〜&ensp;3月16日: HTML,CSS,JavaScript
       <br>
-      &ensp;3月19日〜&ensp;3月22日: JavaScript
+      &ensp;3月19日&ensp;〜&ensp;3月22日: JavaScript
       <br>
-      &ensp;3月25日〜&ensp;3月27日: SQL
+      &ensp;3月25日&ensp;〜&ensp;3月27日: SQL
       <br>
-      &ensp;3月29日〜&ensp;4月&ensp;1日: Python
+      &ensp;3月29日&ensp;〜&ensp;4月&ensp;1日: Python
       <br>
-      &ensp;4月&ensp;1日〜&ensp;4月30日: <i class="fa-solid fa-file-word" style="color: #2b5797;">
+      &ensp;4月&ensp;1日&ensp;〜&ensp;4月30日: <i class="fa-solid fa-file-word" style="color: #2b5797;">
       </i> <i class="fa-solid fa-file-excel" style="color: #217346;">
       </i> <i class="fa-solid fa-file-powerpoint" style="color: #D54E00;">
       </i> Microsoft Officeを学習
       <br>
-      &ensp;4月25日〜&ensp;5月17日: PDO（PHP Data Objects）
+      &ensp;4月25日&ensp;〜&ensp;5月17日: PDO（PHP Data Objects）
     </p>
 
     <div class="double-space2"></div>
@@ -898,21 +898,21 @@
     </h5>
 
     <p class="gray-bg">
-      &ensp;5月20日〜&ensp;6月24日: Laravel基礎（PHPのフレームワーク）
+      &ensp;5月20日&ensp;〜&ensp;6月24日: Laravel基礎（PHPのフレームワーク）
       <br>
-      &ensp;6月25日〜&ensp;7月&ensp;4日: ①メルカリ風フリマアプリ制作、
+      &ensp;6月25日&ensp;〜&ensp;7月&ensp;4日: ①メルカリ風フリマアプリ制作、
       <i class="fa-solid fa-file-excel" style="color: #217346;"></i> 企業案件Excelデータ入力(一日目10件、二日目20件)
       <br>
-      &ensp;7月&ensp;8日〜&ensp;7月24日: ②SNS風アプリ制作、PC4台キッティング作業
+      &ensp;7月&ensp;8日&ensp;〜&ensp;7月24日: ②SNS風アプリ制作、PC4台キッティング作業
       <br>
-      &ensp;7月26日〜&ensp;7月31日: 職員が作成した基本設計書をもとに、③本管理アプリの機能変更、追加。
+      &ensp;7月26日&ensp;〜&ensp;7月31日: 職員が作成した基本設計書をもとに、③本管理アプリの機能変更、追加。
       <i class="fab fa-react" style="color: #61DBFB;"></i>React学習
       <br>
-      &ensp;7月31日〜&ensp;8月&ensp;5日: JavaScript、Git、HTML&CSS
+      &ensp;7月31日&ensp;〜&ensp;8月&ensp;5日: JavaScript、Git、HTML&CSS
       <br>
-      &ensp;8月&ensp;6日〜&ensp;8月&ensp;7日: JavaScriptによるDOM操作
+      &ensp;8月&ensp;6日&ensp;〜&ensp;8月&ensp;7日: JavaScriptによるDOM操作
       <br>
-      &ensp;8月&ensp;8日〜&ensp;8月16日: 実習に備えて<i class="fab fa-vuejs" style="color: #42b883;"></i>Vue.js3
+      &ensp;8月&ensp;8日&ensp;〜&ensp;8月16日: 実習に備えて<i class="fab fa-vuejs" style="color: #42b883;"></i>Vue.js3
     </p>
 
     <div class="double-space2"></div>
@@ -922,18 +922,18 @@
     </h5>
 
     <p class="gray-bg">
-      &ensp;8月19日〜&ensp;9月19日: 企業実習（株式会社リテラル）
+      &ensp;8月19日&ensp;〜&ensp;9月19日: 企業実習（株式会社リテラル）
       <br>
-      &ensp;9月24日〜&ensp;9月27日: 実習のコードを改修に挑戦。④顧客管理システムを改修したアプリ、
+      &ensp;9月24日&ensp;〜&ensp;9月27日: 実習のコードを改修に挑戦。④顧客管理システムを改修したアプリ、
       <i class="fa-solid fa-file-excel" style="color: #217346;"></i> Excel企業案件データ入力(約10件)
       <br>
-      &ensp;9月28日〜&ensp;9月30日: jQuery
+      &ensp;9月28日&ensp;〜&ensp;9月30日: jQuery
       <br>
-      10月&ensp;1日〜10月&ensp;7日: 実習に備えて、事前にLinux学習（Ubuntu、LAMP構築）
+      10月&ensp;1日&ensp;〜10月&ensp;7日: 実習に備えて、事前にLinux学習（Ubuntu、LAMP構築）
       <br>
-      10月&ensp;8日〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、⑤お問い合わせフォームアプリ制作
+      10月&ensp;8日&ensp;〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、⑤お問い合わせフォームアプリ制作
       <br>
-      10月11日〜10月16日: 実習の復習
+      10月11日&ensp;〜10月16日: 実習の復習
     </p>
 
     <div class="double-space2"></div>
@@ -943,9 +943,9 @@
     </h5>
 
     <p class="gray-bg">
-      10月17日〜10月&ensp;5日: 職員が制作中の教材をデバッグ。Docker学習。⑥Laravelでデプロイに挑戦。成功したので職員へフィードバック
+      10月17日&ensp;〜10月&ensp;5日: 職員が制作中の教材をデバッグ。Docker学習。⑥Laravelでデプロイに挑戦。成功したので職員へフィードバック
       <br>
-      10月18日〜10月29日: ポートフォリオ雛形を制作、①～⑥デプロイの検証
+      10月18日&ensp;〜10月29日: ポートフォリオ一次制作、①～⑥デプロイの検証
     </p>
 
     <div class="double-space2"></div>
@@ -955,15 +955,15 @@
     </h5>
 
     <p class="gray-bg">
-      10月29日〜&ensp;&ensp;月&ensp;&ensp;日: 就職活動開始、ポートフォリオ随時更新
+      10月29日&ensp;〜&ensp;&ensp;月&ensp;&ensp;日: 就職活動開始、ポートフォリオ随時更新（公開日 2024/10/29）
       <br>
-      11月&ensp;1日〜11月&ensp;7日: ②SNS風アプリの見直し、Vue.jsが本番で正常に動作するよう改善
+      11月&ensp;1日&ensp;〜11月&ensp;7日: ②SNS風アプリの見直し、Vue.jsが本番で正常に動作するよう改善
       <br>
-      11月&ensp;8日〜11月20日: ①メルカリ風フリマアプリの見直し、デプロイ後に画像処理が動作するよう仕様を変更
+      11月&ensp;8日&ensp;〜11月20日: ①メルカリ風フリマアプリの見直し、デプロイ後に画像処理が動作するよう仕様を変更
       <br>
-      11月21日〜12月10日: ポートフォリオにJava追加
+      11月21日&ensp;〜12月10日: ポートフォリオにJava追加
       <br>
-      12月11日〜&ensp;&ensp;月&ensp;&ensp;日: 職員からフィードバックを受けて、ポートフォリオのレイアウトを見やすさ重視に一新
+      12月11日&ensp;〜&ensp;&ensp;月&ensp;&ensp;日: 職員からフィードバックを受けて、ポートフォリオのレイアウトを見やすさ重視に一新
     </p>
   </div>
 
@@ -1142,7 +1142,7 @@
     <strong style="font-size: 1.2rem;">
       <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
     </strong>
-    &ensp;&ensp;10/8~10/10（3日間）&ensp;&ensp;13～17時（小休憩自由）
+    &ensp;&ensp;10/8～10/10（3日間）&ensp;&ensp;13～17時（小休憩自由）
 
     <div class="d-m-t2"></div>
 
@@ -2180,7 +2180,7 @@
       return {
         isVisible: false, // 初期状態では要素は非表示（アニメーション前）
         isBtn: false, // おまけボタン
-
+        isbar: false, // 初期状態は非表示
         isSidebar: true, // サイドバーの表示・非表示を管理
         menu: {
           jisyu: false,
@@ -2220,6 +2220,12 @@
       }
     },
     methods: {
+      tbar() {
+        this.isbar = true; // サイドメニューを表示
+      },
+      cbar() {
+        this.isbar = false; // サイドメニューを非表示
+      },
       toggleSubMenu(selectedMenu) {
         // クリックされたメニューがすでに開いているかを確認
         const isOpen = this.menu[selectedMenu];

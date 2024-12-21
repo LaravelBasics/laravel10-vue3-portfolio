@@ -12,6 +12,59 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
+        /* スマホ用サイドメニュー */
+        .sbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 250px;
+            background: #f8f9fa;
+            /* 明るい背景色 */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transform: translateX(-100%);
+            /* 初期状態: 非表示 */
+            transition: transform 0.3s ease-in-out;
+            /* アニメーション */
+
+            max-width: 90%;
+            /* モーダルの幅を90%にする */
+            /* max-height: 80vh; */
+            /* ビューポートの80%に制限 */
+            overflow-y: auto;
+            /* 縦方向にスクロール */
+            font-size: 0.9rem;
+            /* 小さい画面ではフォントサイズを少し小さく */
+        }
+
+        .slide-in {
+            transform: translateX(0);
+            /* メニューが画面内に表示される */
+        }
+
+        /* スライドアウトアニメーション */
+        .slide-out {
+            transform: translateX(-100%);
+            /* メニューが画面外にスライド */
+        }
+
+        /* 背景オーバーレイ */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            /* 半透明の黒背景 */
+            z-index: 1000;
+            /* サイドメニューの背面 */
+        }
+
+        /* ここまでスマホ用 */
+
+
         .sidebar {
             position: sticky;
             /* 固定されつつ、スクロールに追従 */
@@ -19,12 +72,14 @@
             /* ビューポートの上端に固定 */
             height: 100vh;
             /* 必要に応じて高さを設定 */
+
+            overflow-y: auto;
+            max-width: 90%;
+            /* モーダルの幅を90%にする */
+            /* max-height: 80vh; */
+            /* ビューポートの80%に制限 */
         }
 
-        .navbar {
-            position: relative;
-            /* アイコン位置の基準 */
-        }
 
         .navhidden .navbar-toggler {
             z-index: 1050;
@@ -34,12 +89,13 @@
         /* スクリーン幅が768px未満のときに、positionを解除 */
         @media (max-width: 48rem) {
             .sidebar {
-                position: static;
+                /* position: static; */
                 /* スクロール追従を解除 */
                 height: auto;
                 /* 高さを自動に設定 */
-                /* display: none; */
+                display: none;
                 /* スマホサイズなどはサイドバー非表示 */
+                overflow-y: auto;
             }
 
             .navbar-toggler {
@@ -56,6 +112,51 @@
             .navhidden {
                 display: block;
                 width: 100%;
+            }
+
+            .btnHidden {
+                display: none;
+            }
+
+            .icon-box {
+                font-size: 2rem;
+                border: 2px solid black;
+                /* ボーダーの色と太さ */
+                padding: 0.5rem;
+                /* アイコンと枠線の間隔 */
+                display: inline-block;
+                /* ボックス化 */
+                border-radius: 0.5rem;
+                transform: translateX(-0.55rem);
+                /* 左に移動（調整値） */
+            }
+
+            .icon-box2 {
+                font-size: 2rem;
+                border: 2px solid black;
+                /* ボーダーの色と太さ */
+                padding: 0.5rem 0.625rem;
+                /* アイコンと枠線の間隔 */
+                display: inline-block;
+                /* ボックス化 */
+                border-radius: 0.5rem;
+                transform: translateX(-0.55rem);
+                /* 左に移動（調整値） */
+            }
+
+            .navbar {
+                position: sticky;
+                /* stickyに変更 */
+                top: 0;
+                /* スクロールしても画面の上に固定 */
+                z-index: 100;
+                /* 他の要素より上に表示 */
+            }
+        }
+
+        @media (min-width: 48rem) {
+            .hidden1 {
+                display: none;
             }
         }
 
@@ -126,7 +227,11 @@
     <div id="app">
         <!-- ナビゲーションバー -->
         @include('includes.navbar')
-
+        <div v-if="isbar" class="hidden1 sbar" :class="{ 'slide-in': isbar, 'slide-out': !isbar }">
+            @include('includes.nav')
+        </div>
+        <!-- 背景オーバーレイ -->
+        <div v-if="isbar" class="overlay" @click="cbar"></div>
         <div class="container-fluid">
             <div class="row">
                 <!-- サイドメニュー← -->
@@ -143,7 +248,7 @@
                 <div v-if="!isSidebar" class="col-md-2 bg-light sidebar">
                     @include('includes.right')
                 </div>
-                
+
             </div>
         </div>
     </div>
