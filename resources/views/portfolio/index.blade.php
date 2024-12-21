@@ -379,9 +379,9 @@
 
     opacity: 0;
     /* 初期状態では非表示にする（透明） */
-    transform: translateY(150%);
+    transform: translateY(20%);
     /* 初期位置を画面外、下の方に設定 (画面外に配置) */
-    transition: opacity 0.1s ease-out, transform 3s ease-out;
+    transition: opacity 3s ease-out, transform 2s ease-out;
     /* 透明度と位置のアニメーション設定（1秒かけて移動） */
     position: relative;
     /* 相対的な位置を設定、これにより`transform`プロパティを使った位置変更が可能に */
@@ -422,6 +422,198 @@
 
   a:hover {
     color: #2ecc71;
+  }
+
+  /* アニメーション */
+  .text {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  .sand-effect span {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #333;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100vw);
+      /* 画面外まで移動 */
+    }
+  }
+
+  .move-text {
+    /* font-size: 3rem; */
+    font-weight: bold;
+    color: red;
+    /* position: absolute; */
+    white-space: nowrap;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: moveRight 3s linear forwards;
+
+    position: fixed;
+    /* これが重要！ */
+    /* position: relative; */
+    /* これが重要！ */
+    /* height: 100vh; */
+    /* 画面の高さを基準にする */
+  }
+
+  .bt {
+    font-size: 1rem;
+    cursor: pointer;
+    border: 0.1rem solid #333;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  .bt:hover {
+    background-color: #ddd;
+  }
+
+  .container0 {
+    display: flex;
+    /* flex: 0 0 auto; */
+    align-items: center;
+    /* 子要素を中央揃え */
+  }
+
+  /* 表全体の配置 */
+  .table-container {
+    display: flex;
+    /* 横並びに配置 */
+    justify-content: center;
+    /* 中央寄せ */
+    /* margin: 2rem 0; */
+    /* 上下の余白 */
+    width: 100%;
+    /* 表全体の幅を100%に設定 */
+    max-width: 56.25rem;
+    /* 表の最大幅を設定（900px） */
+    margin: 1.25rem auto;
+    /* 横方向の中央寄せ */
+    padding: 1.25rem;
+    /* 表周りのパディング */
+    box-sizing: border-box;
+    /* パディングを含めた幅設定 */
+    overflow-x: auto;
+    /* テーブルが画面外に出る場合スクロール可能に */
+  }
+
+  /* 表の基本スタイル */
+  .simple-table {
+    width: 100%;
+    /* 表の幅を100%に設定 */
+    font-size: 1rem;
+    /* テキストの基本フォントサイズ */
+    text-align: left;
+    /* テキストを左揃え */
+    background-color: #f9f9f9;
+    /* 表の背景色（薄いグレー） */
+    border-collapse: collapse;
+    /* 格子線が重ならないように設定 */
+  }
+
+  /* 表のセルスタイル */
+  .simple-table th,
+  .simple-table td {
+    padding: 0.5rem;
+    /* セルの内側の余白 */
+    /* background-color: #fff9c4; */
+    /* セルの背景色（薄い黄色） */
+    background-color: #FFFFCC;
+    /* 図形の色 */
+    font-size: 0.9rem;
+    /* セル内のフォントサイズ */
+    color: #333;
+    /* セル内の文字色（暗い灰色） */
+    border: 0.0625rem solid #ccc;
+    /* セルのボーダー（細いグレーの線） */
+    transition: background-color 0.3s ease;
+    /* 背景色の変化にスムーズなトランジションを追加 */
+
+    /* td */
+    /* white-space: nowrap; */
+    /* テキストの折り返しを防ぐ */
+    /* word-wrap: normal; */
+    /* テキストの折り返しを禁止 */
+    overflow: hidden;
+    /* コンテンツがはみ出さないようにする */
+    text-overflow: ellipsis;
+    /* はみ出したテキストに省略記号を追加（任意） */
+
+    /* th */
+    /* 見出し部分の背景色（薄い緑） */
+    /* font-weight: bold; */
+    /* 太字に設定 */
+
+    text-align: left;
+    /* 左揃えで読みやすく */
+    word-wrap: break-word;
+    /* 長いテキストを折り返す */
+    line-height: 1.6;
+    /* 行間は1.6倍（読みやすさを重視） */
+    letter-spacing: 0.05rem;
+    /* 少し文字間を広げて視認性を向上 */
+    word-spacing: 0.1rem;
+    /* 単語間を少し広げて、段落をスッキリ見せる */
+    margin-bottom: 1.2rem;
+    /* 各段落の下に適度なスペースを追加 */
+  }
+
+
+  /* colspan属性があるヘッダーセル（th）のスタイル */
+  .simple-table th[colspan] {
+    background-color: #BCF4BC;
+    /* セル結合された見出しの背景色（緑） */
+    text-align: center;
+    /* セル結合部分を中央寄せ */
+  }
+
+  /* 表のタイトル（th）にホバー効果を適用 */
+  .simple-table th:hover {
+    background-color: #c8eddc;
+    /* 薄い緑色に変更 */
+    color: #000;
+    /* 文字色を黒に変更（必要に応じて） */
+  }
+
+  /* tbody内のセルにホバー効果 */
+  .simple-table tbody td:hover {
+    background-color: #dcedc8;
+    /* セル単体にもホバー効果を追加 */
+  }
+
+  /* 表全体にホバー効果 */
+  .simple-table tbody tr:hover td {
+    background-color: #e8f5e9;
+    /* 行全体がハイライトされる */
   }
 </style>
 @endsection
@@ -503,7 +695,7 @@
       <span class="m-t0"></span>
 
       <h4>
-        <i class="fa-solid fa-pencil" style="color: #e67e22;"></i> 学習中の言語&ensp;&ensp;開発環境
+        <i class="fa-solid fa-pencil" style="color: #e67e22;"></i> 学習中の言語と開発環境
       </h4>
 
       <p class="gray-bg">
@@ -523,56 +715,126 @@
       <span class="m-t0"></span>
 
       <h4>
-        <i class="fa-brands fa-github"></i> デプロイ経験&ensp;
-        <!-- <span style="font-size: 1.2rem;"> -->
-        （アプリをネット上に公開する挑戦）
-        <!-- </span> -->
+        <i class="fa-brands fa-github"></i> デプロイ経験
       </h4>
+      <div class="rounded-box">
 
-      <p class="gray-bg">
-        <!-- Windows、Linux共に、GitHubにプッシュ、Vercelにデプロイ、VercelDBとの接続にも成功。
+        <!-- <div class="d-m-t"></div> -->
+
+        <!-- <div class="double-space"></div> -->
+
+        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+          <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリをネット上に公開する挑戦(´・ω・｀)？
+        </strong>
+
+        <span style="margin-right: 5rem;"></span>
+        <button type="button" class="btn btn-link" @click="showHelpModal1"
+          style="font-size: 1.5rem; position: relative; right: 0.75rem;"> <i class="fa-solid fa-desktop"></i>詳細画面へ
+        </button>
+
+
+        <!-- <div class="d-m-t2"></div> -->
+
+        <p class="gray-bg">
+          デプロイ方法: GitHubにプッシュ → Vercelでデプロイ
+        </p>
+
+        <div class="double-space2"></div>
+
+        <strong style="font-size: 1.2rem;">
+          <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+        </strong>
+        <span class="p2">&ensp;&ensp;制作期間（2日）</span>
+
+        <div class="d-m-t2"></div>
+
+        <p class="gray-bg">
+
+          <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリをネット上に公開する挑戦(´・ω・｀)？
+          </strong>
+
+          <span style="margin-right: 5rem;"></span>
+          <button type="button" class="btn btn-link" @click="showHelpModal1"
+            style="font-size: 1.5rem; position: relative; right: 0.75rem;"> <i class="fa-solid fa-desktop"></i>詳細画面へ
+          </button>
+
+        </p>
+
+        <div class="double-space2"></div>
+
+        <strong style="font-size: 1.2rem;">
+          <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> このサイトについて
+        </strong>
+        <!-- <span class="p2">&ensp;（アプリをネット上に公開すること）</span> -->
+
+        <div class="d-m-t2"></div>
+
+        <p class="gray-bg">
+          <a href="https://laravel10-vue3-client-manager-511pfnz1d-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> 一次制作の画面
+          </a>
+
+          <span style="margin-right: 5rem;"></span>
+          
+          <a href="https://laravel10-vue3-client-manager-c6bcq8axa-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> 二次制作の画面
+          </a>
+
+          <span style="margin-right: 5rem;"></span>
+          
+          <a href="https://laravel10-vue3-client-manager-xqe6jqrai-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> 三次制作の画面
+          </a>
+
+          <span style="margin-right: 5rem;"></span>
+          
+          <a href="https://laravel10-vue3-client-manager-7gtumsjgf-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> 四次制作の画面
+          </a>
+
+          <span style="margin-right: 5rem;"></span>
+          
+          <a href="https://laravel10-vue3-client-manager.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> 五次制作の画面
+          </a>
+
+          <span style="margin-right: 5rem;"></span>
+          
+          <a href="#" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> 現在の画面
+          </a>
+
+        </p>
+
+        <div class="double-space2"></div>
+
+        <strong style="font-size: 1.2rem;">
+          <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+        </strong>
+
+        <div class="d-m-t2"></div>
+
+        <p class="gray-bg">
+          <!-- Windows、Linux共に、GitHubにプッシュ、Vercelにデプロイ、VercelDBとの接続にも成功。
                 <br>
                 WindowsはXAMPP, Laravel 10, 11, PHP 8.2, PostgreSQL
                 <br>
                 バーチャルボックス、Rocky Linux 9.4, Laravel 6, PHP 7.4, PostgreSQL -->
+          Windows環境: XAMPP<br>
+          技術: Laravel 10, 11 / PHP 8.2 / PostgreSQL<br>
+          成果: VercelDBとの接続に成功<br>
+          <span class="double-space" style="display: block;"></span>
+          Linux環境: VirtualBox + Rocky Linux 9.4<br>
+          技術: Laravel 6 / PHP 7.4 / PostgreSQL<br>
+          成果: Linux環境も成功
+        </p>
+      </div>
 
 
-        1. 環境と使用技術<br>
-
-        Windows環境: XAMPP<br>
-        技術: Laravel 10, 11 / PHP 8.2 / PostgreSQL<br>
-        デプロイ方法: GitHubにプッシュ → Vercelにデプロイ<br>
-        成果: VercelDBとの接続にも成功<br>
-        <br>
-
-        2. 初めてのデプロイ挑戦（期間: 2日）<br>
-        目的: アプリをインターネット上に公開するため、Laravelで初のデプロイに挑戦（Breezeを使ったログイン機能のみ）。<br>
-        学習手段: 就労支援の職員が作成した教材を活用し、Docker（WSL）とVercel（GitHub連携）を学習。<br>
-
-        課題と解決策:<br>
-
-        環境変数とデータベース接続<br>
-        Vercelでのvercel.jsonや.envファイルの記述方法に関する情報が（2024年10月時点）十分になく、試行錯誤を重ねました。<br>
-        解決: 設定が成功した後、必要な項目を整理し、職員にも共有。結果、職員も無事デプロイに成功しました。<br>
-        試行内容:<br>
-        ローカル環境でPostgreSQLインストールの必要性や接続の設定など、チャットGPTを活用しつつ、100回以上デプロイを試行してようやく成功に至りました。<br>
-        <!-- ローカル環境でのPostgreSQLのインストールや接続設定を行い、GitHubへのプッシュとVercelへのデプロイを100回以上試行。<br> -->
-        これにより、Vercelの環境変数設定や接続トラブルの解決方法が身につきました。<br>
-
-        感想: 逆算して課題を解決する思考力が身につき、職員の支援にもつながったことで、大きな達成感を得られました。<br>
-        <br>
-        3. Linux環境でもデプロイに挑戦<br>
-        試行内容:<br>
-        これまでの実習で使用したRocky Linuxを活用し、Linux環境にてデプロイに挑戦しました。<br>
-        Linux特有の環境差異を考慮しつつ、VirtualBox + Rocky Linux 9.4環境でのLaravel 6 / PHP 7.4 / PostgreSQLの構成を構築。<br>
-        Windowsでの経験を活かし、環境変数の設定やデータベースの接続方法を工夫することで、Linux環境でも無事デプロイに成功しました。<br>
-
-        Linux環境: VirtualBox + Rocky Linux 9.4<br>
-        技術: Laravel 6 / PHP 7.4 / PostgreSQL<br>
-        成果: Linux環境でもデプロイに成功
-      </p>
     </div>
   </div>
+
 
   {{-- <div class="double-space2"></div> --}}
   <div class="double-space4"></div>
@@ -1004,14 +1266,15 @@
 
       <span class="p-l"></span>
 
-      <span class="m-t">インターネット上に公開中です。無料プランのため、データベースと通信している際に速度が遅くなることがあります。予めご了承ください。</span>
+      <span class="m-t">インターネット上に公開中です。無料プランのため、<span style="color: red;">(´・ω・｀)？</span>データベースと通信している際に速度が遅くなることがあります。予めご了承ください。</span>
 
       <br>
 
       <span class="p-l"></span>
 
 
-      <span style="font-weight: bold; font-size: 1rem;">※Vercelの無料プランではリソース制限により、画像処理で504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。</span>
+      <span
+        style="font-weight: bold; font-size: 1rem;">※Vercelの無料プランではリソース制限により、画像処理で504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。</span>
     </h5>
 
     <div class="double-space2"></div>
@@ -1217,7 +1480,7 @@
     <p class="gray-bg">
       初めてのVue.jsとLaravelの環境構築に苦戦し、
       <br>
-      特にnpm依存関係のエラーでVue.jsが2から3へ自動的にバージョンアップされたため記述の違いにさらに時間がかかりました。
+      特にnpm依存関係のエラーでVue.jsを2から3へバージョンアップしたため、記述の違いにさらに時間がかかりました。
       <br>
       教材通りの機能は実装できたものの、Vueコンポーネントの理解が不十分でした。
       <br>
@@ -1238,8 +1501,9 @@
     <p class="gray-bg">
       Linux上でLaravel 6を用いたデプロイに挑戦した際、Laravel Mixのmix.jsを使ったVue.js機能が本番環境で動作しないという課題に直面しました。
       <br>
-      これに対して、npm run productionでビルドを行い、vercel.jsonの設定を見直した後、npx vercel
-      --forceで再デプロイすることでVue.jsが本番で正常に動作するよう改善しました。
+      これに対して、npm run productionでビルドを行い、vercel.jsonの設定を見直した後、
+      <br>
+      npx vercel --forceで再度デプロイ、これによりVue.jsが本番で正常に動作するよう改善しました。
     </p>
     <!-- </div> -->
 
@@ -1438,11 +1702,6 @@
 
   <div class="space2"></div>
 
-  {{-- <h2 class="title2">
-        <i class="fas fa-person-walking" title="歩いている人" style="color: #2ecc71; position: relative; top: 0.3rem;">
-        </i> アップル梅田の課題
-    </h2> --}}
-
   <div class="rounded-box" id="section13">
     <!-- <div class="d-m-t"></div> -->
     <h4>
@@ -1503,7 +1762,7 @@
 
   <div class="double-space"></div>
 
-  <div class="double-space"></div>
+  {{-- <div class="double-space"></div> --}}
 
   <div>
     <div class="d-s"></div>
@@ -1513,6 +1772,26 @@
       <p>これまでの学習と経験を活かし、さらに技術を磨いていきたいと思っております。</p>
       <p>ご興味をお持ちいただけましたら、ぜひお気軽にご連絡ください。</p>
       <p>どうぞよろしくお願いいたします。</p>
+    </div>
+
+    <div class="d-s2"></div>
+
+    <hr>
+
+    <button v-if="!isBtn" class="bt" @click="handle">おまけ</button>
+
+    <div class="space"></div>
+
+    <div v-if="isBtn" class="container0">
+      <div class="text" @click="handleClick">@{{ displayText }}</div>
+      <button class="bt" @click="handleClick">出荷よー</button>
+      <div class="sand-effect" ref="sandEffect"></div>
+    </div>
+
+    <!-- 「トラック」をv-ifで表示を切り替え -->
+    <div v-if="showA" class="move-text">
+      <!-- トラックアイコン -->
+      <i class="fa-solid fa-truck-fast" style="font-size: 5rem; color: #F4A300;"></i>
     </div>
 
     <div class="d-s2"></div>
@@ -1541,7 +1820,6 @@
                 <td class="aomori">1</td>
                 <td class="aomori">0</td>
                 <td class="aomori">1</td>
-
               </tr>
               <tr>
                 <td class="aomori">1</td>
@@ -1736,6 +2014,162 @@
       </div>
     </div>
   </div>
+
+  <!-- デプロイ経験表モーダル -->
+  <div class="modal fade" id="helpModal1" tabindex="-1" aria-labelledby="helpModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 59.05rem;">
+      <div class="modal-content" style="height: 37.80rem;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="helpModalLabel1">
+            デプロイ経験
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="table-container">
+            <table class="simple-table">
+              <thead>
+                <tr>
+                  <th colspan="2">1. 学習のきっかけ</th> <!-- colspanを使ってセルを結合 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold;">学習内容</td>
+                  <td>Docker（WSL）とVercel（GitHub連携）を学べる教材を基に学習を開始。</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">背景</td>
+                  <td>プログラミングの企業実習2か所が終了し、次の学習内容を検討していた際、就労支援事業所の職員から、制作中の教材を紹介される。
+                  </td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th colspan="2">2. 提案された学習および活動</th> <!-- colspanを使ってセルを結合 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold;">状況</td>
+                  <td>LaravelアプリをVercelにデプロイしたが、ログイン操作時に500サーバーエラーが発生したため、作業を中断した状態で渡される。
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">活動</td>
+                  <td>教材を元に学習を進め、並行してデバッグ作業を実施。デバッグの情報は、日報を通じて職員に共有。</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold; white-space: nowrap;">アプリの仕様</td>
+                  <td>Breezeを使用したログイン機能のみの状態でテスト中のものだった。</td>
+                </tr>
+              </tbody>
+
+
+              <thead>
+                <tr>
+                  <th colspan="2">3. デプロイへの挑戦</th> <!-- colspanを使ってセルを結合 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold;">環境</td>
+                  <td>Laravelの同一環境を使用し、自らも初のデプロイに挑戦。</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">目的</td>
+                  <td>学習ついでにポートフォリオをインターネット上に公開できれば嬉しい(´・ω・｀)？</td>
+                </tr>
+              </tbody>
+
+              <thead>
+                <tr>
+                  <th colspan="2">4. 課題と解決策</th> <!-- colspanを使ってセルを結合 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold;">課題.1</td>
+                  <td>環境変数とデータベース接続</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">問題</td>
+                  <td>Vercelでのvercel.jsonや.envファイルの記述方法に関する情報が（2024年10月時点）不十分。＼(^o^)／ｵﾜﾀ</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">対応</td>
+                  <td>チャットGPTを活用し、情報を収集しつつ約15時間試行錯誤を繰り返した。_(:3 」∠)_</td>
+                </tr>
+
+                <tr>
+                  <td style="font-weight: bold;">課題.2</td>
+                  <td>PostgreSQLの接続とデプロイ制限</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">問題</td>
+                  <td>ローカル環境でのPostgreSQLインストール、接続設定の必要性が発生。職員と同じ状況まで到達('ω')</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">試行</td>
+                  <td>100回デプロイを試行した結果、Vercelの1日あたり100回のデプロイ制限に到達。(;´･ω･)</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">対応</td>
+                  <td>制限解除の待ち時間を活用し就寝( ˘ω˘)ｽﾔｧ、起床後これまでの試行内容を整理。デプロイでは、約5時間で成功。(´Д｀)</td>
+                </tr>
+              </tbody>
+
+              <thead>
+                <tr>
+                  <th colspan="2">5. 成果と振り返り</th> <!-- colspanを使ってセルを結合 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold;">成功の要因</td>
+                  <td>設定が成功した後、必要な項目を整理し、最初からデプロイを複数回実施。φ(..)メモメモ</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">情報共有</td>
+                  <td>重要そうな情報をまとめて職員に共有。数日後、職員も無事にデプロイに成功。</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">成果</td>
+                  <td>学習と試行錯誤の結果、事業所の業務に貢献するに至る。(´・ω・`)？</td>
+                </tr>
+              </tbody>
+
+              <thead>
+                <tr>
+                  <th colspan="2">6. Linux環境でのデプロイ挑戦</th> <!-- colspanを使ってセルを結合 -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: bold;">試行内容</td>
+                  <td>外部の実習で使用したRocky Linuxを活用し、Linux環境にてデプロイに挑戦しました。</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">環境構築</td>
+                  <td>VirtualBox + Rocky Linux 9.4環境でのLaravel 6 / PHP 7.4 / PostgreSQLの構成を構築。</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">工夫</td>
+                  <td>Windowsでの経験を活かし、環境変数の設定やデータベースの接続方法を調整。</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">結果</td>
+                  <td>工夫を重ねた結果、Linux環境でも無事デプロイに成功しました。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 @endsection
 
@@ -1745,6 +2179,7 @@
     data() {
       return {
         isVisible: false, // 初期状態では要素は非表示（アニメーション前）
+        isBtn: false, // おまけボタン
 
         isSidebar: true, // サイドバーの表示・非表示を管理
         menu: {
@@ -1752,6 +2187,12 @@
           php: false,
           java: false,
         },
+        phrases: [
+          "(´・ω・`)そんなー.;:…(´・ω...:.;::..(´・;::: .:.;: ｻﾗｻﾗ..",
+        ],
+        clickCount: 0,
+        displayText: "(´・ω・｀)らんらん♪",
+        showA: false, // ★トラックアイコンを表示するかどうかを管理
       };
     },
     mounted() {
@@ -1800,6 +2241,10 @@
           this.menu[key] = false;
         }
       },
+      showHelpModal1() {
+        const modal = new bootstrap.Modal(document.getElementById('helpModal1'));
+        modal.show();
+      },
       showHelpModal2() {
         const modal = new bootstrap.Modal(document.getElementById('helpModal2'));
         modal.show();
@@ -1811,6 +2256,40 @@
       toggleSidebar() {
         // サイドメニューの表示、非表示を変更する
         this.isSidebar = !this.isSidebar;
+      },
+      handle() {
+        this.isBtn = true;
+      },
+      handleClick() {
+        if (this.clickCount % 2 === 0) {
+          const newPhrase = this.phrases[0];
+          this.displayText = "";
+          this.showA = false; // クリックのたびに「トラック」を非表示にする
+          this.$refs.sandEffect.innerHTML = ""; // 砂効果の要素をリセット
+
+          this.$nextTick(() => {
+            newPhrase.split("").forEach((char, i) => {
+              const span = document.createElement("span");
+              span.textContent = char;
+              span.style.animationDelay = `${i * 0.1}s`; // 0.1秒ずつずらす
+              span.style.animation = `disappear 1s forwards ${i * 0.1 + 0.1}s`; // 0.1秒後に消える
+
+              // ★ これがポイント！最後の文字だけanimationendを監視する
+              if (i === newPhrase.length - 1) {
+                span.addEventListener('animationend', () => {
+                  this.showA = true; // 最後の文字のアニメーションが終了したら「トラック」を表示
+                });
+              }
+
+              this.$refs.sandEffect.appendChild(span);
+            });
+          });
+        } else {
+          this.displayText = "(´・ω・｀)らんらん♪";
+          this.$refs.sandEffect.innerHTML = ""; // 砂効果をリセット
+          this.showA = false; // 「トラック」を非表示にする
+        }
+        this.clickCount++;
       },
       checkVisibility() {
         const element = this.$refs.animatedElement; // アニメーション対象の要素（`ref`で指定した要素）
