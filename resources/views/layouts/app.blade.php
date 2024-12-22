@@ -158,6 +158,8 @@
                 /* フル幅に変更 */
                 padding: 0;
                 /* 余白がある場合は調整 */
+                /* box-sizing: border-box; */
+                overflow-x: hidden; /* 横スクロールを防ぐ */
             }
         }
 
@@ -249,7 +251,7 @@
                 </div>
 
                 <!-- コンテンツ -->
-                <div class="col-md-10">
+                <div class="col-md-10 mt-0">
                     @yield('content')
                 </div>
 
