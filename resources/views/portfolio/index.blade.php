@@ -1784,16 +1784,17 @@
 
     <div v-if="isBtn" class="container0">
       <div class="text" @click="handleClick">@{{ displayText }}</div>
-      <button class="bt" @click="handleClick">出荷よー</button>
+      <button class="bt" @click="handleClick" style="white-space: nowrap;">出荷よー</button>
       <div class="sand-effect" ref="sandEffect"></div>
     </div>
 
     <!-- 「トラック」をv-ifで表示を切り替え -->
     <div v-if="showA" class="move-text">
       <!-- トラックアイコン -->
+      <small style="font-size: 3rem; font-style: italic; color: #000000">(´・ω・｀)</small>
       <i class="fa-solid fa-truck-fast" style="font-size: 5rem; color: #F4A300;"></i>
     </div>
-
+ 
     <div class="d-s2"></div>
   </div>
 
