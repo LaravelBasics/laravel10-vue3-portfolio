@@ -119,7 +119,7 @@
             }
 
             .icon-box {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 border: 2px solid black;
                 /* ボーダーの色と太さ */
                 padding: 0.5rem;
@@ -132,10 +132,10 @@
             }
 
             .icon-box2 {
-                font-size: 2rem;
+                font-size: 1.45rem;
                 border: 2px solid black;
                 /* ボーダーの色と太さ */
-                padding: 0.5rem 0.625rem;
+                padding: 0.525rem 0.6rem;
                 /* アイコンと枠線の間隔 */
                 display: inline-block;
                 /* ボックス化 */
@@ -160,6 +160,14 @@
                 /* 余白がある場合は調整 */
                 /* box-sizing: border-box; */
                 overflow-x: hidden; /* 横スクロールを防ぐ */
+            }
+
+            .mb-0 {
+                font-size: 1.25rem;
+            }
+
+            .me-4 {
+                font-size: 0.85rem;
             }
         }
 
