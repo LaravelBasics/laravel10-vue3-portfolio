@@ -619,7 +619,7 @@
 @endsection
 @section('content')
 
-<div class="container mt-4">
+<div class="container">
   <div class="space2"></div>
 
   <h1 class="green-bg" id="section3">【プロフィール】</h1>

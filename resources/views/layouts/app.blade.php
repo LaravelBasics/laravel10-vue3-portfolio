@@ -89,7 +89,7 @@
         /* スクリーン幅が768px未満のときに、positionを解除 */
         @media (max-width: 48rem) {
             .sidebar {
-                /* position: static; */
+                position: static;
                 /* スクロール追従を解除 */
                 /* height: auto; */
                 /* 高さを自動に設定 */
@@ -237,8 +237,10 @@
         <div v-if="isbar" class="hidden1 sbar" :class="{ 'slide-in': isbar, 'slide-out': !isbar }">
             @include('includes.nav')
         </div>
+
         <!-- 背景オーバーレイ -->
         <div v-if="isbar" class="overlay" @click="cbar"></div>
+        
         <div class="container-fluid">
             <div class="row">
                 <!-- サイドメニュー← -->
@@ -247,7 +249,7 @@
                 </div>
 
                 <!-- コンテンツ -->
-                <div class="col-md-10 mt-0">
+                <div class="col-md-10">
                     @yield('content')
                 </div>
 
