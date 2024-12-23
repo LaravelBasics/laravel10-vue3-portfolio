@@ -29,6 +29,17 @@
     /* 各段落の下に適度なスペースを追加 */
   }
 
+  .p3 {
+    line-height: 1.6;
+    /* 行間は1.6倍（読みやすさを重視） */
+    letter-spacing: 0.05rem;
+    /* 少し文字間を広げて視認性を向上 */
+    word-spacing: 0.1rem;
+    /* 単語間を少し広げて、段落をスッキリ見せる */
+    margin-bottom: 1.2rem;
+    /* 各段落の下に適度なスペースを追加 */
+  }
+
   strong {
     line-height: 1.6;
     /* 行間は1.6倍（読みやすさを重視） */
@@ -42,7 +53,6 @@
   h4,
   h5,
   h6 {
-    /* font-size: 2rem; */
     line-height: 1.6;
     /* 行間は1.6倍（読みやすさを重視） */
     letter-spacing: 0.05rem;
@@ -97,12 +107,6 @@
     /* 角を丸くする */
   }
 
-  /* .title2 {
-        font-size: 2rem;
-        text-align: center;
-        padding-right: 1rem;
-    } */
-
   /* 図形 */
   .gray-bg {
     border: 0.2rem solid rgb(223, 222, 222);
@@ -113,8 +117,6 @@
     /* 内容と枠線の間隔を確保 */
     background-color: rgb(248, 248, 248);
     /* 背景色（灰色） */
-    /* 標準？background-color: rgb(240, 240, 240); */
-
     box-shadow: 0.625rem 0.625rem 1.25rem 0rem rgba(140, 140, 140, 0.3);
     /* 影の追加 →方向, ↓方向, 全体のぼかし, box-shadowだけ（影のサイズ調整 */
   }
@@ -206,7 +208,15 @@
     /* display: inline-block; */
     margin-top: 0.25rem;
     /* 2行分の余白を追加 (1行 = 1em) */
-    padding-left: 0.125rem;
+    padding-left: 0.2rem;
+    line-height: 1.6;
+    /* 行間は1.6倍（読みやすさを重視） */
+    letter-spacing: 0.05rem;
+    /* 少し文字間を広げて視認性を向上 */
+    word-spacing: 0.1rem;
+    /* 単語間を少し広げて、段落をスッキリ見せる */
+    margin-bottom: 1.2rem;
+    /* 各段落の下に適度なスペースを追加 */
   }
 
   .d-m-t {
@@ -406,11 +416,6 @@
     /* 位置の変化を0.5秒かけてアニメーション */
     /* `in-view`のスライドアニメーションとは異なり、位置の調整のみ行い、少し遅れて微調整 */
   }
-
-  /* .r-b:hover {
-    transform: translateY(-0.3rem) scale(1.03);
-    box-shadow: 0.625rem 0.625rem 1.25rem 0rem rgb(174, 250, 191);
-  } */
 
   /* モーダルボタンのホバースタイル */
   .btn-link:hover {
@@ -626,10 +631,6 @@
 
   <div class="space2"></div>
 
-  {{-- <h2 class="title2">
-        <i class="fas fa-user-tie" style="color: black;"></i> 私について
-    </h2> --}}
-
   <div class="rounded-box">
     <div>
       <span class="m-t0"></span>
@@ -665,11 +666,6 @@
         <br>
         java, PHP, HTML, CSS, Javascript, SQLなどの基礎学習から始め、<br>
         Laravel, Vue.js, React, Linuxといった幅広い技術に挑戦しながら、アプリ制作を通じてスキルの向上に努めています。
-        {{-- Vue.js、React、Linuxといった幅広い技術に挑戦しながら、実践的な制作を通じてスキルの向上に努めています。 --}}
-        {{-- <br> --}}
-        {{-- フロントエンドとバックエンドの技術を幅広く学び、 --}}
-        {{-- <br> --}}
-        {{-- <small style="color: red;">(´・ω・｀)？</small> --}}
       </p>
     </div>
 
@@ -681,15 +677,80 @@
       </h4>
 
       <p class="gray-bg">
-        {{-- これらのスキルを活かして、 --}}
-        {{-- 開発現場で貢献できるエンジニアを目指しています。 --}}
         就職後は、研修等を通して実務に必要となるスキルや働くイメージを養い、
         <br>
         これまでの学びを開発現場で活かせる技術者に成長していきたいと思っています。
-        <!-- これらのスキルを活かし、実際のプロジェクトに貢献できるエンジニアを目指しています。 -->
-        {{-- <small style="color: red;">(´・ω・｀)？</small> --}}
       </p>
     </div>
+
+    <div>
+      <span class="m-t0"></span>
+
+      <h4>
+        <i class="fas fa-home" style="color: #2ecc71;"></i> このサイトについて
+      </h4>
+
+      <p class="gray-bg">
+
+        {{-- 初期画面と説明？
+                <a href="https://laravel10-vue3-client-manager-511pfnz1d-laravelbasics-projects.vercel.app/"
+                    target="_blank" style="font-size: 1.5rem;">
+                    <i class="fa-solid fa-desktop"></i> 一次制作の画面
+                </a>
+                <br> --}}
+
+
+        {{-- <span style="margin-right: 5rem;"></span> --}}
+        どのようなレイアウトにすれば良いか分からなかったため、ChatGPTを活用して、タイトルや見出し、文章などを中心にした文字主体の構成を試みました。
+        <br>
+        <a href="https://laravel10-vue3-client-manager-c6bcq8axa-laravelbasics-projects.vercel.app/"
+          target="_blank" style="font-size: 1.5rem;">
+          <i class="fa-solid fa-desktop"></i> 一次制作の画面
+        </a>
+        <br><br>
+        {{-- <span style="margin-right: 5rem;"></span> --}}
+        <strong>二次制作からは就労移行支援の職員からアドバイスを受けて、</strong>
+        <br>
+        文章の背景色（background-color）を灰色に変更し、タイトルを緑に設定。デザインに変化を加え、視覚的に調整しました。
+        <br>
+        <a href="https://laravel10-vue3-client-manager-xqe6jqrai-laravelbasics-projects.vercel.app/"
+          target="_blank" style="font-size: 1.5rem;">
+          <i class="fa-solid fa-desktop"></i> 二次制作の画面
+        </a>
+        <br><br>
+        {{-- <span style="margin-right: 5rem;"></span> --}}
+        Font Awesome（フリー素材）を使ってアイコンを追加、区画を整理して、枠線（border）を追加しました。デザインが視覚的に整いました。
+        <br>
+        <a href="https://laravel10-vue3-client-manager-7gtumsjgf-laravelbasics-projects.vercel.app/"
+          target="_blank" style="font-size: 1.5rem;">
+          <i class="fa-solid fa-desktop"></i> 三次制作の画面
+        </a>
+        <br><br>
+        {{-- <span style="margin-right: 5rem;"></span> --}}
+        図形に影をつけ、タイトルの順番を変更。&lt;p&gt;や&lt;h&gt;タグを使用して文字のフォントや行間をCSSで調整、視認性を向上。
+        <br>
+        一部にアニメーションを使用、文章やサイドバーの改善も行いました。
+        <br>
+        また、画面が小さくなるとサイドバーがハンバーガーアイコンに変わるようレスポンシブ対応し、絶対値（px）を相対値（rem）に変更しました。
+        <br>
+        レイアウトでは、UIの視認性を重視しました。
+        <br>
+
+        <a href="#" target="_blank" style="font-size: 1.5rem;">
+          <i class="fa-solid fa-desktop"></i> 現在の画面
+        </a>
+        {{-- <a href="https://laravel10-vue3-client-manager.vercel.app/" target="_blank"
+                    style="font-size: 1.5rem;">
+                    <i class="fa-solid fa-desktop"></i> 四次制作の画面
+                </a> --}}
+        {{-- <br><br> --}}
+        {{-- <span style="margin-right: 5rem;"></span> --}}
+        {{-- 完成画面と説明？ --}}
+
+
+      </p>
+    </div>
+
 
     <div>
       <span class="m-t0"></span>
@@ -717,27 +778,24 @@
       <h4>
         <i class="fa-brands fa-github"></i> デプロイ経験
       </h4>
-      <div class="rounded-box">
+      <div class="gray-bg">
 
         <!-- <div class="d-m-t"></div> -->
 
-        <!-- <div class="double-space"></div> -->
+        <div class="double-space"></div>
 
         <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
-          <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリをネット上に公開する挑戦(´・ω・｀)？
+          <i class="fas fa-flask" style="color:#9b59b6;"></i> 試験的にアプリをネット上に公開する取り組み
+          {{-- をしました --}}
         </strong>
 
-        <span style="margin-right: 5rem;"></span>
-        <button type="button" class="btn btn-link" @click="showHelpModal1"
-          style="font-size: 1.5rem; position: relative; right: 0.75rem;"> <i class="fa-solid fa-desktop"></i>詳細画面へ
-        </button>
+        <div class="d-m-t2"></div>
 
-
-        <!-- <div class="d-m-t2"></div> -->
-
-        <p class="gray-bg">
+        <p style="text-indent: 1.65rem;">
           デプロイ方法: GitHubにプッシュ → Vercelでデプロイ
         </p>
+
+        <hr>
 
         <div class="double-space2"></div>
 
@@ -748,90 +806,48 @@
 
         <div class="d-m-t2"></div>
 
-        <p class="gray-bg">
-
-          <!-- <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
-            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリをネット上に公開する挑戦(´・ω・｀)？
-          </strong>
-
-          <span style="margin-right: 5rem;"></span>
+        <p style="text-indent: 1.8rem;">
           <button type="button" class="btn btn-link" @click="showHelpModal1"
-            style="font-size: 1.5rem; position: relative; right: 0.75rem;"> <i class="fa-solid fa-desktop"></i>詳細画面へ
-          </button> -->
-
+            style="font-size: 1.5rem; position: relative; right: 0.75rem;"><i
+              class="fa-solid fa-desktop"></i> 詳細画面へ
+          </button>
         </p>
 
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-          <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> このサイトについて
-        </strong>
-        <!-- <span class="p2">&ensp;（アプリをネット上に公開すること）</span> -->
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-          <a href="https://laravel10-vue3-client-manager-511pfnz1d-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> 一次制作の画面
-          </a>
-
-          <span style="margin-right: 5rem;"></span>
-
-          <a href="https://laravel10-vue3-client-manager-c6bcq8axa-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> 二次制作の画面
-          </a>
-
-          <span style="margin-right: 5rem;"></span>
-
-          <a href="https://laravel10-vue3-client-manager-xqe6jqrai-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> 三次制作の画面
-          </a>
-
-          <span style="margin-right: 5rem;"></span>
-
-          <a href="https://laravel10-vue3-client-manager-7gtumsjgf-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> 四次制作の画面
-          </a>
-
-          <span style="margin-right: 5rem;"></span>
-
-          <a href="https://laravel10-vue3-client-manager.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> 五次制作の画面
-          </a>
-
-          <span style="margin-right: 5rem;"></span>
-
-          <a href="#" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> 現在の画面
-          </a>
-
-        </p>
+        <hr>
 
         <div class="double-space2"></div>
-
         <strong style="font-size: 1.2rem;">
           <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
         </strong>
 
         <div class="d-m-t2"></div>
 
-        <p class="gray-bg">
+        <p style="text-indent: 1.8rem;">
           <!-- Windows、Linux共に、GitHubにプッシュ、Vercelにデプロイ、VercelDBとの接続にも成功。
                 <br>
                 WindowsはXAMPP, Laravel 10, 11, PHP 8.2, PostgreSQL
                 <br>
                 バーチャルボックス、Rocky Linux 9.4, Laravel 6, PHP 7.4, PostgreSQL -->
-          Windows環境: XAMPP<br>
-          技術: Laravel 10, 11 / PHP 8.2 / PostgreSQL<br>
-          成果: VercelDBとの接続に成功<br>
-          <span class="double-space" style="display: block;"></span>
-          Linux環境: VirtualBox + Rocky Linux 9.4<br>
-          技術: Laravel 6 / PHP 7.4 / PostgreSQL<br>
-          成果: Linux環境も成功
+          <small style="text-indent: 1.8rem; font-size: 1rem;">Windows環境: XAMPP</small>
+          <br>
+          <small style="margin-left: 1.8rem; font-size: 1rem;">技術: Laravel 10, 11 / PHP 8.2 /
+            PostgreSQL</small>
+          <br>
+          <small style="margin-left: 1.8rem; font-size: 1rem;">成果: VercelDBとの接続に成功</small>
+          <br>
+
+          <hr>
+          {{-- <span class="double-space" style="display: block;"></span> --}}
+
+          <small style="margin-left: 1.8rem; font-size: 1rem;">Linux環境: VirtualBox + Rocky Linux 9.4</small>
+          <br>
+          <small style="margin-left: 1.8rem; font-size: 1rem;">技術: Laravel 6 / PHP 7.4 / PostgreSQL</small>
+          <br>
+          <small style="margin-left: 1.8rem; font-size: 1rem;">成果: Linux環境も成功</small>
         </p>
       </div>
-
-
+      {{-- <span class="m-t0"></span> --}}
+      <div class="space25"></div>
     </div>
   </div>
 
@@ -842,10 +858,6 @@
   <h1 class="green-bg" id="section4">【学習履歴】</h1>
 
   <div class="space2"></div>
-
-  {{-- <h2 class="title2">
-        <i class="fa-solid fa-graduation-cap" style="color: #007BFF;"></i> アップル梅田で学んだこと
-    </h2> --}}
 
   <!-- <div class="double-space"></div> -->
 
@@ -974,9 +986,6 @@
 
   <div class="space2"></div>
 
-  {{-- <h2 class="title2">
-        <i class="fas fa-folder-open" style="color: #FFD966"></i> 実習の内容（株式会社リテラル）
-    </h2> --}}
   <div class="rounded-box">
     <div class="d-m-t"></div>
 
@@ -1049,7 +1058,7 @@
     <p class="gray-bg">
       このアプリでは、プログラミング言語に紐付く教材、その教材に紐付く学習した日数など、データの管理を行います。
       <br>
-      検索の一例&ensp;「学習した日数」一覧画面に移動後、プログラミング言語を選択し、
+      検索の一例:&ensp;「学習した日数」一覧画面に移動後、プログラミング言語を選択し、
       <br>
       教材をクリックすると、プログラミング言語に紐づいた教材が取得されます（取得するまでにタイムラグがあります）。
       <br>
@@ -1088,7 +1097,9 @@
       <br>
       改修作業は実習後に行い、社外秘の情報が含まれているため、職員に確認を取り、実習で制作したコードを基に改修に挑戦しました。
       <br>
-      元の仕様イメージ「親会社」に紐付く「子会社」を変更し、「プログラミング言語」に紐づく「教材」、「教材」に紐づく「学習日数」という設計に変更しました。
+      元の仕様イメージ「親会社」に紐付く「子会社」を変更し、
+      <br>
+      「プログラミング言語」に紐づく「教材」、「教材」に紐づく「学習日数」という設計に変更しました。
       <br>
       これに伴い、マイグレーションでテーブル名やユニークカラムを変更し、それに応じてモデル、コントローラー、リクエストクラス、ブレードなどを修正しました。
 
@@ -1260,21 +1271,23 @@
 
     <h5>
       <i class="fa-solid fa-sync-alt" style="color: #ffce47;"></i>
-      <strong> サーバーレス環境で稼働中のPHPアプリ（Vercel + Laravel + PostgreSQL）</strong>
+      <strong class="p3"> サーバーレス環境で稼働中のPHPアプリ（Vercel + Laravel + PostgreSQL）</strong>
 
       <br>
 
       <span class="p-l"></span>
 
-      <span class="m-t">インターネット上に公開中です。無料プランのため、<span style="color: red;">(´・ω・｀)？</span>データベースと通信している際に速度が遅くなることがあります。予めご了承ください。</span>
+      <span class="m-t">インターネット上に公開中です。無料プランのため通信速度など遅くなることがあります。予めご了承ください。</span>
+      {{-- 、データベースと通信している際に --}}
 
       <br>
 
       <span class="p-l"></span>
 
 
-      <span
-        style="font-weight: bold; font-size: 1rem;">※Vercelの無料プランではリソース制限により、画像処理で504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。</span>
+      <span class="p3" style="font-weight: bold; font-size: 1rem; padding-left: 0.2rem;">
+        ※Vercelの無料プランではリソース制限により、画像処理で504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。
+      </span>
     </h5>
 
     <div class="double-space2"></div>
@@ -1284,9 +1297,6 @@
 
   <div class="space2"></div>
 
-  {{-- <h2 class="title2">
-        <i class="fa-solid fa-shopping-cart" style="color: #2ecc71;"></i> メルカリ風フリマアプリ
-    </h2> --}}
   <div class="rounded-box" id="section6">
     <div>
       <div class="d-m-t"></div>
@@ -1580,7 +1590,8 @@
       <br>
       Laravelシーダーのファクトリークラスでダミーデータを生成した際に、ダミーデータを英語から日本語に変更するのに苦戦しました。
       <br>
-      職員に動作確認をしてもらい機能自体は完成しましたが、Reactはあまり理解できませんでした。
+      職員に動作確認をしてもらい機能自体は完成しましたが、Reactの理解が不十分でした。
+      {{-- Reactはあまり理解できませんでした。 --}}
     </p>
 
     <div class="double-space2"></div>
@@ -1593,7 +1604,8 @@
     <div class="d-m-t2"></div>
 
     <p class="gray-bg">
-      Reactのjsxファイルでデプロイに挑戦しました。成功するか不安でしたが、無事に動作しました。
+      {{-- Reactのjsxファイルでデプロイに挑戦しました。成功するか不安でしたが、無事に動作しました。 --}}
+      デプロイ経験を積んでいたので、React（JSXファイル）でのデプロイはスムーズに進みました。
     </p>
 
     <div class="double-space2"></div>
@@ -1608,90 +1620,6 @@
       Windows, Laravel 10, React, 認証パッケージBreeze, PostgreSQL
     </p>
   </div>
-
-  <!-- <div class="rounded-box" id="section11">
-            <div>
-
-                <div class="d-m-t"></div>
-
-                <h3>
-                    <strong style="margin-right: 5rem;">
-                        <i class="fa-solid fa-cloud-upload-alt" style="color: #2ecc71"></i> 初めてデプロイに挑戦したアプリ
-                    </strong>
-                </h3>
-            </div>
-
-            <div class="double-space"></div>
-
-            <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
-                <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
-            </strong>
-
-            <span style="margin-right: 5rem;"></span>
-
-            <a href="https://laravel10-breeze-demo.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-                <i class="fa-solid fa-desktop"></i> アプリの画面
-            </a>
-
-            <span style="margin-right: 5rem;"></span>
-
-            <a href="https://github.com/LaravelBasics/Laravel10_Breeze_Demo/tree/aaa" target="_blank" style="font-size: 1.5rem;">
-                <i class="fa-brands fa-github"></i> GitHub
-            </a>
-
-            <div class="d-m-t2"></div>
-
-            <p class="gray-bg">
-                画面右上から、メールアドレス、パスワードを入力してログイン。その他、新規ユーザー登録、ログアウトができます。
-            </p>
-
-            <div class="double-space2"></div>
-
-            <strong style="font-size: 1.2rem;">
-                <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
-            </strong>
-
-            <div class="d-m-t2"></div>
-
-            <p class="gray-bg">
-                デプロイまでの期間２日
-                <br>
-                インターネット上に公開するため、Laravelで初めてデプロイに挑戦しました。(Breezeを使ったログイン機能のみ)
-                <br>
-                就労支援の職員が作成した教材をもとに、Docker（WSL）とVercel(gihub連携)を学習しました。
-                <br>
-                Vercelでの環境変数やデータベース接続（特にvercel.jsonや.envファイルの記述）には、ネット上（2024年10月）に十分な情報がなく試行錯誤を要しました。
-                <br>
-                最終的に、成功した設定をもとに必要な項目を逆算して整理、職員の方もデプロイ成功に至ったことが何よりの成果で、大きな達成感を感じました。
-            </p>
-
-            <div class="double-space2"></div>
-
-            <strong style="font-size: 1.2rem;">
-                <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
-            </strong>
-
-            <div class="d-m-t2"></div>
-
-            <p class="gray-bg">
-                アプリをインターネット上に公開するため、
-                <br>
-                ローカルでのPostgreSQLインストールの必要性や接続の設定など、チャットGPTを活用しつつ、100回以上デプロイを試行してようやく成功に至りました。
-                <br>
-                Dockerはコンテナで使用するDockerfileの作成に難航し、実習で経験したRocky Linuxを使って試行した結果、Linuxでは無事に成功しました。
-            </p>
-
-            <div class="double-space2"></div>
-
-            <strong style="font-size: 1.2rem;">
-                <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
-            </strong>
-
-            <div class="d-m-t2"></div>
-
-            <p class="gray-bg">Windows, Laravel 10, 認証パッケージBreeze, PostgreSQL</p>
-
-        </div> -->
 
   {{-- <div class="double-space2"></div> --}}
   <div class="double-space4"></div>
@@ -1784,17 +1712,17 @@
 
     <div v-if="isBtn" class="container0">
       <div class="text" @click="handleClick">@{{ displayText }}</div>
-      <button class="bt" @click="handleClick" style="white-space: nowrap;">出荷よー</button>
+      <button class="bt" @click="handleClick" style="white-space: nowrap;">出荷する</button>
       <div class="sand-effect" ref="sandEffect"></div>
     </div>
 
     <!-- 「トラック」をv-ifで表示を切り替え -->
     <div v-if="showA" class="move-text">
       <!-- トラックアイコン -->
-      <small style="font-size: 3rem; font-style: italic; color: #000000">(´・ω・｀)</small>
+      <small style="font-size: 2.5rem; font-style: italic; color: #000000">(´・ω・｀)</small>
       <i class="fa-solid fa-truck-fast" style="font-size: 5rem; color: #F4A300;"></i>
     </div>
- 
+
     <div class="d-s2"></div>
   </div>
 
@@ -2042,7 +1970,9 @@
                 </tr>
                 <tr>
                   <td style="font-weight: bold;">背景</td>
-                  <td>プログラミングの企業実習2か所が終了し、次の学習内容を検討していた際、就労支援事業所の職員から、制作中の教材を紹介される。
+                  <td>
+                    プログラミングの企業実習2か所が終了し、次の学習内容を検討していた際、就労支援事業所の職員から、制作中の教材を紹介される。
+                    <!-- プログラミングの企業実習2か所が終了。学習を検討していた際、就労支援事業所の職員から制作中の教材を紹介される。 -->
                   </td>
                 </tr>
               </tbody>
@@ -2080,7 +2010,7 @@
                 </tr>
                 <tr>
                   <td style="font-weight: bold;">目的</td>
-                  <td>学習ついでにポートフォリオをインターネット上に公開できれば嬉しい(´・ω・｀)？</td>
+                  <td>学習ついでに制作したアプリをインターネット上に公開できれば嬉しい(/・ω・)/</td>
                 </tr>
               </tbody>
 
@@ -2117,7 +2047,7 @@
                 </tr>
                 <tr>
                   <td style="font-weight: bold;">対応</td>
-                  <td>制限解除の待ち時間を活用し就寝( ˘ω˘)ｽﾔｧ、起床後これまでの試行内容を整理。デプロイでは、約5時間で成功。(´Д｀)</td>
+                  <td>制限解除の待ち時間を活用し就寝( ˘ω˘)ｽﾔｧ、起床後これまでの試行内容を整理。約5時間後デプロイに成功。(´Д｀)</td>
                 </tr>
               </tbody>
 
@@ -2133,11 +2063,11 @@
                 </tr>
                 <tr>
                   <td style="font-weight: bold;">情報共有</td>
-                  <td>重要そうな情報をまとめて職員に共有。数日後、職員も無事にデプロイに成功。</td>
+                  <td>重要そうな情報をまとめて職員に共有。数日後、職員も無事デプロイに成功。</td>
                 </tr>
                 <tr>
                   <td style="font-weight: bold;">成果</td>
-                  <td>学習と試行錯誤の結果、事業所の業務に貢献するに至る。(´・ω・`)？</td>
+                  <td>学習と試行錯誤の結果、事業所の業務に貢献するに至る。</td>
                 </tr>
               </tbody>
 

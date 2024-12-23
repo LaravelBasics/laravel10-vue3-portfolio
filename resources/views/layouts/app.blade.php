@@ -18,10 +18,10 @@
             top: 0;
             left: 0;
             height: 100vh;
-            width: 250px;
+            width: 15.625rem;
             background: #f8f9fa;
             /* 明るい背景色 */
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0.125rem 0 0.3125rem rgba(0, 0, 0, 0.1);
             z-index: 1001;
             transform: translateX(-100%);
             /* 初期状態: 非表示 */
@@ -120,7 +120,7 @@
 
             .icon-box {
                 font-size: 1.5rem;
-                border: 2px solid black;
+                border: 0.125rem solid black;
                 /* ボーダーの色と太さ */
                 padding: 0.5rem;
                 /* アイコンと枠線の間隔 */
@@ -133,7 +133,7 @@
 
             .icon-box2 {
                 font-size: 1.45rem;
-                border: 2px solid black;
+                border: 0.125rem solid black;
                 /* ボーダーの色と太さ */
                 padding: 0.525rem 0.6rem;
                 /* アイコンと枠線の間隔 */
