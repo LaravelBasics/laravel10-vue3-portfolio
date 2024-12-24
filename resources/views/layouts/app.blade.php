@@ -159,7 +159,8 @@
                 padding: 0;
                 /* 余白がある場合は調整 */
                 /* box-sizing: border-box; */
-                overflow-x: hidden; /* 横スクロールを防ぐ */
+                overflow-x: hidden;
+                /* 横スクロールを防ぐ */
             }
 
             .mb-0 {
@@ -250,7 +251,7 @@
 
         <!-- 背景オーバーレイ -->
         <div v-if="isbar" class="overlay" @click="cbar"></div>
-        
+
         <div class="container-fluid">
             <div class="row">
                 <!-- サイドメニュー← -->

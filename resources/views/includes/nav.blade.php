@@ -1,6 +1,6 @@
 <nav class="nav flex-column">
     <div class="space0"></div>
-    <div style="border-radius: 1rem; background-color: rgb(253, 253, 253)">
+    <div style="border-radius: 1rem; background-color: rgb(253, 253, 253);">
         <div style="padding-top: 0.5rem;">
             <strong class="sepia-bg2"><span>PHPアプリ共通のアカウント</span></strong>
         </div>
@@ -20,12 +20,8 @@
         <span class="p2" style="color: #007BFF;">青字</span>をクリックすると詳細へ
     </div>
 
-    <!-- <button @click="toggleSidebar" class="btn r-box2" style="text-align: left;">サイドバーを切り替え
-        <i class="r-box2i fas fa-toggle-off float-end"></i>
-    </button> -->
-
     <div class="double-space25">
-        {{-- <sapn style="color: red;">(´・ω・｀)？</sapn> --}}
+
     </div>
 
     <a class="nav-link r-box" href="/#section3" @click="toggleSubMenu2('close')">【プロフィール】</a>

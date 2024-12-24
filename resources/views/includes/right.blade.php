@@ -1,6 +1,6 @@
 <nav class="nav flex-column">
     <div class="space0"></div>
-    <div style="border-radius: 1rem; background-color: rgb(253, 253, 253)">
+    <div style="border-radius: 1rem; background-color: rgb(253, 253, 253);">
         <div style="padding-top: 0.5rem;">
             <strong class="sepia-bg2"><span>PHPアプリ共通のアカウント</span></strong>
         </div>
