@@ -3,7 +3,49 @@
 @section('title', 'ポートフォリオ')
 @section('style')
 <style>
+    .custom-link {
+        font-size: 1rem;
+        /* position: relative; */
+        /* 親要素の位置を相対的に設定し、擬似要素を配置できるようにする */
+        color: #007BFF;
+        /* text-decoration: none; */
+        /* デフォルトの下線を削除 */
+        display: inline-block;
+        /* インライン要素として扱い、ブロック要素としてのスタイルを適用可能にする */
+        /* width: 19rem; */
+        /* 幅を19remに設定、適切な幅を指定してレイアウトを整える */
+        line-height: 1.6;
+        /* 行間は1.6倍（読みやすさを重視） */
+        letter-spacing: 0.05rem;
+        /* 少し文字間を広げて視認性を向上 */
+        word-spacing: 0.1rem;
+        /* 単語間を少し広げて、段落をスッキリ見せる */
+        /* margin-bottom: 1.2rem; */
+        /* 各段落の下に適度なスペースを追加 */
+        text-decoration: underline;
+        /* デフォルトのリンクスタイルのように下線を引く */
+    }
+
+    /* ホバー時に下線の色を変更 */
+    .custom-link:hover {
+        color: #2ecc71;
+        /* ホバー時に下線の色を #2ecc71 に変更 */
+    }
+
     p {
+        font-size: 1rem;
+        /* 16px */
+        line-height: 1.6;
+        /* 行間は1.6倍（読みやすさを重視） */
+        letter-spacing: 0.05rem;
+        /* 少し文字間を広げて視認性を向上 */
+        word-spacing: 0.1rem;
+        /* 単語間を少し広げて、段落をスッキリ見せる */
+        margin-bottom: 1.2rem;
+        /* 各段落の下に適度なスペースを追加 */
+    }
+
+    .p1 {
         font-size: 1rem;
         /* 16px */
         line-height: 1.6;
@@ -731,9 +773,9 @@
 
                 <strong style="font-size: 1.125rem;">中間の構成:</strong>
                 <br>
-                構成に行き詰まったため、就労移行支援の職員に改良案を質問しました。
+                構成に行き詰まったため、これ以降は就労移行支援の職員に改良案などを適時質問しました。
                 <br>
-                その後、いただいたアドバイスを取り入れながら、構成に迷った際には積極的に質問を行い、自ら試行錯誤して改良を加えました。
+                いただいたアドバイスを取り入れながら、構成に迷った際には積極的に質問を行い、ChatGPTを活用しながら改良を加えました。
                 <br>
                 文章の背景色（background-color）を灰色に変更し、タイトルを緑に設定。デザインに変化を加え、視覚的に調整しました。
                 <br>
@@ -745,11 +787,13 @@
                 <br>
                 図形に影をつけ、タイトルの順番を変更。&lt;p&gt;や&lt;h&gt;タグのフォントや行間をCSSで調整、視認性を向上。
                 <br>
-                一部にアニメーションを使用、文章やサイドバーの改善も行いました。
+                ChatGPTを活用して、一部にアニメーションを使用、文章やサイドバーの改善も行いました。
                 <br>
                 また、画面が小さくなるとサイドバーがハンバーガーアイコンに変わるようレスポンシブ対応し、絶対値（px）を相対値（rem）に変更しました。
                 <br>
-                <strong>レイアウトでは、UIの視認性を重視しました。</strong>
+                <strong>レイアウトでは、総合的なUIのクオリティアップを重視しました。
+                    {{-- UIの視認性を重視しました。 --}}
+                </strong>
             </p>
         </div>
 
@@ -879,12 +923,19 @@
         <p class="gray-bg">
             &ensp;5月20日&ensp;〜&ensp;6月24日: Laravel基礎（PHPのフレームワーク）
             <br>
-            &ensp;6月25日&ensp;〜&ensp;7月&ensp;4日: ①メルカリ風フリマアプリ制作、
+            &ensp;6月25日&ensp;〜&ensp;7月&ensp;4日:
+            <strong>①</strong>
+            <a href="#section6" target="_blank">メルカリ風フリマアプリ</a>制作、
             <i class="fa-solid fa-file-excel" style="color: #217346;"></i> 企業案件Excelデータ入力(一日目10件、二日目20件)
             <br>
-            &ensp;7月&ensp;8日&ensp;〜&ensp;7月24日: ②SNS風アプリ制作、PC4台キッティング作業
+            &ensp;7月&ensp;8日&ensp;〜&ensp;7月24日:
+            <strong>②</strong>
+            <a href="#section7" target="_blank">SNS風アプリ</a>制作、
+            PC4台キッティング作業
             <br>
-            &ensp;7月26日&ensp;〜&ensp;7月31日: 職員が作成した基本設計書をもとに、③本管理アプリの機能変更、追加。
+            &ensp;7月26日&ensp;〜&ensp;7月31日: 職員が作成した基本設計書をもとに、
+            <strong>③</strong>
+            <a href="#section8" target="_blank">本管理アプリ</a>の機能変更、追加。
             <i class="fab fa-react" style="color: #61DBFB;"></i>React学習
             <br>
             &ensp;7月31日&ensp;〜&ensp;8月&ensp;5日: JavaScript、Git、HTML&CSS
@@ -903,14 +954,16 @@
         <p class="gray-bg">
             &ensp;8月19日&ensp;〜&ensp;9月19日: 企業実習（株式会社リテラル）
             <br>
-            &ensp;9月24日&ensp;〜&ensp;9月27日: 実習のコードを改修に挑戦。④顧客管理システムを改修したアプリ、
+            &ensp;9月24日&ensp;〜&ensp;9月27日: 実習のコードを改修に挑戦。<strong>④</strong>
+            <a href="#section9" target="_blank">顧客管理システムを改修したアプリ</a>、
             <i class="fa-solid fa-file-excel" style="color: #217346;"></i> Excel企業案件データ入力(約10件)
             <br>
             &ensp;9月28日&ensp;〜&ensp;9月30日: jQuery
             <br>
             10月&ensp;1日&ensp;〜10月&ensp;7日: 実習に備えて、事前にLinux学習（Ubuntu、LAMP構築）
             <br>
-            10月&ensp;8日&ensp;〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、⑤お問い合わせフォームアプリ制作
+            10月&ensp;8日&ensp;〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、<strong>⑤</strong>
+            <a href="#section10" target="_blank">お問い合わせフォームアプリ</a>制作
             <br>
             10月11日&ensp;〜10月16日: 実習の復習
         </p>
@@ -922,9 +975,10 @@
         </h5>
 
         <p class="gray-bg">
-            10月17日&ensp;〜10月19日: 職員が制作中の教材をデバッグ。Docker学習。⑥Laravelでデプロイに挑戦。成功したので職員へフィードバック
+            10月17日&ensp;〜10月19日: 職員が制作中の教材をデバッグ。Docker学習。<strong>⑥</strong>
+            <span @click="showHelpModal1" class="custom-link"> 試験的にアプリをネット上に公開する取り組み</span>。成功したので職員へフィードバック
             <br>
-            10月18日&ensp;〜10月29日: ポートフォリオ一次制作、①～⑥デプロイの検証
+            10月19日&ensp;〜10月29日: ポートフォリオ制作開始、<strong>①～⑥</strong>デプロイの検証
         </p>
 
         <div class="double-space2"></div>
@@ -934,15 +988,16 @@
         </h5>
 
         <p class="gray-bg">
-            10月29日&ensp;〜&ensp;&ensp;月&ensp;&ensp;日: 就職活動開始、ポートフォリオ随時更新（公開日 2024/10/29）
+            10月29日&ensp;〜<span style="display: inline-block; width: 1.175rem;"></span>月<span style="display: inline-block; width: 1.125rem;"></span>日: 就職活動開始、ポートフォリオ随時更新（公開日 2024/10/29）
             <br>
-            11月&ensp;1日&ensp;〜11月&ensp;7日: ②SNS風アプリの見直し、Vue.jsが本番で正常に動作するよう改善
+            11月&ensp;1日&ensp;〜11月&ensp;7日: <strong>②</strong>SNS風アプリの見直し、Vue.jsが本番で正常に動作するよう改善
             <br>
-            11月&ensp;8日&ensp;〜11月20日: ①メルカリ風フリマアプリの見直し、デプロイ後に画像処理が動作するよう仕様を変更
+            11月&ensp;8日&ensp;〜11月20日: <strong>①</strong>メルカリ風フリマアプリの見直し、デプロイ後に画像処理が動作するよう仕様を変更
             <br>
             11月21日&ensp;〜12月10日: ポートフォリオにJava追加
             <br>
-            12月11日&ensp;〜&ensp;&ensp;月&ensp;&ensp;日: 職員からフィードバックを受けて、ポートフォリオのレイアウトを見やすさ重視に一新
+            12月11日&ensp;〜<span style="display: inline-block; width: 1.185rem;"></span>月<span style="display: inline-block; width: 1.185rem;"></span>日:
+            職員からフィードバックを受けて、ポートフォリオのレイアウトを見やすさ重視に一新
         </p>
     </div>
 
@@ -984,6 +1039,8 @@
             成果: 4画面大体完成。ログイン機能は無し。実習の評価は優秀でした。
             <br>
             CSS（相対位置、絶対位置の違い）、データベース、コードの可読性などは更なる学習が必要と感じました。
+            <br>
+            後述する顧客管理システムを改修したアプリ制作で学習を深めました。
         </p>
     </div>
 
@@ -1023,7 +1080,9 @@
         <div class="d-m-t2"></div>
 
         <p class="gray-bg">
-            このアプリでは、プログラミング言語に紐付く教材、その教材に紐付く学習した日数など、データの管理を行います。
+            このアプリは、企業実習で制作した顧客管理システムのコードを基に、プログラミング学習のデータ管理システム制作に挑戦したものです。
+            <br>
+            社外秘の情報が含まれているため、学習のためにコードを参考にして問題ないか、職員に確認を取った上で取り組みました。
             <br>
             検索の一例:&ensp;「学習した日数一覧」画面に移動後、プログラミング言語を選択し、
             <br>
@@ -1052,11 +1111,9 @@
         <p class="gray-bg">
             実習中に制作した期間が1ヶ月で、その後1週間でコードの改修を行いました。
             <br>
-            改修作業は実習後に行い、社外秘の情報が含まれているため、職員に確認を取り、実習で制作したコードを基に改修に挑戦しました。
+            元のシステムにおいて「親会社」を選択した際に関連する「子会社」を表示していた設計箇所を、
             <br>
-            元の仕様イメージ「親会社」に紐付く「子会社」を変更し、
-            <br>
-            「プログラミング言語」に紐づく「教材」、「教材」に紐づく「学習日数」という設計に変更しました。
+            「プログラミング言語」を選択することで学習に用いた「教材」を、「教材」を選択することで「学習日数」を表示する設計に変更しました。
             <br>
             これに伴い、マイグレーションでテーブル名やユニークカラムを変更し、それに応じてモデル、コントローラー、リクエストクラス、ブレードなどを修正しました。
         </p>
@@ -1113,9 +1170,12 @@
             <br>
             課題②として⑤簡易問い合わせフォームを制作（テスト用にメールトラップで受信を確認しました）。
             <br>
-            成果: 初めてLinuxを学習（実習1週間前の情報は、バーチャルボックスでLAMP環境を構築することのみ、事前の学習期間は1週間）、
+            実習1週間前に「バーチャルボックスでLAMP環境を構築する」ことのみを伝えられ、Linuxの学習が必要になると判断し、学習に取り組んでから実習に臨みました。
             <br>
-            即戦力を求めていたため全体的に難しい課題だったものの、事前学習の甲斐もあり課題は達成できました。
+            初めてのLinux学習だったことと先方が即戦力を求めていたことから、全体的に難しい課題だったものの、事前学習の甲斐もあり課題は無事に達成できました。
+            {{-- 成果: 初めてLinuxを学習（実習1週間前の情報は、バーチャルボックスでLAMP環境を構築することのみ、事前の学習期間は1週間）、
+            <br>
+            即戦力を求めていたため全体的に難しい課題だったものの、事前学習の甲斐もあり課題は達成できました。 --}}
         </p>
     </div>
 
@@ -1158,9 +1218,9 @@
             <br>
             確認ボタンを押すと内容確認画面が表示されます。
             <br>
-            その後、送信ボタンを押すと、管理者宛てにメールが送信され、
+            その後、送信ボタンを押すと、管理者にはそのメールが、送信者には送信完了を知らせるメールが送られます。
             <br>
-            送信後はサンクス画面が表示「トップページに戻る」をクリックすると最初の画面に戻ります。
+            送信後の送信者画面は、サンクス画面に移行します。「トップページに戻る」をクリックすると最初の画面に戻ります。
             <br>
             web画面は最低限の機能のみを実装しています。
         </p>
@@ -1177,9 +1237,9 @@
         <p class="gray-bg">
             外部実習で制作したアプリ。フロントエンドは最低限の機能（バリデーション、送信時に同意するチェックボックスなど）で実装しました。
             <br>
-            テスト用にメールトラップで受信を確認しました。
+            テスト用にメールトラップで管理者側および送信者側のメール受信を確認しました。
             <br>
-            Laravel 11は初めて触ったので、メール、管理者、送信者など難しかったです。
+            実習当時の最新バージョンであるLaravel 11に初めて触ったので、管理者・送信者に対してメールを送信するロジックの構築や、自分1人で動作確認を行うことなどが難しかったです。
         </p>
 
         <div class="double-space2"></div>
@@ -1377,7 +1437,7 @@
         <div class="d-m-t2"></div>
 
         <p class="gray-bg">
-            このSNS風アプリでは、記事の投稿・編集やいいね「<i class="fas fa-heart" style="color: red;"></i>」、ユーザーフォローが行えます。
+            このSNS風アプリでは、記事の投稿・編集や簡易的なリアクション機能「<i class="fas fa-heart" style="color: red;"></i>」、ユーザーフォローが行えます。
             <br>
             メールアドレスとパスワードでログイン後、左上の「Memo」からトップページへ移動可能。
             <br>
@@ -1388,11 +1448,17 @@
             <br>
             ユーザーページでは、そのユーザーの投稿が閲覧でき、フォロー／フォロー解除が行えます。
             <br>
-            <i class="fas fa-heart" style="color: #808080;"></i>を押すといいね「<i class="fas fa-heart"
-                style="color: red;"></i>」が付き、
-            赤い状態でクリックすると逆に解除されます。
+            「<i class="fas fa-heart" style="color: #808080;"></i>」をクリックすると「<i class="fas fa-heart"
+                style="color: red;"></i>」に変化します。
             <br>
-            ※無料プランのため、「いいね」の反映には5～6秒のタイムラグがあります。
+            この状態が投稿記事に対してリアクションが付いている状態です。
+            <br>
+            「<i class="fas fa-heart" style="color: red;"></i>」をクリックするとリアクションが解除され、「<i class="fas fa-heart"
+                style="color: #808080;"></i>」
+            になります。
+            <br>
+            ※無料プランのため、「<i class="fas fa-heart" style="color: #808080;"></i>」⇄「<i class="fas fa-heart"
+                style="color: red;"></i>」の反映には5～6秒のタイムラグがあります。
             <br>
             未ログイン時は一部機能が制限され、ポップアップで案内が表示されます。
         </p>
@@ -1409,7 +1475,7 @@
         <p class="gray-bg">
             初めてのVue.jsとLaravelの環境構築に苦戦し、
             <br>
-            特にnpm依存関係のエラーでVue.jsを2から3へバージョンアップしたため、記述の違いにさらに時間がかかりました。
+            特にnpm依存関係のエラーが発生し、Vue.jsを2から3へバージョンアップした際、Vue.js 2と3で記述方法が異なるため、さらに時間がかかりました。
             <br>
             教材通りの機能は実装できたものの、Vueコンポーネントの理解が不十分でした。
             <br>
@@ -1636,9 +1702,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>二次元配列があり、中には0と1がランダムで入っています。※この二次元配列を世界と呼ぶことにします
+                    <p>二次元配列があり、中には0と1がランダムで入っています
                         <br>
-                        世界の中から青森と鹿児島の数を数えて表示します。以下は青森と鹿児島の定義です
+                        この二次元配列を世界と呼ぶことにします
+                        <br>
+                        世界の中から青森と鹿児島の数を数えて表示します
+                        <br>
+                        以下は青森と鹿児島の定義です
                     </p>
                     <hr>
                     <div>
@@ -1718,12 +1788,14 @@
                     &ensp;&ensp;10 * 10 の世界を作成し、その中の青森と鹿児島の数を教えてください
                     <hr>
                     <h5>問題 【2】</h5>
-                    &ensp;&ensp;3000 * 3000 の世界を作成し、その中の青森と鹿児島の数を教えてください。
-                    ただし1秒以内に数え終わってください
+                    &ensp;&ensp;3000 * 3000 の世界を作成し、その中の青森と鹿児島の数を教えてください
+                    <br>
+                    &ensp;&ensp;ただし1秒以内に数え終わってください
                     <hr>
                     <h5>問題 【3】</h5>
-                    &ensp;&ensp;新しく三重を追加します。
-                    10 * 10 の世界を作成し、その中の青森と鹿児島と三重の数を教えてください
+                    &ensp;&ensp;新しく三重を追加します
+                    <br>
+                    &ensp;&ensp;10 * 10 の世界を作成し、その中の青森と鹿児島と三重の数を教えてください
                     <hr>
                     <h5>問題 【4】
                         <a href="https://github.com/LaravelBasics/java/blob/master/src/%E9%9D%92%E6%A3%AE%E9%B9%BF%E5%85%90%E5%B3%B6%E5%95%8F%E9%A1%8C/Main.java"
@@ -1740,7 +1812,8 @@
                         </a>
                     </h5>
                     &ensp;&ensp;10000 * 10000 の世界を作成し、その中の青森と鹿児島の数を教えてください
-                    ただし、１秒以内に数えて終わってください
+                    <br>
+                    &ensp;&ensp;ただし、１秒以内に数えて終わってください
                     <hr>
                     <h5>研究問題 【2】</h5>
                     &ensp;&ensp;100 * 100の世界の中に存在できる青森、鹿児島、三重の合計の最大の数と、その配置を求めてください
@@ -1778,13 +1851,13 @@
                         <hr>
                     </p>
 
-                    <h6>2.【ディーラーの手】</h6>
+                    <h6>2.【ディーラーの手札開示】</h6>
                     <p>
                         &ensp;&ensp;初めに、『ディーラー』の手のカードは2枚のうち1枚だけが開示されます。
                         <hr>
                     </p>
 
-                    <h6>3.【プレイヤーの選択】</h6>
+                    <h6>3.【プレイヤー側の選択】</h6>
                     <p>
                         &ensp;&ensp;『プレイヤー』はカードを追加するか『ディーラー』に尋ねられます。
                         <br>
@@ -1798,7 +1871,7 @@
                     <p>
                         &ensp;&ensp;『プレイヤー』はカードを何枚でも追加できます。
                         <br>
-                        &ensp;&ensp;ただし、21点を超えてしまうと『プレイヤー』の負けとなります。
+                        &ensp;&ensp;ただし、21点を超えてしまうと即座に『プレイヤー』の負けとなります。
                         <hr>
                     </p>
 
@@ -1812,15 +1885,17 @@
 
                     <h6>6.【勝負のルール】</h6>
                     <p>
-                        &ensp;&ensp;『ディーラー』が22点以上になると『ディーラー』の負け。
-                        <br>
-                        &ensp;&ensp;『プレイヤー』が21点以下の場合、『ディーラー』の負けとなり、『プレイヤー』の勝利となります。
-                        <br>
+                        {{-- &ensp;&ensp;『プレイヤー』が21点以下の場合、『ディーラー』の負けとなり、『プレイヤー』の勝利となります。 --}}
+                        {{-- <br> --}}
+                        {{-- &ensp;&ensp;ただし、21点を超えてしまうと即座に『プレイヤー』の負けとなります。 --}}
                         &ensp;&ensp;『プレイヤー』が『ディーラー』よりも21点に近い場合、『プレイヤー』の勝ちとなります。
                         <br>
-                        &ensp;&ensp;逆に、『ディーラー』よりも21点に遠い場合、『プレイヤー』は負けとなります。
+                        &ensp;&ensp;逆に、『ディーラー』より21点に遠い場合、『プレイヤー』は負けとなります。
                         <br>
                         &ensp;&ensp;同点の場合は引き分けです。
+                        <br>
+
+                        &ensp;&ensp;『ディーラー』が22点以上になると即座に『ディーラー』の負けになります。
                         <hr>
                     </p>
 
@@ -1828,15 +1903,19 @@
                     <p>
                         &ensp;&ensp;2～9 まではそのままの数字、10・J・Q・K は「すべて10点」と数えます。
                         <br>
-                        &ensp;&ensp;また、 A （エース）は「1点」もしくは「11点」のどちらに数えても構いません。
+                        &ensp;&ensp;また、ブラックジャックの正規ルール通り、A （エース）は「1点」もしくは「11点」のどちらにも扱うことができます。
+                        <br>
+                        &ensp;&ensp;この特殊な計算処理を実現するため、Aが手札に加わった時点から、1点の場合の合計値と11点の場合の合計値を両方表示しており、
+                        <br>
+                        &ensp;&ensp;勝負する際にはプレイヤーに有利な方の数値を自動で選択するように構築しました。
                         <hr>
                     </p>
 
                     <h6>8.【特別な役】</h6>
                     <p>
-                        &ensp;&ensp;最初に配られた2枚のカードが「Aと10点札」で21点が完成していた場合を
+                        &ensp;&ensp;最初に配られた2枚のカードが「Aと10点札」で21点が完成していた場合を『ブラックジャック』といい、
                         <br>
-                        &ensp;&ensp;『ブラックジャック』といい、片方のみの場合その時点で勝ちとなります。
+                        &ensp;&ensp;片方のみの場合その時点で勝ちとなります。
                     </p>
                 </div>
             </div>
@@ -1928,7 +2007,7 @@
                                 </tr>
                                 <tr>
                                     <td style="font-weight: bold;">対応</td>
-                                    <td>チャットGPTを活用し、情報を収集しつつ約15時間試行錯誤を繰り返した。</td>
+                                    <td>ChatGPTを活用し、情報を収集しつつ約15時間試行錯誤を繰り返した。</td>
                                 </tr>
 
                                 <tr>
@@ -1937,7 +2016,7 @@
                                 </tr>
                                 <tr>
                                     <td style="font-weight: bold;">問題</td>
-                                    <td>ローカル環境でのPostgreSQLインストール、接続設定の必要性が発生。職員と同じ状況まで到達</td>
+                                    <td>ローカル環境でのPostgreSQLインストール、接続設定の必要性が発生。職員と同じ状況まで到達。</td>
                                 </tr>
                                 <tr>
                                     <td style="font-weight: bold;">試行</td>
@@ -1977,7 +2056,7 @@
                             <tbody>
                                 <tr>
                                     <td style="font-weight: bold;">試行内容</td>
-                                    <td>外部の実習で使用したRocky Linuxを活用し、Linux環境にてデプロイに挑戦しました。</td>
+                                    <td>外部の実習で使用したRocky Linuxを活用し、Linux環境にてデプロイに挑戦。</td>
                                 </tr>
                                 <tr>
                                     <td style="font-weight: bold;">環境構築</td>
@@ -1989,7 +2068,7 @@
                                 </tr>
                                 <tr>
                                     <td style="font-weight: bold;">結果</td>
-                                    <td>工夫を重ねた結果、Linux環境でも無事デプロイに成功しました。</td>
+                                    <td>工夫を重ねた結果、Linux環境でも無事デプロイに成功。</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2005,141 +2084,163 @@
 @section('scripts')
 <script>
     const app = Vue.createApp({
-    data() {
-      return {
-        isVisible: false, // 初期状態では要素は非表示（アニメーション前）
-        isBtn: false, // おまけボタン
-        isbar: false, // 初期状態は非表示
-        isSidebar: true, // サイドバーの表示・非表示を管理
-        menu: {
-          jisyu: false,
-          php: false,
-          java: false,
+        data() {
+            return {
+                isVisible: false, // 初期状態では要素は非表示（アニメーション前）
+                isBtn: false, // おまけボタン
+                isbar: false, // 初期状態は非表示
+                isSidebar: true, // サイドバーの表示・非表示を管理
+                menu: {
+                    jisyu: false,
+                    php: false,
+                    java: false,
+                },
+                phrases: [
+                    "(´・ω・`)そんなー.;:…(´・ω...:.;::..(´・;::: .:.;: ｻﾗｻﾗ..",
+                ],
+                clickCount: 0,
+                displayText: "(´・ω・｀)らんらん♪",
+                showA: false, // ★トラックアイコンを表示するかどうかを管理
+            };
         },
-        phrases: [
-          "(´・ω・`)そんなー.;:…(´・ω...:.;::..(´・;::: .:.;: ｻﾗｻﾗ..",
-        ],
-        clickCount: 0,
-        displayText: "(´・ω・｀)らんらん♪",
-        showA: false, // ★トラックアイコンを表示するかどうかを管理
-      };
-    },
-    mounted() {
-      // ページがロードされたときにスクロールイベントを監視開始
-      window.addEventListener('scroll', this.checkVisibility); // スクロール時に`checkVisibility`メソッドを呼び出す
-      this.checkVisibility(); // 初期ロード時にも`checkVisibility`メソッドを呼び出し、現在の要素の位置を確認
-    },
-    unmounted() {
-      // コンポーネントが破棄されるときにスクロールイベントの監視を解除
-      window.removeEventListener('scroll', this.checkVisibility); // スクロールイベントの監視を解除
-    },
-    watch: {
-      // `isVisible`の値が変わったときに、アニメーションのクラスを切り替える
-      isVisible(newVal) {
-        const element = this.$refs.animatedElement; // アニメーション対象の要素（`ref`で指定した要素）
-        if (newVal) {
-          // `isVisible`が`true`になった（要素がビューポート内に入った）場合
-          element.classList.add('in-view'); // `in-view`クラスを追加してアニメーションを開始
-          element.classList.remove('landed'); // もし`landed`クラスが追加されていれば、それを削除（着地後にスライドが再度発生しないように）
-        } else {
-          // `isVisible`が`false`になった（要素がビューポート外に出た）場合
-          element.classList.add('landed'); // `landed`クラスを追加して、着地後のアニメーションを終了
-          element.classList.remove('in-view'); // `in-view`クラスを削除して、スライドアニメーションを停止
-        }
-      }
-    },
-    methods: {
-      tbar() {
-        this.isbar = true; // サイドメニューを表示
-      },
-      cbar() {
-        this.isbar = false; // サイドメニューを非表示
-      },
-      toggleSubMenu(selectedMenu) {
-        // クリックされたメニューがすでに開いているかを確認
-        const isOpen = this.menu[selectedMenu];
+        mounted() {
+            // ページがロードされたときにスクロールイベントを監視開始
+            window.addEventListener('scroll', this.checkVisibility); // スクロール時に`checkVisibility`メソッドを呼び出す
+            this.checkVisibility(); // 初期ロード時にも`checkVisibility`メソッドを呼び出し、現在の要素の位置を確認
+        },
+        unmounted() {
+            // コンポーネントが破棄されるときにスクロールイベントの監視を解除
+            window.removeEventListener('scroll', this.checkVisibility); // スクロールイベントの監視を解除
+        },
+        watch: {
+            // `isVisible`の値が変わったときに、アニメーションのクラスを切り替える
+            isVisible(newVal) {
+                const element = this.$refs.animatedElement; // アニメーション対象の要素（`ref`で指定した要素）
+                if (newVal) {
+                    // `isVisible`が`true`になった（要素がビューポート内に入った）場合
+                    element.classList.add('in-view'); // `in-view`クラスを追加してアニメーションを開始
+                    element.classList.remove('landed'); // もし`landed`クラスが追加されていれば、それを削除（着地後にスライドが再度発生しないように）
+                } else {
+                    // `isVisible`が`false`になった（要素がビューポート外に出た）場合
+                    element.classList.add('landed'); // `landed`クラスを追加して、着地後のアニメーションを終了
+                    element.classList.remove('in-view'); // `in-view`クラスを削除して、スライドアニメーションを停止
+                }
+            }
+        },
+        methods: {
+            tbar() {
+                this.isbar = true; // サイドメニューを表示
+            },
+            cbar() {
+                this.isbar = false; // サイドメニューを非表示
+            },
+            toggleSubMenu(selectedMenu) {
+                // クリックされたメニューがすでに開いているかを確認
+                const isOpen = this.menu[selectedMenu];
 
-        // すべてのメニューを一度falseにする
-        for (const key in this.menu) {
-          this.menu[key] = false;
-        }
+                // すべてのメニューを一度falseにする
+                for (const key in this.menu) {
+                    this.menu[key] = false;
+                }
 
-        // クリックされたメニューが「閉じる」状態なら開く（trueにする）
-        if (!isOpen) {
-          // クリックされたメニューだけをトグル（trueにする）
-          this.menu[selectedMenu] = true;
-        }
-      },
-      toggleSubMenu2(selectedMenu) {
-        // すべてのメニューをfalseにする
-        for (const key in this.menu) {
-          this.menu[key] = false;
-        }
-      },
-      showHelpModal1() {
-        const modal = new bootstrap.Modal(document.getElementById('helpModal1'));
-        modal.show();
-      },
-      showHelpModal2() {
-        const modal = new bootstrap.Modal(document.getElementById('helpModal2'));
-        modal.show();
-      },
-      showHelpModal3() {
-        const modal = new bootstrap.Modal(document.getElementById('helpModal3'));
-        modal.show();
-      },
-      toggleSidebar() {
-        // サイドメニューの表示、非表示を変更する
-        this.isSidebar = !this.isSidebar;
-      },
-      handle() {
-        this.isBtn = true;
-      },
-      handleClick() {
-        if (this.clickCount % 2 === 0) {
-          const newPhrase = this.phrases[0];
-          this.displayText = "";
-          this.showA = false; // クリックのたびに「トラック」を非表示にする
-          this.$refs.sandEffect.innerHTML = ""; // 砂効果の要素をリセット
+                // クリックされたメニューが「閉じる」状態なら開く（trueにする）
+                if (!isOpen) {
+                    // クリックされたメニューだけをトグル（trueにする）
+                    this.menu[selectedMenu] = true;
+                }
 
-          this.$nextTick(() => {
-            newPhrase.split("").forEach((char, i) => {
-              const span = document.createElement("span");
-              span.textContent = char;
-              span.style.animationDelay = `${i * 0.1}s`; // 0.1秒ずつずらす
-              span.style.animation = `disappear 1s forwards ${i * 0.1 + 0.1}s`; // 0.1秒後に消える
+                this.isbar = false; // スマホ画面でサイドメニューを非表示
+            },
+            toggleSubMenu2(selectedMenu) {
+                // すべてのメニューをfalseにする
+                for (const key in this.menu) {
+                    this.menu[key] = false;
+                }
 
-              // ★ これがポイント！最後の文字だけanimationendを監視する
-              if (i === newPhrase.length - 1) {
-                span.addEventListener('animationend', () => {
-                  this.showA = true; // 最後の文字のアニメーションが終了したら「トラック」を表示
-                });
-              }
+                this.isbar = false; // スマホ画面でサイドメニューを非表示
+            },
+            toggleSubMenu3() {
+                this.isbar = false; // スマホ画面でサイドメニューを非表示
+            },
+            toggleSubMenu4(selectedMenu) {// スマホ用
+                // クリックされたメニューがすでに開いているかを確認
+                const isOpen = this.menu[selectedMenu];
 
-              this.$refs.sandEffect.appendChild(span);
-            });
-          });
-        } else {
-          this.displayText = "(´・ω・｀)らんらん♪";
-          this.$refs.sandEffect.innerHTML = ""; // 砂効果をリセット
-          this.showA = false; // 「トラック」を非表示にする
+                // すべてのメニューを一度falseにする
+                for (const key in this.menu) {
+                    this.menu[key] = false;
+                }
+
+                // クリックされたメニューが「閉じる」状態なら開く（trueにする）
+                if (!isOpen) {
+                    // クリックされたメニューだけをトグル（trueにする）
+                    this.menu[selectedMenu] = true;
+                }
+            },
+            showHelpModal1() {
+                const modal = new bootstrap.Modal(document.getElementById('helpModal1'));
+                modal.show();
+            },
+            showHelpModal2() {
+                const modal = new bootstrap.Modal(document.getElementById('helpModal2'));
+                modal.show();
+            },
+            showHelpModal3() {
+                const modal = new bootstrap.Modal(document.getElementById('helpModal3'));
+                modal.show();
+            },
+            toggleSidebar() {
+                // サイドメニューの表示、非表示を変更する
+                this.isSidebar = !this.isSidebar;
+            },
+            handle() {
+                this.isBtn = true;
+            },
+            handleClick() {
+                if (this.clickCount % 2 === 0) {
+                    const newPhrase = this.phrases[0];
+                    this.displayText = "";
+                    this.showA = false; // クリックのたびに「トラック」を非表示にする
+                    this.$refs.sandEffect.innerHTML = ""; // 砂効果の要素をリセット
+
+                    this.$nextTick(() => {
+                        newPhrase.split("").forEach((char, i) => {
+                            const span = document.createElement("span");
+                            span.textContent = char;
+                            span.style.animationDelay = `${i * 0.1}s`; // 0.1秒ずつずらす
+                            span.style.animation = `disappear 1s forwards ${i * 0.1 + 0.1}s`; // 0.1秒後に消える
+
+                            // ★ これがポイント！最後の文字だけanimationendを監視する
+                            if (i === newPhrase.length - 1) {
+                                span.addEventListener('animationend', () => {
+                                    this.showA = true; // 最後の文字のアニメーションが終了したら「トラック」を表示
+                                });
+                            }
+
+                            this.$refs.sandEffect.appendChild(span);
+                        });
+                    });
+                } else {
+                    this.displayText = "(´・ω・｀)らんらん♪";
+                    this.$refs.sandEffect.innerHTML = ""; // 砂効果をリセット
+                    this.showA = false; // 「トラック」を非表示にする
+                }
+                this.clickCount++;
+            },
+            checkVisibility() {
+                const element = this.$refs.animatedElement; // アニメーション対象の要素（`ref`で指定した要素）
+                const rect = element.getBoundingClientRect(); // 要素の位置を取得。これにより、ビューポートに対する位置（上端、下端など）を取得できます。
+
+                // 要素がビューポート内に表示されている場合にアニメーションを開始
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    // 要素の上端が画面内に入った、または下端が画面内に入った場合
+                    this.isVisible = true; // 要素がビューポート内に入ったので`isVisible`を`true`に設定
+                } else {
+                    // 要素がビューポート外に出た場合
+                    this.isVisible = false; // 要素がビューポート外に出たので`isVisible`を`false`に設定
+                }
+            }
         }
-        this.clickCount++;
-      },
-      checkVisibility() {
-        const element = this.$refs.animatedElement; // アニメーション対象の要素（`ref`で指定した要素）
-        const rect = element.getBoundingClientRect(); // 要素の位置を取得。これにより、ビューポートに対する位置（上端、下端など）を取得できます。
-
-        // 要素がビューポート内に表示されている場合にアニメーションを開始
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          // 要素の上端が画面内に入った、または下端が画面内に入った場合
-          this.isVisible = true; // 要素がビューポート内に入ったので`isVisible`を`true`に設定
-        } else {
-          // 要素がビューポート外に出た場合
-          this.isVisible = false; // 要素がビューポート外に出たので`isVisible`を`false`に設定
-        }
-      }
-    }
-  }).mount('#app');
+    }).mount('#app');
 </script>
 @endsection

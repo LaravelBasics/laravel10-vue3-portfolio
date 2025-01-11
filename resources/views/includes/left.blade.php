@@ -17,7 +17,7 @@
     </div>
 
     <div style="padding: 0.5rem 0rem 0.5rem 0.85rem;">
-        <span class="p2" style="color: #007BFF;">青字</span>をクリックすると詳細へ
+        <span class="p2" style="color: #007BFF; text-decoration: underline;">青字</span>をクリックすると詳細へ
     </div>
 
     <button @click="toggleSidebar" class="btn r-box2" style="text-align: left;">サイドバーを切り替え
