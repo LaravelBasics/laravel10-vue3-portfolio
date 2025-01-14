@@ -924,17 +924,17 @@
             &ensp;5月20日&ensp;〜&ensp;6月24日: Laravel基礎（PHPのフレームワーク）
             <br>
             &ensp;6月25日&ensp;〜&ensp;7月&ensp;4日:
-            <strong>①</strong>
+            <strong style="color: #007BFF;">①</strong>
             <a href="#section6" target="_blank">メルカリ風フリマアプリ</a>制作、
             <i class="fa-solid fa-file-excel" style="color: #217346;"></i> 企業案件Excelデータ入力(一日目10件、二日目20件)
             <br>
             &ensp;7月&ensp;8日&ensp;〜&ensp;7月24日:
-            <strong>②</strong>
+            <strong style="color: #007BFF;">②</strong>
             <a href="#section7" target="_blank">SNS風アプリ</a>制作、
             PC4台キッティング作業
             <br>
             &ensp;7月26日&ensp;〜&ensp;7月31日: 職員が作成した基本設計書をもとに、
-            <strong>③</strong>
+            <strong style="color: #007BFF;">③</strong>
             <a href="#section8" target="_blank">本管理アプリ</a>の機能変更、追加。
             <i class="fab fa-react" style="color: #61DBFB;"></i>React学習
             <br>
@@ -954,7 +954,7 @@
         <p class="gray-bg">
             &ensp;8月19日&ensp;〜&ensp;9月19日: 企業実習（株式会社リテラル）
             <br>
-            &ensp;9月24日&ensp;〜&ensp;9月27日: 実習のコードを改修に挑戦。<strong>④</strong>
+            &ensp;9月24日&ensp;〜&ensp;9月27日: 実習のコードを改修に挑戦。<strong style="color: #007BFF;">④</strong>
             <a href="#section9" target="_blank">顧客管理システムを改修したアプリ</a>、
             <i class="fa-solid fa-file-excel" style="color: #217346;"></i> Excel企業案件データ入力(約10件)
             <br>
@@ -962,7 +962,7 @@
             <br>
             10月&ensp;1日&ensp;〜10月&ensp;7日: 実習に備えて、事前にLinux学習（Ubuntu、LAMP構築）
             <br>
-            10月&ensp;8日&ensp;〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、<strong>⑤</strong>
+            10月&ensp;8日&ensp;〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、<strong style="color: #007BFF;">⑤</strong>
             <a href="#section10" target="_blank">お問い合わせフォームアプリ</a>制作
             <br>
             10月11日&ensp;〜10月16日: 実習の復習
@@ -975,10 +975,10 @@
         </h5>
 
         <p class="gray-bg">
-            10月17日&ensp;〜10月19日: 職員が制作中の教材をデバッグ。Docker学習。<strong>⑥</strong>
+            10月17日&ensp;〜10月19日: 職員が制作中の教材をデバッグ。Docker学習。<strong style="color: #007BFF;">⑥</strong>
             <span @click="showHelpModal1" class="custom-link"> 試験的にアプリをネット上に公開する取り組み</span>。成功したので職員へフィードバック
             <br>
-            10月19日&ensp;〜10月29日: ポートフォリオ制作開始、<strong>①～⑥</strong>デプロイの検証
+            10月19日&ensp;〜10月29日: ポートフォリオ制作開始、<strong style="color: #007BFF;">①</strong>～<strong style="color: #007BFF;">⑥</strong>デプロイの検証
         </p>
 
         <div class="double-space2"></div>
@@ -990,9 +990,9 @@
         <p class="gray-bg">
             10月29日&ensp;〜<span style="display: inline-block; width: 1.175rem;"></span>月<span style="display: inline-block; width: 1.125rem;"></span>日: 就職活動開始、ポートフォリオ随時更新（公開日 2024/10/29）
             <br>
-            11月&ensp;1日&ensp;〜11月&ensp;7日: <strong>②</strong>SNS風アプリの見直し、Vue.jsが本番で正常に動作するよう改善
+            11月&ensp;1日&ensp;〜11月&ensp;7日: <strong style="color: #007BFF;">②</strong>SNS風アプリの見直し、Vue.jsが本番で正常に動作するよう改善
             <br>
-            11月&ensp;8日&ensp;〜11月20日: <strong>①</strong>メルカリ風フリマアプリの見直し、デプロイ後に画像処理が動作するよう仕様を変更
+            11月&ensp;8日&ensp;〜11月20日: <strong style="color: #007BFF;">①</strong>メルカリ風フリマアプリの見直し、デプロイ後に画像処理が動作するよう仕様を変更
             <br>
             11月21日&ensp;〜12月10日: ポートフォリオにJava追加
             <br>
