@@ -33,18 +33,18 @@
     <a class="nav-link r-box" href="/#section4" @click="toggleSubMenu2('close')">【学習履歴】</a>
 
     <a class="nav-link r-box" href="/#section5" @click="toggleSubMenu('jisyu')">【企業実習】
-        <span class="float-end">
+        <!-- <span class="float-end">
             <i v-if="!menu.jisyu" class="fas fa-chevron-right"></i>
             <i v-else class="fas fa-chevron-down"></i>
-        </span>
+        </span> -->
     </a>
 
-    <div v-if="menu.jisyu">
+    <!-- <div v-if="menu.jisyu">
         <a class="nav-link ms-0 ms-2 r-b2" href="/#section9">顧客管理システム改修</a>
         <a class="nav-link ms-0 ms-2 r-b2" href="/#section10">お問い合わせフォーム</a>
-    </div>
+    </div> -->
 
-    <a class="nav-link r-box" href="/#section1" @click="toggleSubMenu('php')">【PHP制作実績】
+    <a class="nav-link r-box" @click="toggleSubMenu('php')">【PHP制作実績】
         <span class="float-end">
             <i v-if="!menu.php" class="fas fa-chevron-right"></i>
             <i v-else class="fas fa-chevron-down"></i>
@@ -52,20 +52,21 @@
     </a>
 
     <div v-if="menu.php">
-        <a class="nav-link ms-0 ms-2 r-b2" href="/#section6">メルカリ風フリマアプリ</a>
+        <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section6">メルカリ風フリマアプリ</a>
         <a class="nav-link ms-0 ms-2 r-b2" href="/#section7">SNS風アプリ</a>
-        <a class="nav-link ms-0 ms-2 r-b2" href="/#section8">本管理アプリ</a>
+        <a class="nav-link ms-0 ms-2 r-b2" href="/#section8">本管理アプリ</a> -->
+        <a class="nav-link ms-0 ms-2 r-b2" href="/#section15">備品管理アプリ</a>
     </div>
 
-    <a class="nav-link r-box" href="/#section2" @click="toggleSubMenu('java')">【Java制作実績】
+    <!-- <a class="nav-link r-box" href="/#section2" @click="toggleSubMenu('java')">【Java制作実績】
         <span class="float-end">
             <i v-if="!menu.java" class="fas fa-chevron-right"></i>
             <i v-else class="fas fa-chevron-down"></i>
         </span>
-    </a>
+    </a> -->
 
-    <div v-if="menu.java">
-        <a class="nav-link ms-0 ms-2 r-b2" href="/#section13">青森鹿児島問題</a>
-        <a class="nav-link ms-0 ms-2 r-b2" href="/#section14">ブラックジャック</a>
-    </div>
+    <!-- <div v-if="menu.java"> -->
+        <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section13">青森鹿児島問題</a> -->
+        <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section14">ブラックジャック</a>
+    </div> -->
 </nav>

@@ -24,6 +24,8 @@
         /* 各段落の下に適度なスペースを追加 */
         text-decoration: underline;
         /* デフォルトのリンクスタイルのように下線を引く */
+        cursor: pointer;
+        /* ホバー時にポインターを表示 */
     }
 
     /* ホバー時に下線の色を変更 */
@@ -809,7 +811,7 @@
             <p class="gray-bg">
                 <strong>プログラミング言語:</strong> Java, PHP, HTML, CSS, JavaScript
                 <br>
-                <strong>フレームワーク:</strong> Laravel 6 / 10 / 11, Vue.js 3.4, Bootstrap 5.3
+                <strong>フレームワーク:</strong> Laravel 6 / 10 / 11 / 12, Vue.js 3.4, Bootstrap 5.3
                 <br>
                 <strong>データベース:</strong> MySQL, PostgreSQL
                 <br>
@@ -883,9 +885,13 @@
         </h5>
 
         <p class="gray-bg">
-            10月&ensp;1日&ensp;〜&ensp;1月19日: Java基礎、アルゴリズム、2次元配列、例外処理、ファイル入出力など（約4ヶ月）
+            10月&ensp;1日&ensp;〜&ensp;1月19日: Java基礎、アルゴリズム、
+            <span @click="showHelpModal2" class="custom-link">二次元配列</span>
+            、例外処理、ファイル入出力など（約4ヶ月）
             <br>
-            &ensp;1月22日&ensp;〜&ensp;2月13日: エクリプス上で動くブラック・ジャックを制作（約3週間）
+            &ensp;1月22日&ensp;〜&ensp;2月13日: エクリプス上で動く
+            <span @click="showHelpModal3" class="custom-link">ブラック・ジャック</span>
+            を制作（約3週間）
         </p>
 
         <div class="double-space2"></div>
@@ -925,17 +931,19 @@
             <br>
             &ensp;6月25日&ensp;〜&ensp;7月&ensp;4日:
             <strong style="color: #007BFF;">①</strong>
-            <a href="#section6" target="_blank">メルカリ風フリマアプリ</a>制作、
+            <span @click="showModal1" class="custom-link">メルカリ風フリマアプリ</span>制作、
             <i class="fa-solid fa-file-excel" style="color: #217346;"></i> 企業案件Excelデータ入力(一日目10件、二日目20件)
             <br>
             &ensp;7月&ensp;8日&ensp;〜&ensp;7月24日:
             <strong style="color: #007BFF;">②</strong>
-            <a href="#section7" target="_blank">SNS風アプリ</a>制作、
+            <span @click="showModal2" class="custom-link">SNS風アプリ</span>
+            制作、
             PC4台キッティング作業
             <br>
             &ensp;7月26日&ensp;〜&ensp;7月31日: 職員が作成した基本設計書をもとに、
             <strong style="color: #007BFF;">③</strong>
-            <a href="#section8" target="_blank">本管理アプリ</a>の機能変更、追加。
+            <span @click="showModal3" class="custom-link">本管理アプリ</span>
+            の機能変更、追加。
             <i class="fab fa-react" style="color: #61DBFB;"></i>React学習
             <br>
             &ensp;7月31日&ensp;〜&ensp;8月&ensp;5日: JavaScript、Git、HTML&CSS
@@ -955,15 +963,15 @@
             &ensp;8月19日&ensp;〜&ensp;9月19日: 企業実習（株式会社リテラル）
             <br>
             &ensp;9月24日&ensp;〜&ensp;9月27日: 実習のコードを改修に挑戦。<strong style="color: #007BFF;">④</strong>
-            <a href="#section9" target="_blank">顧客管理システムを改修したアプリ</a>、
-            <i class="fa-solid fa-file-excel" style="color: #217346;"></i> Excel企業案件データ入力(約10件)
+            <span @click="showModal4" class="custom-link">顧客管理システムを改修したアプリ</span>、
+            <i class="fa-solid fa-file-excel" style="color: #217346;"></i> Excel企業案件データ入力(8件)
             <br>
             &ensp;9月28日&ensp;〜&ensp;9月30日: jQuery
             <br>
             10月&ensp;1日&ensp;〜10月&ensp;7日: 実習に備えて、事前にLinux学習（Ubuntu、LAMP構築）
             <br>
             10月&ensp;8日&ensp;〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、<strong style="color: #007BFF;">⑤</strong>
-            <a href="#section10" target="_blank">お問い合わせフォームアプリ</a>制作
+            <span @click="showModal5" class="custom-link">お問い合わせフォームアプリ</span>制作
             <br>
             10月11日&ensp;〜10月16日: 実習の復習
         </p>
@@ -994,10 +1002,16 @@
             <br>
             11月&ensp;8日&ensp;〜11月20日: <strong style="color: #007BFF;">①</strong>メルカリ風フリマアプリの見直し、デプロイ後に画像処理が動作するよう仕様を変更
             <br>
-            11月21日&ensp;〜12月10日: ポートフォリオにJava追加
+            11月21日&ensp;〜12月10日: ポートフォリオにモーダルを追加
             <br>
             12月11日&ensp;〜<span style="display: inline-block; width: 1.185rem;"></span>月<span style="display: inline-block; width: 1.185rem;"></span>日:
             職員からフィードバックを受けて、ポートフォリオのレイアウトを見やすさ重視に一新
+            <br>
+            &ensp;3月10日&ensp;〜&ensp;3月20日: Laravel 12 + Vue.js 3を使用して
+            <strong style="color: #007BFF;">⑦</strong>
+            <span @click="showModal6" class="custom-link">備品管理アプリ</span>
+            を開発
+            <br>
         </p>
     </div>
 
@@ -1040,108 +1054,13 @@
             <br>
             CSS（相対位置、絶対位置の違い）、データベース、コードの可読性などは更なる学習が必要と感じました。
             <br>
-            後述する顧客管理システムを改修したアプリ制作で学習を深めました。
+            <span @click="showModal4" class="custom-link">顧客管理システムを改修したアプリ</span>制作で学習を深めました。
         </p>
     </div>
 
     <div class="double-space"></div>
 
-    <div class="rounded-box" id="section9">
-        <div>
-            <div class="d-m-t"></div>
-
-            <h3>
-                <strong style="margin-right: 5rem;">
-                    <i class="fa-solid fa-users" style="color: #2ecc71;"></i> 顧客管理システムを改修したアプリ
-                </strong>
-            </h3>
-        </div>
-
-        <div class="double-space"></div>
-
-        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
-            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
-        </strong>
-
-        <span style="margin-right: 5rem;"></span>
-
-        <a href="https://laravel10-vue3-client-manager.vercel.app/learning-days" target="_blank"
-            style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> アプリの画面
-        </a>
-
-        <span style="margin-right: 5rem;"></span>
-
-        <a href="https://github.com/LaravelBasics/Laravel10_Vue3_ClientManager/tree/master" target="_blank"
-            style="font-size: 1.5rem;">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            このアプリは、企業実習で制作した顧客管理システムのコードを基に、プログラミング学習のデータ管理システム制作に挑戦したものです。
-            <br>
-            社外秘の情報が含まれているため、学習のためにコードを参考にして問題ないか、職員に確認を取った上で取り組みました。
-            <br>
-            検索の一例:&ensp;「学習した日数一覧」画面に移動後、プログラミング言語を選択し、
-            <br>
-            教材をクリックすると、プログラミング言語に紐づいた教材が取得されます（取得するまでにタイムラグがあります）。
-            <br>
-            <strong class="yellow" style="font-weight: bold;">※検索ボタンを空のままクリックすると、データベースから全件取得されます。</strong>
-            <br>
-            左側のサイドバー「プログラミング」をクリック ➡ 「学習したプログラミング」から4つの画面にアクセスできます。
-            <br>
-            実習で使用していたサイドバー部分は「A-1」などの表記に変更しています。
-            <br>
-            登録、編集、削除、バリデーション（入力されたデータが正しいかどうかをチェックする仕組み）や、
-            <br>
-            ソート（昇順・降順）も行えます。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
-        </strong>
-        <span class="p2">&ensp;&ensp;制作期間（1ヶ月）+&ensp;改修期間（1週間）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            実習中に制作した期間が1ヶ月で、その後1週間でコードの改修を行いました。
-            <br>
-            元のシステムにおいて「親会社」を選択した際に関連する「子会社」を表示していた設計箇所を、
-            <br>
-            「プログラミング言語」を選択することで学習に用いた「教材」を、「教材」を選択することで「学習日数」を表示する設計に変更しました。
-            <br>
-            これに伴い、マイグレーションでテーブル名やユニークカラムを変更し、それに応じてモデル、コントローラー、リクエストクラス、ブレードなどを修正しました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
-        </strong>
-        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            CDNを使用していたため、Vue.jsやBootstrapの動作も問題なくスムーズにデプロイできました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
-        </strong>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">Windows, Laravel 10, CDN Vuejs 3.3, Bootstrap 5.3</p>
-
-    </div>
+    <!--  -->
 
     <div class="double-space"></div>
 
@@ -1168,7 +1087,8 @@
         <p class="gray-bg">
             課題①バーチャルボックスを使用してローカルにLAMP環境を構築し、Laravel 11をインストール。
             <br>
-            課題②として⑤簡易問い合わせフォームを制作（テスト用にメールトラップで受信を確認しました）。
+            課題②として<strong style="color: #007BFF;">⑤</strong>
+            <span @click="showModal5" class="custom-link">お問い合わせフォームアプリ</span>を制作（テスト用にメールトラップで受信を確認しました）。
             <br>
             実習1週間前に「バーチャルボックスでLAMP環境を構築する」ことのみを伝えられ、Linuxの学習が必要になると判断し、学習に取り組んでから実習に臨みました。
             <br>
@@ -1181,90 +1101,7 @@
 
     <div class="double-space"></div>
 
-    <div class="rounded-box" id="section10">
-        <div>
-            <div class="d-m-t"></div>
-
-            <h3>
-                <strong style="margin-right: 5rem;">
-                    <i class="fa-solid fa-envelope" style="color: #2ecc71;"></i> お問い合わせフォームアプリ
-                </strong>
-            </h3>
-        </div>
-
-        <div class="double-space"></div>
-
-        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
-            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
-        </strong>
-
-        <span style="margin-right: 5rem;"></span>
-
-        <a href="https://laravel11-contact-form.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> アプリの画面
-        </a>
-
-        <span style="margin-right: 5rem;"></span>
-
-        <a href="https://github.com/LaravelBasics/Laravel11_ContactForm/tree/master" target="_blank"
-            style="font-size: 1.5rem;">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            このアプリでは、必須項目を入力し、「個人情報の取り扱いに同意する」にチェックを入れて、
-            <br>
-            確認ボタンを押すと内容確認画面が表示されます。
-            <br>
-            その後、送信ボタンを押すと、管理者にはそのメールが、送信者には送信完了を知らせるメールが送られます。
-            <br>
-            送信後の送信者画面は、サンクス画面に移行します。「トップページに戻る」をクリックすると最初の画面に戻ります。
-            <br>
-            web画面は最低限の機能のみを実装しています。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
-        </strong>
-        <span class="p2">&ensp;&ensp;制作期間（3～4時間）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            外部実習で制作したアプリ。フロントエンドは最低限の機能（バリデーション、送信時に同意するチェックボックスなど）で実装しました。
-            <br>
-            テスト用にメールトラップで管理者側および送信者側のメール受信を確認しました。
-            <br>
-            実習当時の最新バージョンであるLaravel 11に初めて触ったので、管理者・送信者に対してメールを送信するロジックの構築や、自分1人で動作確認を行うことなどが難しかったです。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
-        </strong>
-        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            デプロイ後も動作するのか気になったため挑戦し、無事にメールトラップで受信できました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
-        </strong>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">バーチャルボックス, LAMP(RockyLinux9.4, apache 2.4, MySQL 8.0, PHP8.2), Laravel 11</p>
-    </div>
+    <!--  -->
 
     <div class="double-space4"></div>
 
@@ -1277,19 +1114,18 @@
 
         <h5>
             <i class="fa-solid fa-sync-alt" style="color: #ffce47;"></i>
-            <strong class="p3"> サーバーレス環境で稼働中のPHPアプリ（Vercel + Laravel + PostgreSQL）</strong>
-
+            <strong class="p3">
+                稼働中のPHPアプリはインターネット上に公開中です。無料プランのため通信速度が遅くなることがあります。
+            </strong>
             <br>
 
             <span class="p-l"></span>
-
-            <span class="m-t">インターネット上に公開中です。無料プランのため通信速度など遅くなることがあります。予めご了承ください。</span>
-
+            <span class="m-t">
+                サーバー: Vercel | データベース: Neon (PostgreSQL) | バックエンド: Laravel | フロントエンド: Vue.js | UIライブラリ: Bootstrap
+            </span>
             <br>
 
             <span class="p-l"></span>
-
-
             <span class="p3" style="font-weight: bold; font-size: 1rem; padding-left: 0.2rem;">
                 ※Vercelの無料プランではリソース制限により、画像処理で504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。
             </span>
@@ -1302,115 +1138,13 @@
 
     <div class="space2"></div>
 
-    <div class="rounded-box" id="section6">
+    <div class="rounded-box" id="section15">
         <div>
             <div class="d-m-t"></div>
 
             <h3>
                 <strong style="margin-right: 5rem;">
-                    <i class="fa-solid fa-shopping-cart" style="color: #2ecc71;"></i> メルカリ風フリマアプリ
-                </strong>
-            </h3>
-        </div>
-
-        <div class="double-space"></div>
-
-        <div>
-            <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
-                <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
-            </strong>
-
-            <span style="margin-right: 5rem;"></span>
-
-            <a href="https://laravel6-flea-market.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-                <i class="fa-solid fa-desktop"></i> アプリの画面
-            </a>
-
-            <span style="margin-right: 5rem;"></span>
-
-            <a href="https://github.com/LaravelBasics/Laravel6_FleaMarket/tree/main" target="_blank"
-                style="font-size: 1.5rem;">
-                <i class="fa-brands fa-github"></i> GitHub
-            </a>
-        </div>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            このアプリは、商品の出品・購入を管理できるフリマアプリです。
-            <br>
-            出品中の商品は検索可能で、購入済みの商品には「SOLD」のタグが表示されます。
-            <br>
-            メールアドレスとパスワードでログイン後、画面右上の▼アイコンからユーザーメニューにアクセスできます。
-            <br>
-            ユーザーのプロフィール（名前や画像）は編集可能です。
-            <br>
-            トップページには、画面左上のMelpitアイコンをクリックして移動できます。
-            <br>
-            画像のアップロードはPCのエクスプローラーから直接選択可能です。（詳細は「デプロイ」に記載）
-        </p>
-
-        <div class="double-space2"></div>
-
-        <!-- 反省・評価アイコン -->
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
-        </strong>
-        <span class="p2">&ensp;&ensp;制作期間（3週間）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            教材の環境と異なるためエラー対応や、Laravel 6でLaravel 7の機能再現に挑戦しました。
-            <br>
-            クレジットカード決済（PAY.JP）、Mailtrap.ioによるメール送受信、
-            <br>
-            画像の保存処理にJavaScriptを利用するなど、基礎を学びつつエラー解決に取り組みました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
-        </strong>
-        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            Windowsで制作したプロジェクト①をLinuxにコピーし、Laravel 6を使用して、デプロイに挑戦しました。
-            <br>
-            画像処理を除く機能は正常に動作しましたが、Vercelのサーバーレス環境ではPHPのライブラリが制限されており、
-            <br>
-            ユーザーがPCから選択した画像を直接保存して表示する機能が実現できませんでした。
-            <br>
-            そのため、事前にローカルでpublic/imagesに画像を保存し、デプロイ後に保存された画像を表示するように仕様を変更しました。
-            <br>
-            これにより、一時的に画像処理の機能が動作するようになりました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
-        </strong>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            Windows, Laravel 6, JavaScript, MySQL（教材の環境: Windows, Laravel 7, Docker, JavaScript, MySQL）
-        </p>
-    </div>
-
-    <div class="double-space"></div>
-
-    <div class="rounded-box" id="section7">
-        <div>
-            <div class="d-m-t"></div>
-
-            <h3>
-                <strong style="margin-right: 5rem;">
-                    <i class="fa-solid fa-comment-dots" style="color: #2ecc71;"></i> SNS風アプリ
+                    <i class="fa-solid fa-clipboard-list" style="color: #2ecc71;"></i> 備品管理アプリ
                 </strong>
             </h3>
         </div>
@@ -1423,191 +1157,40 @@
 
         <span style="margin-right: 5rem;"></span>
 
-        <a href="https://laravel6-sns.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i>
-            アプリの画面
-        </a>
-
-        <span style="margin-right: 5rem;"></span>
-
-        <a href="https://github.com/LaravelBasics/Laravel6_SNS" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            このSNS風アプリでは、記事の投稿・編集や簡易的なリアクション機能「<i class="fas fa-heart" style="color: red;"></i>」、ユーザーフォローが行えます。
-            <br>
-            メールアドレスとパスワードでログイン後、左上の「Memo」からトップページへ移動可能。
-            <br>
-            右上の「投稿する」ボタンで新規投稿ができ、投稿済みの記事は「︙」から編集が行えます。
-            <br>
-            <span class="tag">#タグ</span>
-            をクリックすると同じタグの記事を検索でき、ユーザー名を押すとそのユーザーのページへ移動。
-            <br>
-            ユーザーページでは、そのユーザーの投稿が閲覧でき、フォロー／フォロー解除が行えます。
-            <br>
-            「<i class="fas fa-heart" style="color: #808080;"></i>」をクリックすると「<i class="fas fa-heart"
-                style="color: red;"></i>」に変化します。
-            <br>
-            この状態が投稿記事に対してリアクションが付いている状態です。
-            <br>
-            「<i class="fas fa-heart" style="color: red;"></i>」をクリックするとリアクションが解除され、「<i class="fas fa-heart"
-                style="color: #808080;"></i>」
-            になります。
-            <br>
-            ※無料プランのため、「<i class="fas fa-heart" style="color: #808080;"></i>」⇄「<i class="fas fa-heart"
-                style="color: red;"></i>」の反映には5～6秒のタイムラグがあります。
-            <br>
-            未ログイン時は一部機能が制限され、ポップアップで案内が表示されます。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
-        </strong>
-        <span class="p2">&ensp;&ensp;制作期間（3週間）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            初めてのVue.jsとLaravelの環境構築に苦戦し、
-            <br>
-            特にnpm依存関係のエラーが発生し、Vue.jsを2から3へバージョンアップした際、Vue.js 2と3で記述方法が異なるため、さらに時間がかかりました。
-            <br>
-            教材通りの機能は実装できたものの、Vueコンポーネントの理解が不十分でした。
-            <br>
-            また、Googleアカウントでのログイン機能の実装も困難でしたが、無事に実現しました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
-        </strong>
-        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            Linux上でLaravel 6を用いたデプロイに挑戦した際、Laravel Mixのmix.jsを使ったVue.js機能が本番環境で動作しないという課題に直面しました。
-            <br>
-            これに対して、npm run productionでビルドを行い、vercel.jsonの設定を見直した後、
-            <br>
-            npx vercel --forceで再度デプロイ、これによりVue.jsが本番で正常に動作するよう改善しました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
-        </strong>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            Windows, Laravel 6, Vue.js 3, MySQL（教材の環境: MacOS, Laravel 6, Docker, Vue.js 2, PostgreSQL）
-        </p>
-    </div>
-
-    <div class="double-space"></div>
-
-    <div class="rounded-box" id="section8">
-        <div>
-            <div class="d-m-t"></div>
-
-            <h3>
-                <strong style="margin-right: 5rem;">
-                    <i class="fa-solid fa-book-open" style="color: #2ecc71;"></i> 本管理アプリ
-                </strong>
-            </h3>
-        </div>
-
-        <div class="double-space"></div>
-
-        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
-            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
-        </strong>
-
-        <span style="margin-right: 5rem;"></span>
-
-        <a href="https://laravel10-books.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+        <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> アプリの画面
         </a>
 
         <span style="margin-right: 5rem;"></span>
 
-        <a href="https://github.com/LaravelBasics/Laravel10_Books" target="_blank" style="font-size: 1.5rem;">
+        <a href="https://github.com/LaravelBasics/lending-system/blob/main/resources/views/lendings/index.blade.php" target="_blank"
+            style="font-size: 1.5rem;">
             <i class="fa-brands fa-github"></i> GitHub
         </a>
 
         <div class="d-m-t2"></div>
 
         <p class="gray-bg">
-            画面右上からメールアドレスとパスワードでログイン後、
+            このアプリは、備品の貸出管理を行うためのアプリです。
             <br>
-            「Books」をクリックすると、本管理ページに移動します。
+            貸し出し時には、名前、品名（例：PC、マウス、傘など）、貸出日が設定できます。
             <br>
-            このページでは、本の登録・編集・削除が可能で、ページネーションにも対応しています。
+            貸出日は自動で今日の日付が設定されますが、変更する場合はボックスをクリックし、カレンダーから選択します。
+            <br>
+            返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
+            <br>
+            名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
+            <br>
+            最新のデータは降順で表示され、ページネーションは一番下に配置されています。
+            <br>
+            チェックボックスを使って未返却のデータのみ検索することが可能で、さらに部分検索（例：2025年や2025-01月など）もサポートしています。
+            <br>
+            データ量の増加に備えて、削除専用ページを設置し、不要なデータを簡単に削除できます。
+            <br>
+            検索結果に基づいたデータをExcel形式でダウンロードできるCSVダウンロードボタンを提供しています。検索条件を反映した結果が降順でエクスポートされます。
         </p>
 
         <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
-        </strong>
-        <span class="p2">&ensp;&ensp;制作期間（1週間）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            就労支援の職員が作成した基本設計書をもとに、本管理アプリの機能変更と追加を行いました。
-            <br>
-            Laravelシーダーのファクトリークラスでダミーデータを生成した際に、ダミーデータを英語から日本語に変更するのに苦戦しました。
-            <br>
-            職員に動作確認をしてもらい機能自体は完成しましたが、Reactの理解が不十分でした。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
-        </strong>
-        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            デプロイ経験を積んでいたので、React（JSXファイル）のデプロイはスムーズに進みました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
-        </strong>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            Windows, Laravel 10, React, 認証パッケージBreeze, PostgreSQL
-        </p>
-    </div>
-
-    <div class="double-space4"></div>
-
-    <h1 class="green-bg" id="section2">【Java制作実績】</h1>
-
-    <div class="space2"></div>
-
-    <div class="rounded-box" id="section13">
-        <h4>
-            <i class="fa-solid fa-layer-group" style="color: #3498db;"></i> <button type="button" class="btn btn-link"
-                @click="showHelpModal2" style="font-size: 1.5rem; position: relative; right: 0.75rem;">青森鹿児島問題（二次元配列）
-            </button>
-        </h4>
 
         <strong style="font-size: 1.2rem;">
             <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
@@ -1617,45 +1200,58 @@
         <div class="d-m-t2"></div>
 
         <p class="gray-bg">
-            問題を【1】から順番に解いたため、コードは問題【4】、研究問題【1】のみです。（不要なコードもあります。テスト用など）
+            就労移行支援の職員から依頼を受け、聞き取りをしながら設計を行いました。
             <br>
-            また、研究問題【1】のコードは実行時間3秒（ひとつのメソッドにまとめ、メソッドを呼ぶ回数を減らすと、2秒でした）
-            <br>
-            研究問題【2】 5 * 5に減らすなどして、コード自体は完成したものの、
-            <br>
-            100 * 100だと、数分待っても処理が終わらないため、実行時間も含めると20 * 20までが限界でした。
-            <br>
-            コードの書き方次第で処理速度が大きく変わるなど、色々と勉強になりました。
+            必要な機能をすべて実装し、使いやすさと見やすさを重視して開発しました。
         </p>
-    </div>
 
-    <div class="double-space"></div>
-
-    <div class="rounded-box" id="section14">
-        <h4>
-            <span style="position: relative; top: 0.25rem;">&#127137; </span>
-            <button type="button" class="btn btn-link" @click="showHelpModal3"
-                style="font-size: 1.5rem; position: relative; right: 0.5rem;">ブラックジャック
-            </button>
-        </h4>
+        <div class="double-space2"></div>
 
         <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
         </strong>
-        <span class="p2">&ensp;&ensp;制作期間（3週間）</span>
+        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
 
         <div class="d-m-t2"></div>
 
         <p class="gray-bg">
-            ゲームの仕様やカード処理の順番（一人用にするか、対戦できるようにするか、カードを引く順番など）を決めて、
+            アプリをネット上に公開する際、Vercelのデータベースはアクセス時に通信速度に制限があり、動作が遅くなることがありました。
             <br>
-            処理の仕方が分からない部分は職員に質問し、何度もデバッグしながら挑戦しました。
-            <br>
-            特に、エース【1】の扱い、勝敗判定の条件式に苦戦しながら、無事に完成しました。
+            そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。
         </p>
+
+        <div class="double-space2"></div>
+
+        <strong style="font-size: 1.2rem;">
+            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+        </strong>
+
+        <div class="d-m-t2"></div>
+
+        <p class="gray-bg">Windows, Laravel 12, CDN Vuejs 3.3, Bootstrap 5.3</p>
     </div>
 
     <div class="double-space"></div>
+
+    <!--  -->
+
+    <!-- <div class="double-space"></div> -->
+
+    <!--  -->
+
+    <!-- <div class="double-space4"></div> -->
+
+    <!-- <h1 class="green-bg" id="section2">【Java制作実績】</h1> -->
+
+    <!-- <div class="space2"></div> -->
+
+    <!--  -->
+
+    <!-- <div class="double-space"></div> -->
+
+    <!--  -->
+
+    <!-- <div class="double-space"></div> -->
 
     <div>
         <div class="d-s"></div>
@@ -1697,7 +1293,7 @@
             <div class="modal-content" style="height: 37.80rem;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="helpModalLabel2">
-                        青森鹿児島問題
+                        <i class="fa-solid fa-layer-group" style="color: #3498db;"></i> 青森鹿児島問題（二次元配列）
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -1821,6 +1417,26 @@
                     <div class="double-space"></div>
 
                 </div>
+                <div class="rounded-box" id="section13">
+                    <strong style="font-size: 1.2rem;">
+                        <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+                    </strong>
+                    <span class="p2">&ensp;&ensp;制作期間（約2週間）</span>
+
+                    <div class="d-m-t2"></div>
+
+                    <p class="gray-bg">
+                        問題を【1】から順番に解いたため、コードは問題【4】、研究問題【1】のみです。（不要なコードもあります。テスト用など）
+                        <br>
+                        また、研究問題【1】のコードは実行時間3秒（ひとつのメソッドにまとめ、メソッドを呼ぶ回数を減らすと、2秒でした）
+                        <br>
+                        研究問題【2】 5 * 5に減らすなどして、コード自体は完成したものの、
+                        <br>
+                        100 * 100だと、数分待っても処理が終わらないため、実行時間も含めると20 * 20までが限界でした。
+                        <br>
+                        コードの書き方次第で処理速度が大きく変わるなど、色々と勉強になりました。
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -1830,7 +1446,7 @@
             <div class="modal-content" style="height: 37.80rem;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="helpModalLabel3">
-                        ブラックジャック
+                        <span style="position: relative; top: 0rem;">&#127137; </span>ブラックジャック
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -1918,6 +1534,22 @@
                         &ensp;&ensp;最初に配られた2枚のカードが「Aと10点札」で21点が完成していた場合を『ブラックジャック』といい、
                         <br>
                         &ensp;&ensp;片方のみの場合その時点で勝ちとなります。
+                    </p>
+                </div>
+                <div class="rounded-box" id="section14">
+                    <strong style="font-size: 1.2rem;">
+                        <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+                    </strong>
+                    <span class="p2">&ensp;&ensp;制作期間（3週間）</span>
+
+                    <div class="d-m-t2"></div>
+
+                    <p class="gray-bg">
+                        ゲームの仕様やカード処理の順番（一人用にするか、対戦できるようにするか、カードを引く順番など）を決めて、
+                        <br>
+                        処理の仕方が分からない部分は職員に質問し、何度もデバッグしながら挑戦しました。
+                        <br>
+                        特に、エース【1】の扱い、勝敗判定の条件式に苦戦しながら、無事に完成しました。
                     </p>
                 </div>
             </div>
@@ -2080,6 +1712,652 @@
             </div>
         </div>
     </div>
+
+    <!-- フリマアプリモーダル -->
+    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 59.05rem;">
+            <div class="modal-content" style="height: 37.80rem;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel1">
+                        <strong style="margin-right: 5rem;">
+                            <i class="fa-solid fa-shopping-cart" style="color: #2ecc71;"></i> メルカリ風フリマアプリ
+                        </strong>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="rounded-box" id="section6">
+                        <!-- <div>
+                            <div class="d-m-t"></div>
+
+                            <h3>
+                                
+                            </h3>
+                        </div>
+
+                        <div class="double-space"></div> -->
+
+                        <div>
+                            <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+                                <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
+                            </strong>
+
+                            <span style="margin-right: 5rem;"></span>
+
+                            <a href="https://laravel6-flea-market.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+                                <i class="fa-solid fa-desktop"></i> アプリの画面
+                            </a>
+
+                            <span style="margin-right: 5rem;"></span>
+
+                            <a href="https://github.com/LaravelBasics/Laravel6_FleaMarket/tree/main" target="_blank"
+                                style="font-size: 1.5rem;">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            このアプリは、商品の出品・購入を管理できるフリマアプリです。
+                            <br>
+                            出品中の商品は検索可能で、購入済みの商品には「SOLD」のタグが表示されます。
+                            <br>
+                            メールアドレスとパスワードでログイン後、画面右上の▼アイコンからユーザーメニューにアクセスできます。
+                            <br>
+                            ユーザーのプロフィール（名前や画像）は編集可能です。
+                            <br>
+                            トップページには、画面左上のMelpitアイコンをクリックして移動できます。
+                            <br>
+                            画像のアップロードはPCのエクスプローラーから直接選択可能です。（詳細は「デプロイ」に記載）
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <!-- 反省・評価アイコン -->
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+                        </strong>
+                        <span class="p2">&ensp;&ensp;制作期間（3週間）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            教材の環境と異なるためエラー対応や、Laravel 6でLaravel 7の機能再現に挑戦しました。
+                            <br>
+                            クレジットカード決済（PAY.JP）、Mailtrap.ioによるメール送受信、
+                            <br>
+                            画像の保存処理にJavaScriptを利用するなど、基礎を学びつつエラー解決に取り組みました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
+                        </strong>
+                        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            Windowsで制作したプロジェクト①をLinuxにコピーし、Laravel 6を使用して、デプロイに挑戦しました。
+                            <br>
+                            画像処理を除く機能は正常に動作しましたが、Vercelのサーバーレス環境ではPHPのライブラリが制限されており、
+                            <br>
+                            ユーザーがPCから選択した画像を直接保存して表示する機能が実現できませんでした。
+                            <br>
+                            そのため、事前にローカルでpublic/imagesに画像を保存し、デプロイ後に保存された画像を表示するように仕様を変更しました。
+                            <br>
+                            これにより、一時的に画像処理の機能が動作するようになりました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+                        </strong>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            Windows, Laravel 6, JavaScript, MySQL（教材の環境: Windows, Laravel 7, Docker, JavaScript, MySQL）
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SNS風アプリモーダル -->
+    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 59.05rem;">
+            <div class="modal-content" style="height: 37.80rem;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel2">
+                        <strong style="margin-right: 5rem;">
+                            <i class="fa-solid fa-comment-dots" style="color: #2ecc71;"></i> SNS風アプリ
+                        </strong>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="rounded-box" id="section7">
+                        <!-- <div>
+                            <div class="d-m-t"></div>
+
+                            <h3>
+                                
+                            </h3>
+                        </div>
+
+                        <div class="double-space"></div> -->
+
+                        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+                            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
+                        </strong>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://laravel6-sns.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-solid fa-desktop"></i>
+                            アプリの画面
+                        </a>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://github.com/LaravelBasics/Laravel6_SNS" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            このSNS風アプリでは、記事の投稿・編集や簡易的なリアクション機能「<i class="fas fa-heart" style="color: red;"></i>」、ユーザーフォローが行えます。
+                            <br>
+                            メールアドレスとパスワードでログイン後、左上の「Memo」からトップページへ移動可能。
+                            <br>
+                            右上の「投稿する」ボタンで新規投稿ができ、投稿済みの記事は「︙」から編集が行えます。
+                            <br>
+                            <span class="tag">#タグ</span>
+                            をクリックすると同じタグの記事を検索でき、ユーザー名を押すとそのユーザーのページへ移動。
+                            <br>
+                            ユーザーページでは、そのユーザーの投稿が閲覧でき、フォロー／フォロー解除が行えます。
+                            <br>
+                            「<i class="fas fa-heart" style="color: #808080;"></i>」をクリックすると「<i class="fas fa-heart"
+                                style="color: red;"></i>」に変化します。
+                            <br>
+                            この状態が投稿記事に対してリアクションが付いている状態です。
+                            <br>
+                            「<i class="fas fa-heart" style="color: red;"></i>」をクリックするとリアクションが解除され、「<i class="fas fa-heart"
+                                style="color: #808080;"></i>」
+                            になります。
+                            <br>
+                            ※無料プランのため、「<i class="fas fa-heart" style="color: #808080;"></i>」⇄「<i class="fas fa-heart"
+                                style="color: red;"></i>」の反映には5～6秒のタイムラグがあります。
+                            <br>
+                            未ログイン時は一部機能が制限され、ポップアップで案内が表示されます。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+                        </strong>
+                        <span class="p2">&ensp;&ensp;制作期間（3週間）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            初めてのVue.jsとLaravelの環境構築に苦戦し、
+                            <br>
+                            特にnpm依存関係のエラーが発生し、Vue.jsを2から3へバージョンアップした際、Vue.js 2と3で記述方法が異なるため、さらに時間がかかりました。
+                            <br>
+                            教材通りの機能は実装できたものの、Vueコンポーネントの理解が不十分でした。
+                            <br>
+                            また、Googleアカウントでのログイン機能の実装も困難でしたが、無事に実現しました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
+                        </strong>
+                        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            Linux上でLaravel 6を用いたデプロイに挑戦した際、Laravel Mixのmix.jsを使ったVue.js機能が本番環境で動作しないという課題に直面しました。
+                            <br>
+                            これに対して、npm run productionでビルドを行い、vercel.jsonの設定を見直した後、
+                            <br>
+                            npx vercel --forceで再度デプロイ、これによりVue.jsが本番で正常に動作するよう改善しました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+                        </strong>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            Windows, Laravel 6, Vue.js 3, MySQL（教材の環境: MacOS, Laravel 6, Docker, Vue.js 2, PostgreSQL）
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 本管理アプリモーダル -->
+    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="ModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 59.05rem;">
+            <div class="modal-content" style="height: 37.80rem;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel3">
+                        <strong style="margin-right: 5rem;">
+                            <i class="fa-solid fa-book-open" style="color: #2ecc71;"></i> 本管理アプリ
+                        </strong>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="rounded-box" id="section8">
+                        <!-- <div>
+                            <div class="d-m-t"></div>
+
+                            <h3>
+                                
+                            </h3>
+                        </div>
+
+                        <div class="double-space"></div> -->
+
+                        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+                            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
+                        </strong>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://laravel10-books.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-solid fa-desktop"></i> アプリの画面
+                        </a>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://github.com/LaravelBasics/Laravel10_Books" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            画面右上からメールアドレスとパスワードでログイン後、
+                            <br>
+                            「Books」をクリックすると、本管理ページに移動します。
+                            <br>
+                            このページでは、本の登録・編集・削除が可能で、ページネーションにも対応しています。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+                        </strong>
+                        <span class="p2">&ensp;&ensp;制作期間（1週間）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            就労支援の職員が作成した基本設計書をもとに、本管理アプリの機能変更と追加を行いました。
+                            <br>
+                            Laravelシーダーのファクトリークラスでダミーデータを生成した際に、ダミーデータを英語から日本語に変更するのに苦戦しました。
+                            <br>
+                            職員に動作確認をしてもらい機能自体は完成しましたが、Reactの理解が不十分でした。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
+                        </strong>
+                        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            デプロイ経験を積んでいたので、React（JSXファイル）のデプロイはスムーズに進みました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+                        </strong>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            Windows, Laravel 10, React, 認証パッケージBreeze, PostgreSQL
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 顧客管理システム改修アプリモーダル -->
+    <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="ModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 59.05rem;">
+            <div class="modal-content" style="height: 37.80rem;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel4">
+                        <strong style="margin-right: 5rem;">
+                            <i class="fa-solid fa-users" style="color: #2ecc71;"></i> 顧客管理システムを改修したアプリ
+                        </strong>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="rounded-box" id="section9">
+                        <!-- <div>
+                            <div class="d-m-t"></div>
+
+                            <h3>
+                                
+                            </h3>
+                        </div>
+
+                        <div class="double-space"></div> -->
+
+                        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+                            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
+                        </strong>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://laravel10-vue3-client-manager.vercel.app/learning-days" target="_blank"
+                            style="font-size: 1.5rem;">
+                            <i class="fa-solid fa-desktop"></i> アプリの画面
+                        </a>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://github.com/LaravelBasics/Laravel10_Vue3_ClientManager/tree/master" target="_blank"
+                            style="font-size: 1.5rem;">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            このアプリは、企業実習で制作した顧客管理システムのコードを基に、プログラミング学習のデータ管理システム制作に挑戦したものです。
+                            <br>
+                            社外秘の情報が含まれているため、学習のためにコードを参考にして問題ないか、職員に確認を取った上で取り組みました。
+                            <br>
+                            検索の一例:&ensp;「学習した日数一覧」画面に移動後、プログラミング言語を選択し、
+                            <br>
+                            教材をクリックすると、プログラミング言語に紐づいた教材が取得されます（取得するまでにタイムラグがあります）。
+                            <br>
+                            <strong class="yellow" style="font-weight: bold;">※検索ボタンを空のままクリックすると、データベースから全件取得されます。</strong>
+                            <br>
+                            左側のサイドバー「プログラミング」をクリック ➡ 「学習したプログラミング」から4つの画面にアクセスできます。
+                            <br>
+                            実習で使用していたサイドバー部分は「A-1」などの表記に変更しています。
+                            <br>
+                            登録、編集、削除、バリデーション（入力されたデータが正しいかどうかをチェックする仕組み）や、
+                            <br>
+                            ソート（昇順・降順）も行えます。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+                        </strong>
+                        <span class="p2">&ensp;&ensp;制作期間（1ヶ月）+&ensp;改修期間（1週間）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            実習中に制作した期間が1ヶ月で、その後1週間でコードの改修を行いました。
+                            <br>
+                            元のシステムにおいて「親会社」を選択した際に関連する「子会社」を表示していた設計箇所を、
+                            <br>
+                            「プログラミング言語」を選択することで学習に用いた「教材」を、「教材」を選択することで「学習日数」を表示する設計に変更しました。
+                            <br>
+                            これに伴い、マイグレーションでテーブル名やユニークカラムを変更し、それに応じてモデル、コントローラー、リクエストクラス、ブレードなどを修正しました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
+                        </strong>
+                        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            CDNを使用していたため、Vue.jsやBootstrapの動作も問題なくスムーズにデプロイできました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+                        </strong>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">Windows, Laravel 10, CDN Vuejs 3.3, Bootstrap 5.3</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 簡易お問い合わせフォームモーダル -->
+    <div class="modal fade" id="Modal5" tabindex="-1" aria-labelledby="ModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 59.05rem;">
+            <div class="modal-content" style="height: 37.80rem;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel5">
+                        <strong style="margin-right: 5rem;">
+                            <i class="fa-solid fa-envelope" style="color: #2ecc71;"></i> お問い合わせフォームアプリ
+                        </strong>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="rounded-box" id="section10">
+                        <!-- <div>
+                            <div class="d-m-t"></div>
+
+                            <h3>
+
+                            </h3>
+                        </div>
+
+                        <div class="double-space"></div> -->
+
+                        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+                            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
+                        </strong>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://laravel11-contact-form.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-solid fa-desktop"></i> アプリの画面
+                        </a>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://github.com/LaravelBasics/Laravel11_ContactForm/tree/master" target="_blank"
+                            style="font-size: 1.5rem;">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            このアプリでは、必須項目を入力し、「個人情報の取り扱いに同意する」にチェックを入れて、
+                            <br>
+                            確認ボタンを押すと内容確認画面が表示されます。
+                            <br>
+                            その後、送信ボタンを押すと、管理者にはそのメールが、送信者には送信完了を知らせるメールが送られます。
+                            <br>
+                            送信後の送信者画面は、サンクス画面に移行します。「トップページに戻る」をクリックすると最初の画面に戻ります。
+                            <br>
+                            web画面は最低限の機能のみを実装しています。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+                        </strong>
+                        <span class="p2">&ensp;&ensp;制作期間（3～4時間）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            外部実習で制作したアプリ。フロントエンドは最低限の機能（バリデーション、送信時に同意するチェックボックスなど）で実装しました。
+                            <br>
+                            テスト用にメールトラップで管理者側および送信者側のメール受信を確認しました。
+                            <br>
+                            実習当時の最新バージョンであるLaravel 11に初めて触ったので、管理者・送信者に対してメールを送信するロジックの構築や、自分1人で動作確認を行うことなどが難しかったです。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
+                        </strong>
+                        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            デプロイ後も動作するのか気になったため挑戦し、無事にメールトラップで受信できました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+                        </strong>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">バーチャルボックス, LAMP(RockyLinux9.4, apache 2.4, MySQL 8.0, PHP8.2), Laravel 11</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 備品管理モーダル -->
+    <div class="modal fade" id="Modal6" tabindex="-1" aria-labelledby="ModalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 59.05rem;">
+            <div class="modal-content" style="height: 37.80rem;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel6">
+                        <strong style="margin-right: 5rem;">
+                            <i class="fa-solid fa-clipboard-list" style="color: #2ecc71;"></i> 備品管理アプリ
+                        </strong>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="rounded-box" id="section15">
+
+                        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+                            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
+                        </strong>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-solid fa-desktop"></i> アプリの画面
+                        </a>
+
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://github.com/LaravelBasics/lending-system/blob/main/resources/views/lendings/index.blade.php" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            このアプリは、備品の貸出管理を行うためのアプリです。
+                            <br>
+                            貸し出し時には、名前、品名（例：PC、マウス、傘など）、貸出日が設定できます。
+                            <br>
+                            貸出日は自動で今日の日付が設定されますが、変更する場合はボックスをクリックし、カレンダーから選択します。
+                            <br>
+                            返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
+                            <br>
+                            名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
+                            <br>
+                            最新のデータは降順で表示され、ページネーションは一番下に配置されています。
+                            <br>
+                            チェックボックスを使って未返却のデータのみ検索することが可能で、さらに部分検索（例：2025年や2025-01月など）もサポートしています。
+                            <br>
+                            データ量の増加に備えて、削除専用ページを設置し、不要なデータを簡単に削除できます。
+                            <br>
+                            検索結果に基づいたデータをExcel形式でダウンロードできるCSVダウンロードボタンを提供しています。検索条件を反映した結果が降順でエクスポートされます。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+                        </strong>
+                        <span class="p2">&ensp;&ensp;制作期間（約2週間）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            就労移行支援の職員から依頼を受け、聞き取りをしながら設計を行いました。
+                            <br>
+                            必要な機能をすべて実装し、使いやすさと見やすさを重視して開発しました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
+                        </strong>
+                        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">
+                            アプリをネット上に公開する際、Vercelのデータベースはアクセス時に通信速度に制限があり、動作が遅くなることがありました。
+                            <br>
+                            そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。
+                        </p>
+
+                        <div class="double-space2"></div>
+
+                        <strong style="font-size: 1.2rem;">
+                            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+                        </strong>
+
+                        <div class="d-m-t2"></div>
+
+                        <p class="gray-bg">Windows, Laravel 12, CDN Vuejs 3.3, Bootstrap 5.3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 @endsection
 
@@ -2164,7 +2442,7 @@
             toggleSubMenu3() {
                 this.isbar = false; // スマホ画面でサイドメニューを非表示
             },
-            toggleSubMenu4(selectedMenu) {// スマホ用
+            toggleSubMenu4(selectedMenu) { // スマホ用
                 // クリックされたメニューがすでに開いているかを確認
                 const isOpen = this.menu[selectedMenu];
 
@@ -2189,6 +2467,30 @@
             },
             showHelpModal3() {
                 const modal = new bootstrap.Modal(document.getElementById('helpModal3'));
+                modal.show();
+            },
+            showModal1() {
+                const modal = new bootstrap.Modal(document.getElementById('Modal1'));
+                modal.show();
+            },
+            showModal2() {
+                const modal = new bootstrap.Modal(document.getElementById('Modal2'));
+                modal.show();
+            },
+            showModal3() {
+                const modal = new bootstrap.Modal(document.getElementById('Modal3'));
+                modal.show();
+            },
+            showModal4() {
+                const modal = new bootstrap.Modal(document.getElementById('Modal4'));
+                modal.show();
+            },
+            showModal5() {
+                const modal = new bootstrap.Modal(document.getElementById('Modal5'));
+                modal.show();
+            },
+            showModal6() {
+                const modal = new bootstrap.Modal(document.getElementById('Modal6'));
                 modal.show();
             },
             toggleSidebar() {
