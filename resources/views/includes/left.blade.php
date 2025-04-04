@@ -2,7 +2,7 @@
     <div class="space0"></div>
     <div style="border-radius: 1rem; background-color: rgb(253, 253, 253);">
         <div style="padding-top: 0.5rem;">
-            <strong class="sepia-bg2"><span>PHPアプリ共通のアカウント</span></strong>
+            <strong class="sepia-bg2"><span>アプリ共通のアカウント</span></strong>
         </div>
         <div>
             <strong class="sepia-bg2">
@@ -44,7 +44,7 @@
         <a class="nav-link ms-0 ms-2 r-b2" href="/#section10">お問い合わせフォーム</a>
     </div> -->
 
-    <a class="nav-link r-box" @click="toggleSubMenu('php')">【PHP制作実績】
+    <a class="nav-link r-box" @click="toggleSubMenu('php')">【Laravel制作実績】
         <span class="float-end">
             <i v-if="!menu.php" class="fas fa-chevron-right"></i>
             <i v-else class="fas fa-chevron-down"></i>

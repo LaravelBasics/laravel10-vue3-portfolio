@@ -739,7 +739,7 @@
             <h4>
                 <i class="fas fa-home" style="color: #2ecc71;"></i> このサイトについて&ensp;
                 <span style="margin-right: 5rem; font-size: 0.9rem;">
-                    使用言語: HTML, CSS, JavaScript, Laravel10, Vue.js3.4, Bootstrap5.3</span>
+                    使用言語: HTML, CSS, JavaScript, Laravel10, Vue.js3.3, Bootstrap5.3</span>
             </h4>
 
             <p class="gray-bg">
@@ -811,7 +811,7 @@
             <p class="gray-bg">
                 <strong>プログラミング言語:</strong> Java, PHP, HTML, CSS, JavaScript
                 <br>
-                <strong>フレームワーク:</strong> Laravel 6 / 10 / 11 / 12, Vue.js 3.4, Bootstrap 5.3
+                <strong>フレームワーク:</strong> Laravel 6 / 10 / 11 / 12, Vue.js 3.3, Bootstrap 5.3
                 <br>
                 <strong>データベース:</strong> MySQL, PostgreSQL
                 <br>
@@ -1007,10 +1007,13 @@
             12月11日&ensp;〜<span style="display: inline-block; width: 1.185rem;"></span>月<span style="display: inline-block; width: 1.185rem;"></span>日:
             職員からフィードバックを受けて、ポートフォリオのレイアウトを見やすさ重視に一新
             <br>
-            &ensp;3月10日&ensp;〜&ensp;3月20日: Laravel 12 + Vue.js 3を使用して
+            &ensp;3月10日&ensp;〜&ensp;3月23日: Laravel 12 + Vue.js 3を使用して
             <strong style="color: #007BFF;">⑦</strong>
             <span @click="showModal6" class="custom-link">備品管理アプリ</span>
             を開発
+            <br>
+            &ensp;3月24日&ensp;〜&ensp;4月&ensp;4日: 
+            <strong style="color: #007BFF;">⑦</strong>にサジェスト機能を追加、非同期通信の処理速度を検証、認証機能の学習、手動で認証機能（管理者機能は無し）を追加
             <br>
         </p>
     </div>
@@ -1054,6 +1057,7 @@
             <br>
             CSS（相対位置、絶対位置の違い）、データベース、コードの可読性などは更なる学習が必要と感じました。
             <br>
+            <strong style="color: #007BFF;">④</strong>
             <span @click="showModal4" class="custom-link">顧客管理システムを改修したアプリ</span>制作で学習を深めました。
         </p>
     </div>
@@ -1105,7 +1109,7 @@
 
     <div class="double-space4"></div>
 
-    <h1 class="green-bg" id="section1">【PHP制作実績】</h1>
+    <h1 class="green-bg" id="section1">【Laravel制作実績】</h1>
 
     <div class="double-space"></div>
 
@@ -1115,19 +1119,21 @@
         <h5>
             <i class="fa-solid fa-sync-alt" style="color: #ffce47;"></i>
             <strong class="p3">
-                稼働中のPHPアプリはインターネット上に公開中です。無料プランのため通信速度が遅くなることがあります。
+                <!-- 稼働中のLaravelアプリは -->
+                インターネット上に公開中です。
+                <!-- データベースがシンガポールのため通信速度が遅くなることがあります。 -->
+                Vercel + Supabase + Laravel 12 + Vue.js 3
             </strong>
-            <br>
-
+            <!-- <br>
             <span class="p-l"></span>
             <span class="m-t">
-                サーバー: Vercel | データベース: Neon (PostgreSQL) | バックエンド: Laravel | フロントエンド: Vue.js | UIライブラリ: Bootstrap
-            </span>
+                サーバー: Vercel | データベース: Neon (PostgreSQL) | バックエンド: Laravel | フロントエンド: Vue.js Bootstrap
+            </span> -->
             <br>
 
             <span class="p-l"></span>
-            <span class="p3" style="font-weight: bold; font-size: 1rem; padding-left: 0.2rem;">
-                ※Vercelの無料プランではリソース制限により、画像処理で504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。
+            <span class="p3" style="font-weight: bold; font-size: 1rem; padding-left: 0.2rem; color: #dc3545;">
+                ※Vercelの無料プランではリソース制限により、504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。
             </span>
         </h5>
 
@@ -1157,13 +1163,20 @@
 
         <span style="margin-right: 5rem;"></span>
 
-        <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
+        <!-- <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> アプリの画面
+        </a> -->
+        <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> アプリの画面
         </a>
-
+        
         <span style="margin-right: 5rem;"></span>
 
-        <a href="https://github.com/LaravelBasics/lending-system/blob/main/resources/views/lendings/index.blade.php" target="_blank"
+        <!-- <a href="https://github.com/LaravelBasics/lending-system/" target="_blank"
+            style="font-size: 1.5rem;">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a> -->
+        <a href="https://github.com/LaravelBasics/lending-system-apple/tree/main" target="_blank"
             style="font-size: 1.5rem;">
             <i class="fa-brands fa-github"></i> GitHub
         </a>
@@ -1171,7 +1184,7 @@
         <div class="d-m-t2"></div>
 
         <p class="gray-bg">
-            このアプリは、備品の貸出管理を行うためのアプリです。
+            <!-- このアプリは、備品の貸出管理を行うためのアプリです。
             <br>
             貸し出し時には、名前、品名（例：PC、マウス、傘など）、貸出日が設定できます。
             <br>
@@ -1183,11 +1196,46 @@
             <br>
             最新のデータは降順で表示され、ページネーションは一番下に配置されています。
             <br>
-            チェックボックスを使って未返却のデータのみ検索することが可能で、さらに部分検索（例：2025年や2025-01月など）もサポートしています。
+            チェックボックスを使って未返却のデータのみ検索することが可能で、
             <br>
-            データ量の増加に備えて、削除専用ページを設置し、不要なデータを簡単に削除できます。
+            西暦や月単位での部分検索（例：2025 や 2025-01 など）もサポートしています。
             <br>
-            検索結果に基づいたデータをExcel形式でダウンロードできるCSVダウンロードボタンを提供しています。検索条件を反映した結果が降順でエクスポートされます。
+            検索結果に基づいたデータを、CSV形式でダウンロードできるボタンを提供しています。
+            <br>
+            CSVダウンロードボタンを押すと、データをExcel形式で降順にダウンロードできます。
+            <br>
+            データ量の増加に備えて、削除専用ページを設置し、不要なデータを簡単に削除できます。 -->
+            このアプリは、備品の貸出管理を行うためのアプリです。
+            <br>
+            トップページでユーザーを登録することで、備品管理ページにログインできます。
+            備品のデータはユーザーごとに管理されています。
+            <br>
+            ログイン中のユーザーに関連するデータが降順で表示され、ページネーションはその下に配置されています。
+            <br>
+            貸し出し時には、「名前」&ensp;「品名（例：PC、マウス、傘など）」&ensp;「貸出日」の3つを入力して登録します。
+            <br>
+            貸出日は自動で今日の日付が設定されます。変更する場合はボックスをクリックし、カレンダーから選択します。
+            <br>
+            返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
+            <br>
+            名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
+            <br>
+            検索バーに文字を入力すると、関連するデータがデータベースから自動的に表示されます。
+            <br>
+            チェックボックスを使って未返却のデータのみを検索できます。
+            <br>
+            また、西暦や月単位での部分検索（例：2025 や 2025-01 など）にも対応しています。
+            <br>
+            貸出日と返却日両方を使用する場合は、AND検索となります。
+            <br>
+            例：貸出日が2025年、返却日が2025年の場合、
+           「2025年に貸し出して」&ensp;「2025年に返却された」&ensp;データが表示されます。
+            <br>
+            検索結果に基づいて、データをCSV形式でダウンロードできるボタンを提供しています。
+            <br>
+            ボタンを押すと、データがExcel形式で降順にダウンロードされます。
+            <br>
+            データ量が増加した場合に備え、削除専用ページを設置しています。不要なデータを簡単に削除できます。
         </p>
 
         <div class="double-space2"></div>
@@ -1195,12 +1243,12 @@
         <strong style="font-size: 1.2rem;">
             <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
         </strong>
-        <span class="p2">&ensp;&ensp;制作期間（約2週間）</span>
+        <span class="p2">&ensp;&ensp;制作期間（約3週間）</span>
 
         <div class="d-m-t2"></div>
 
         <p class="gray-bg">
-            就労移行支援の職員から依頼を受け、聞き取りをしながら設計を行いました。
+            就労移行支援の職員の要望に基づき、要件定義等を行いながら設計を行いました。
             <br>
             必要な機能をすべて実装し、使いやすさと見やすさを重視して開発しました。
         </p>
@@ -1217,7 +1265,8 @@
         <p class="gray-bg">
             アプリをネット上に公開する際、Vercelのデータベースはアクセス時に通信速度に制限があり、動作が遅くなることがありました。
             <br>
-            そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。
+            そのため、無料プランのデータベースをSupabaseに変更し、通信速度を向上させました。
+            <!-- そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。 -->
         </p>
 
         <div class="double-space2"></div>
@@ -1418,6 +1467,7 @@
 
                 </div>
                 <div class="rounded-box" id="section13">
+
                     <strong style="font-size: 1.2rem;">
                         <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
                     </strong>
@@ -1437,6 +1487,7 @@
                         コードの書き方次第で処理速度が大きく変わるなど、色々と勉強になりました。
                     </p>
                 </div>
+                <div class="double-space3"></div>
             </div>
         </div>
     </div>
@@ -1552,6 +1603,7 @@
                         特に、エース【1】の扱い、勝敗判定の条件式に苦戦しながら、無事に完成しました。
                     </p>
                 </div>
+                <div class="double-space3"></div>
             </div>
         </div>
     </div>
@@ -2281,13 +2333,23 @@
 
                         <span style="margin-right: 5rem;"></span>
 
-                        <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
+                        <!-- <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
                             <i class="fa-solid fa-desktop"></i> アプリの画面
                         </a>
 
                         <span style="margin-right: 5rem;"></span>
 
-                        <a href="https://github.com/LaravelBasics/lending-system/blob/main/resources/views/lendings/index.blade.php" target="_blank" style="font-size: 1.5rem;">
+                        <a href="https://github.com/LaravelBasics/lending-system/" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a> -->
+
+                        <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+                            <i class="fa-solid fa-desktop"></i> アプリの画面
+                        </a>
+        
+                        <span style="margin-right: 5rem;"></span>
+
+                        <a href="https://github.com/LaravelBasics/lending-system-apple/tree/main" target="_blank" style="font-size: 1.5rem;">
                             <i class="fa-brands fa-github"></i> GitHub
                         </a>
 
@@ -2296,21 +2358,35 @@
                         <p class="gray-bg">
                             このアプリは、備品の貸出管理を行うためのアプリです。
                             <br>
-                            貸し出し時には、名前、品名（例：PC、マウス、傘など）、貸出日が設定できます。
+                            トップページでユーザーを登録することで、備品管理ページにログインできます。
+                            備品のデータはユーザーごとに管理されています。
                             <br>
-                            貸出日は自動で今日の日付が設定されますが、変更する場合はボックスをクリックし、カレンダーから選択します。
+                            ログイン中のユーザーに関連するデータが降順で表示され、ページネーションはその下に配置されています。
+                            <br>
+                            貸し出し時には、「名前」&ensp;「品名（例：PC、マウス、傘など）」&ensp;「貸出日」の3つを入力して登録します。
+                            <br>
+                            貸出日は自動で今日の日付が設定されます。変更する場合はボックスをクリックし、カレンダーから選択します。
                             <br>
                             返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
                             <br>
                             名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
                             <br>
-                            最新のデータは降順で表示され、ページネーションは一番下に配置されています。
+                            検索バーに文字を入力すると、関連するデータがデータベースから自動的に表示されます。
                             <br>
-                            チェックボックスを使って未返却のデータのみ検索することが可能で、さらに部分検索（例：2025年や2025-01月など）もサポートしています。
+                            チェックボックスを使って未返却のデータのみを検索できます。
                             <br>
-                            データ量の増加に備えて、削除専用ページを設置し、不要なデータを簡単に削除できます。
+                            また、西暦や月単位での部分検索（例：2025 や 2025-01 など）にも対応しています。
                             <br>
-                            検索結果に基づいたデータをExcel形式でダウンロードできるCSVダウンロードボタンを提供しています。検索条件を反映した結果が降順でエクスポートされます。
+                            貸出日と返却日両方を使用する場合は、AND検索となります。
+                            <br>
+                            例：貸出日が2025年、返却日が2025年の場合、
+                            「2025年に貸し出して」&ensp;「2025年に返却された」&ensp;データが表示されます。
+                            <br>
+                            検索結果に基づいて、データをCSV形式でダウンロードできるボタンを提供しています。
+                            <br>
+                            ボタンを押すと、データがExcel形式で降順にダウンロードされます。
+                            <br>
+                            データ量が増加した場合に備え、削除専用ページを設置しています。不要なデータを簡単に削除できます。
                         </p>
 
                         <div class="double-space2"></div>
@@ -2318,12 +2394,12 @@
                         <strong style="font-size: 1.2rem;">
                             <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
                         </strong>
-                        <span class="p2">&ensp;&ensp;制作期間（約2週間）</span>
+                        <span class="p2">&ensp;&ensp;制作期間（約3週間）</span>
 
                         <div class="d-m-t2"></div>
 
                         <p class="gray-bg">
-                            就労移行支援の職員から依頼を受け、聞き取りをしながら設計を行いました。
+                            就労移行支援の職員の要望に基づき、要件定義等を行いながら設計を行いました。
                             <br>
                             必要な機能をすべて実装し、使いやすさと見やすさを重視して開発しました。
                         </p>
@@ -2338,9 +2414,10 @@
                         <div class="d-m-t2"></div>
 
                         <p class="gray-bg">
-                            アプリをネット上に公開する際、Vercelのデータベースはアクセス時に通信速度に制限があり、動作が遅くなることがありました。
+                            アプリをネット上に公開する際、Vercelのデータベースは通信速度に制限があり、動作が遅くなることがありました。
                             <br>
-                            そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。
+                            そのため、無料プランのデータベースをSupabaseに変更し、通信速度を向上させました。
+                            <!-- そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。 -->
                         </p>
 
                         <div class="double-space2"></div>
