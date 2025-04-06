@@ -8,11 +8,11 @@
 
         <!-- 右側のコンテンツ -->
         <div class="d-flex ms-auto align-items-center">
-            <span class="me-4">更新日: 2025/3/25</span>
-            <a href="/" class="btn btn-outline-primary btnHidden"
+            <span class="me-4">更新日: 2025-04-06</span>
+            <!-- <a href="/" class="btn btn-outline-primary btnHidden"
                 style="background-color: white; color: #0d6efd; border-color: #0d6efd; margin-top: 0.3rem;">
                 トップページ
-            </a>
+            </a> -->
         </div>
 
         <!-- ハンバーガーアイコン -->

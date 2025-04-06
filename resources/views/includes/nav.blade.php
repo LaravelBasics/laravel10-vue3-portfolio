@@ -1,7 +1,7 @@
 <nav class="nav flex-column">
     <div class="space0"></div>
     <div style="border-radius: 1rem; background-color: rgb(253, 253, 253);">
-        <div style="padding-top: 0.5rem;">
+        <!-- <div style="padding-top: 0.5rem;">
             <strong class="sepia-bg2"><span>アプリ共通のアカウント</span></strong>
         </div>
         <div>
@@ -13,7 +13,23 @@
             <strong class="sepia-bg2">パスワード
                 <span style="padding-left: 2.75rem;">testtest</sapn>
             </strong>
-        </div>
+        </div> -->
+        
+        <strong>
+            <table style="border-collapse: collapse; margin: 0 auto;">
+                <caption style="caption-side: top; font-weight: bold; padding-bottom: 0rem;">
+                    テスト用アカウント
+                </caption>
+                <tr style="text-align: center;">
+                    <td style="padding: 0rem 1rem 0rem 0rem; text-align: left;">メールアドレス</td>
+                    <td style="padding: 0rem 0rem 0rem 0rem; text-align: left;">test@test</td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td style="padding: 0rem 1rem 0.5rem 0rem; text-align: left;">パスワード</td>
+                    <td style="padding: 0rem 0rem 0.5rem 0rem; text-align: left;">testtest</td>
+                </tr>
+            </table>
+        </strong>
     </div>
 
     <div style="padding: 0.5rem 0rem 0.5rem 0.85rem;">
@@ -62,7 +78,7 @@
     </a> -->
 
     <!-- <div v-if="menu.java"> -->
-        <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section13" @click="toggleSubMenu3">青森鹿児島問題</a> -->
-        <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section14" @click="toggleSubMenu3">ブラックジャック</a>
+    <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section13" @click="toggleSubMenu3">青森鹿児島問題</a> -->
+    <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section14" @click="toggleSubMenu3">ブラックジャック</a>
     </div> -->
 </nav>

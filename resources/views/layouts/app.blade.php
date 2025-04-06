@@ -183,16 +183,12 @@
             /* 文字が折り返されないようにする */
         }
 
-        .sepia-bg2 {
-            /* background-color: lightgreen; */
+        /* .sepia-bg2 {
             position: relative;
-            /* 相対位置指定 */
             top: 0;
-            /* 上からの位置（デフォルトは0） */
             left: 0.9375rem;
-            /* 左から50px移動（右に移動） */
             text-align: right;
-        }
+        } */
 
         /* ローディング画面 */
         #loading-screen {

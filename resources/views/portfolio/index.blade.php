@@ -1012,8 +1012,8 @@
             <span @click="showModal6" class="custom-link">備品管理アプリ</span>
             を開発
             <br>
-            &ensp;3月24日&ensp;〜&ensp;4月&ensp;4日: 
-            <strong style="color: #007BFF;">⑦</strong>にサジェスト機能を追加、非同期通信の処理速度を検証、認証機能の学習、手動で認証機能（管理者機能は無し）を追加
+            &ensp;3月24日&ensp;〜&ensp;4月&ensp;6日:
+            <strong style="color: #007BFF;">⑦</strong>にオートサジェスト機能、ログイン機能、パスワード再設定（envで設定した、メールトラップのアドレスに送信される）を追加
             <br>
         </p>
     </div>
@@ -1169,7 +1169,7 @@
         <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> アプリの画面
         </a>
-        
+
         <span style="margin-right: 5rem;"></span>
 
         <!-- <a href="https://github.com/LaravelBasics/lending-system/" target="_blank"
@@ -1207,20 +1207,44 @@
             データ量の増加に備えて、削除専用ページを設置し、不要なデータを簡単に削除できます。 -->
             このアプリは、備品の貸出管理を行うためのアプリです。
             <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">①&ensp;ログイン機能・ユーザー別データ表示</span>
+            <br>
             トップページでユーザーを登録することで、備品管理ページにログインできます。
             備品のデータはユーザーごとに管理されています。
             <br>
+            ユーザーがパスワードを忘れた場合は、ログイン画面からパスワード再設定メールを送信できます。
+            <br>
+            <span style="color: #6c757d; font-weight: bold;">※テスト用のため、送信先はenvファイルで設定した管理者にのみ、メールが送信されます。</span>
+            <br>
             ログイン中のユーザーに関連するデータが降順で表示され、ページネーションはその下に配置されています。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">②&ensp;登録機能</span>
             <br>
             貸し出し時には、「名前」&ensp;「品名（例：PC、マウス、傘など）」&ensp;「貸出日」の3つを入力して登録します。
             <br>
             貸出日は自動で今日の日付が設定されます。変更する場合はボックスをクリックし、カレンダーから選択します。
             <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">③&ensp;返却機能</span>
+            <br>
             返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">④&ensp;編集機能</span>
             <br>
             名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
             <br>
-            検索バーに文字を入力すると、関連するデータがデータベースから自動的に表示されます。
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">⑤&ensp;検索機能</span>
+            <br>
+            「名前」&ensp;「品名」&ensp;の検索バーに文字を入力すると、関連する候補が自動的に表示されます。
             <br>
             チェックボックスを使って未返却のデータのみを検索できます。
             <br>
@@ -1229,13 +1253,22 @@
             貸出日と返却日両方を使用する場合は、AND検索となります。
             <br>
             例：貸出日が2025年、返却日が2025年の場合、
-           「2025年に貸し出して」&ensp;「2025年に返却された」&ensp;データが表示されます。
+            「2025年に貸し出して」&ensp;「2025年に返却された」&ensp;データが表示されます。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">⑥&ensp;CSVダウンロード機能</span>
             <br>
             検索結果に基づいて、データをCSV形式でダウンロードできるボタンを提供しています。
             <br>
             ボタンを押すと、データがExcel形式で降順にダウンロードされます。
             <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">⑦&ensp;データ削除機能</span>
+            <br>
             データ量が増加した場合に備え、削除専用ページを設置しています。不要なデータを簡単に削除できます。
+            <span style="display: block; margin-bottom: 2em;"></span>
         </p>
 
         <div class="double-space2"></div>
@@ -2346,7 +2379,7 @@
                         <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
                             <i class="fa-solid fa-desktop"></i> アプリの画面
                         </a>
-        
+
                         <span style="margin-right: 5rem;"></span>
 
                         <a href="https://github.com/LaravelBasics/lending-system-apple/tree/main" target="_blank" style="font-size: 1.5rem;">
@@ -2358,20 +2391,44 @@
                         <p class="gray-bg">
                             このアプリは、備品の貸出管理を行うためのアプリです。
                             <br>
+                            <span style="display: block; margin-bottom: 2em;"></span>
+
+                            <span style="color: #007BFF;">①&ensp;ログイン機能・ユーザー別データ表示</span>
+                            <br>
                             トップページでユーザーを登録することで、備品管理ページにログインできます。
                             備品のデータはユーザーごとに管理されています。
                             <br>
+                            ユーザーがパスワードを忘れた場合は、ログイン画面からパスワード再設定メールを送信できます。
+                            <br>
+                            <span style="color: #6c757d; font-weight: bold;">※テスト用のため、送信先はenvファイルで設定した管理者にのみ、メールが送信されます。</span>
+                            <br>
                             ログイン中のユーザーに関連するデータが降順で表示され、ページネーションはその下に配置されています。
+                            <br>
+                            <span style="display: block; margin-bottom: 2em;"></span>
+
+                            <span style="color: #007BFF;">②&ensp;登録機能</span>
                             <br>
                             貸し出し時には、「名前」&ensp;「品名（例：PC、マウス、傘など）」&ensp;「貸出日」の3つを入力して登録します。
                             <br>
                             貸出日は自動で今日の日付が設定されます。変更する場合はボックスをクリックし、カレンダーから選択します。
                             <br>
+                            <span style="display: block; margin-bottom: 2em;"></span>
+
+                            <span style="color: #007BFF;">③&ensp;返却機能</span>
+                            <br>
                             返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
+                            <br>
+                            <span style="display: block; margin-bottom: 2em;"></span>
+
+                            <span style="color: #007BFF;">④&ensp;編集機能</span>
                             <br>
                             名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
                             <br>
-                            検索バーに文字を入力すると、関連するデータがデータベースから自動的に表示されます。
+                            <span style="display: block; margin-bottom: 2em;"></span>
+
+                            <span style="color: #007BFF;">⑤&ensp;検索機能</span>
+                            <br>
+                            「名前」&ensp;「品名」&ensp;の検索バーに文字を入力すると、関連する候補が自動的に表示されます。
                             <br>
                             チェックボックスを使って未返却のデータのみを検索できます。
                             <br>
@@ -2382,11 +2439,20 @@
                             例：貸出日が2025年、返却日が2025年の場合、
                             「2025年に貸し出して」&ensp;「2025年に返却された」&ensp;データが表示されます。
                             <br>
+                            <span style="display: block; margin-bottom: 2em;"></span>
+
+                            <span style="color: #007BFF;">⑥&ensp;CSVダウンロード機能</span>
+                            <br>
                             検索結果に基づいて、データをCSV形式でダウンロードできるボタンを提供しています。
                             <br>
                             ボタンを押すと、データがExcel形式で降順にダウンロードされます。
                             <br>
+                            <span style="display: block; margin-bottom: 2em;"></span>
+
+                            <span style="color: #007BFF;">⑦&ensp;データ削除機能</span>
+                            <br>
                             データ量が増加した場合に備え、削除専用ページを設置しています。不要なデータを簡単に削除できます。
+                            <span style="display: block; margin-bottom: 2em;"></span>
                         </p>
 
                         <div class="double-space2"></div>
