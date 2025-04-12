@@ -11,7 +11,8 @@
         /* 高さを自動で調整（縦横比を保持） */
         object-fit: cover;
         /* 画像を枠にフィットさせるが、アスペクト比を保持して切り取る */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+        box-shadow: 0px 0px clamp(0.25rem, 1vw + 0.25rem, 0.5rem) rgba(0, 0, 0, 0.2);
         /* 画像に軽い影を付けて立体感を出す */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         /* マウスオーバー時の変化をスムーズにする */
@@ -20,7 +21,8 @@
     /* 画像にマウスホバー時の効果（ズームインなし） */
     .splide__slide img:hover {
         /* transform: scale(1.05); // コメントアウトでズーム効果無効化 */
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        /* box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); */
+        box-shadow: 0px 0px clamp(0.375rem, 1.5vw + 0.375rem, 0.75rem) rgba(0, 0, 0, 0.3);
         /* マウスホバー時に影を強調して浮き上がるようにする */
     }
 
@@ -28,7 +30,7 @@
     .splide__pagination {
         position: absolute;
         /* 絶対位置で配置 */
-        bottom: 10px;
+        bottom: 0.625rem;
         /* スライダー下部から10pxの位置に配置 */
         left: 50%;
         /* 横方向中央に配置 */
@@ -36,7 +38,7 @@
         /* 左から50%の位置を基準に、中央揃え */
         display: flex;
         /* インジケーターを横並びにする */
-        gap: 10px;
+        gap: 0.625rem;
         /* ドット間に10pxの隙間を設定 */
     }
 
@@ -52,7 +54,7 @@
         /* 半透明の黒色背景 */
         color: white;
         /* 矢印の色を白に設定 */
-        padding: 10px;
+        padding: 0.625rem;
         /* 矢印に10pxの内側余白 */
         border: none;
         /* 枠線をなくす */
@@ -62,21 +64,21 @@
 
     /* 前のスライドに移動する矢印の位置 */
     .splide__arrow--prev {
-        left: 10px;
+        left: 0.625rem;
         /* 左端から10pxの位置に配置 */
     }
 
     /* 次のスライドに移動する矢印の位置 */
     .splide__arrow--next {
-        right: 10px;
+        right: 0.625rem;
         /* 右端から10pxの位置に配置 */
     }
 
     /* ページネーションのドット（ページ番号）スタイル */
     .splide__pagination .splide__pagination__page {
-        width: 10px;
+        width: 0.625rem;
         /* ドットの幅を10pxに設定 */
-        height: 10px;
+        height: 0.625rem;
         /* ドットの高さを10pxに設定 */
         background-color: rgba(0, 0, 0, 0.5);
         /* 半透明の黒色 */
@@ -96,17 +98,17 @@
     .splide__slide .description {
         position: absolute;
         /* 絶対位置で配置 */
-        bottom: 20px;
+        bottom: 1.25rem;
         /* スライド下部から20pxの位置に配置 */
-        left: 20px;
+        left: 1.25rem;
         /* 左側から20pxの位置に配置 */
         background: rgba(0, 0, 0, 0.6);
         /* 半透明の黒背景 */
         color: white;
         /* テキスト色を白に設定 */
-        padding: 10px;
+        padding: 0.625rem;
         /* テキスト周りに10pxの内側余白を設定 */
-        border-radius: 5px;
+        border-radius: 0.3125rem;
         /* 角を5pxの半径で丸める */
     }
 
@@ -873,37 +875,49 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <div class="description"><h3>トップ画面</h3></div>
+                        <div class="description">
+                            <h3>トップ画面</h3>
+                        </div>
                         <div class="slide-wrapper">
                             <img class="slide" src="{{ asset("images/image1.png") }}" alt="画像1">
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="description"><h3>ログイン画面</h3></div>
+                        <div class="description">
+                            <h3>ログイン画面</h3>
+                        </div>
                         <div class="slide-wrapper">
                             <img class="slide" src="{{ asset("images/image2.png") }}" alt="画像2">
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="description"><h3>編集画面</h3></div>
+                        <div class="description">
+                            <h3>編集画面</h3>
+                        </div>
                         <div class="slide-wrapper">
                             <img class="slide" src="{{ asset("images/image3.png") }}" alt="画像3">
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="description"><h3>オートサジェスト画面</h3></div>
+                        <div class="description">
+                            <h3>オートサジェスト画面</h3>
+                        </div>
                         <div class="slide-wrapper">
                             <img class="slide" src="{{ asset("images/image4.png") }}" alt="画像4">
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="description"><h3>AND検索画面</h3></div>
+                        <div class="description">
+                            <h3>AND検索画面</h3>
+                        </div>
                         <div class="slide-wrapper">
                             <img class="slide" src="{{ asset("images/image5.png") }}" alt="画像5">
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="description"><h3>AND検索画面をCSVダウンロード</h3></div>
+                        <div class="description">
+                            <h3>AND検索画面をCSVダウンロード</h3>
+                        </div>
                         <div class="slide-wrapper">
                             <img class="slide" src="{{ asset("images/image6.png") }}" alt="画像6">
                         </div>
