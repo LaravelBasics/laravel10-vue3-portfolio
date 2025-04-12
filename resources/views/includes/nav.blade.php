@@ -14,7 +14,7 @@
                 <span style="padding-left: 2.75rem;">testtest</sapn>
             </strong>
         </div> -->
-        
+
         <strong>
             <table style="border-collapse: collapse; margin: 0 auto;">
                 <caption style="caption-side: top; font-weight: bold; padding-bottom: 0rem;">
@@ -40,6 +40,20 @@
 
     </div>
 
+    <a class="nav-link r-box" @click="toggleSubMenu4('php')">【Laravel制作実績】
+        <span class="float-end">
+            <i v-if="!menu.php" class="fas fa-chevron-right"></i>
+            <i v-else class="fas fa-chevron-down"></i>
+        </span>
+    </a>
+
+    <div v-if="menu.php">
+        <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section6" @click="toggleSubMenu3">メルカリ風フリマアプリ</a>
+        <a class="nav-link ms-0 ms-2 r-b2" href="/#section7" @click="toggleSubMenu3">SNS風アプリ</a>
+        <a class="nav-link ms-0 ms-2 r-b2" href="/#section8" @click="toggleSubMenu3">本管理アプリ</a> -->
+        <a class="nav-link ms-0 ms-2 r-b2" href="/#section15">備品管理アプリ</a>
+    </div>
+
     <a class="nav-link r-box" href="/#section3" @click="toggleSubMenu2('close')">【プロフィール】</a>
 
     <a class="nav-link r-box" href="/#section4" @click="toggleSubMenu2('close')">【学習履歴】</a>
@@ -55,20 +69,6 @@
         <a class="nav-link ms-0 ms-2 r-b2" href="/#section9" @click="toggleSubMenu3">顧客管理システム改修</a>
         <a class="nav-link ms-0 ms-2 r-b2" href="/#section10" @click="toggleSubMenu3">お問い合わせフォーム</a>
     </div> -->
-
-    <a class="nav-link r-box" @click="toggleSubMenu4('php')">【Laravel制作実績】
-        <span class="float-end">
-            <i v-if="!menu.php" class="fas fa-chevron-right"></i>
-            <i v-else class="fas fa-chevron-down"></i>
-        </span>
-    </a>
-
-    <div v-if="menu.php">
-        <!-- <a class="nav-link ms-0 ms-2 r-b2" href="/#section6" @click="toggleSubMenu3">メルカリ風フリマアプリ</a>
-        <a class="nav-link ms-0 ms-2 r-b2" href="/#section7" @click="toggleSubMenu3">SNS風アプリ</a>
-        <a class="nav-link ms-0 ms-2 r-b2" href="/#section8" @click="toggleSubMenu3">本管理アプリ</a> -->
-        <a class="nav-link ms-0 ms-2 r-b2" href="/#section15">備品管理アプリ</a>
-    </div>
 
     <!-- <a class="nav-link r-box" href="/#section2" @click="toggleSubMenu4('java')">【Java制作実績】
         <span class="float-end">

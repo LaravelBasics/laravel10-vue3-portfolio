@@ -3,6 +3,146 @@
 @section('title', 'ポートフォリオ')
 @section('style')
 <style>
+    /* スライドショー */
+    .splide__slide img {
+        width: 100%;
+        /* 画像をスライドの幅に合わせて伸縮させる */
+        height: auto;
+        /* 高さを自動で調整（縦横比を保持） */
+        object-fit: cover;
+        /* 画像を枠にフィットさせるが、アスペクト比を保持して切り取る */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        /* 画像に軽い影を付けて立体感を出す */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* マウスオーバー時の変化をスムーズにする */
+    }
+
+    /* 画像にマウスホバー時の効果（ズームインなし） */
+    .splide__slide img:hover {
+        /* transform: scale(1.05); // コメントアウトでズーム効果無効化 */
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        /* マウスホバー時に影を強調して浮き上がるようにする */
+    }
+
+    /* スライダーのページネーション（ドットインジケーター）のスタイル */
+    .splide__pagination {
+        position: absolute;
+        /* 絶対位置で配置 */
+        bottom: 10px;
+        /* スライダー下部から10pxの位置に配置 */
+        left: 50%;
+        /* 横方向中央に配置 */
+        transform: translateX(-50%);
+        /* 左から50%の位置を基準に、中央揃え */
+        display: flex;
+        /* インジケーターを横並びにする */
+        gap: 10px;
+        /* ドット間に10pxの隙間を設定 */
+    }
+
+    /* スライダーのナビゲーション矢印のスタイル */
+    .splide__arrow {
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: 50%;
+        /* 垂直方向で中央に配置 */
+        transform: translateY(-50%);
+        /* 上下中央揃え */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* 半透明の黒色背景 */
+        color: white;
+        /* 矢印の色を白に設定 */
+        padding: 10px;
+        /* 矢印に10pxの内側余白 */
+        border: none;
+        /* 枠線をなくす */
+        cursor: pointer;
+        /* ポインターカーソルに変更（クリック可能であることを示す） */
+    }
+
+    /* 前のスライドに移動する矢印の位置 */
+    .splide__arrow--prev {
+        left: 10px;
+        /* 左端から10pxの位置に配置 */
+    }
+
+    /* 次のスライドに移動する矢印の位置 */
+    .splide__arrow--next {
+        right: 10px;
+        /* 右端から10pxの位置に配置 */
+    }
+
+    /* ページネーションのドット（ページ番号）スタイル */
+    .splide__pagination .splide__pagination__page {
+        width: 10px;
+        /* ドットの幅を10pxに設定 */
+        height: 10px;
+        /* ドットの高さを10pxに設定 */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* 半透明の黒色 */
+        border-radius: 50%;
+        /* ドットを丸くする */
+        cursor: pointer;
+        /* ポインターカーソルに変更（クリック可能であることを示す） */
+    }
+
+    /* アクティブな（現在表示中の）ページネーションのドットのスタイル */
+    .splide__pagination .splide__pagination__page.is-active {
+        background-color: rgba(255, 255, 255, 0.8);
+        /* アクティブなドットを白っぽい色に変更 */
+    }
+
+    /* 各スライド内のテキスト（説明文）のスタイル */
+    .splide__slide .description {
+        position: absolute;
+        /* 絶対位置で配置 */
+        bottom: 20px;
+        /* スライド下部から20pxの位置に配置 */
+        left: 20px;
+        /* 左側から20pxの位置に配置 */
+        background: rgba(0, 0, 0, 0.6);
+        /* 半透明の黒背景 */
+        color: white;
+        /* テキスト色を白に設定 */
+        padding: 10px;
+        /* テキスト周りに10pxの内側余白を設定 */
+        border-radius: 5px;
+        /* 角を5pxの半径で丸める */
+    }
+
+    /* タイトルのスタイル */
+    .splide__slide h3 {
+        font-size: 1.2rem;
+        /* フォントサイズを1.2remに設定 */
+        margin: 0;
+        /* マージン（余白）をゼロに設定 */
+    }
+
+    /* 概要文（本文）のスタイル */
+    .splide__slide p {
+        font-size: 1rem;
+        /* フォントサイズを1remに設定 */
+    }
+
+    /* 画像部分を囲う要素の背景だけ黒くする */
+    .slide-wrapper {
+        background-color: #f5f5f5;
+        /* background-color: 	#2a2f36; */
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 画像サイズを調整 */
+    .slide {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+
     .custom-link {
         font-size: 1rem;
         /* position: relative; */
@@ -675,7 +815,255 @@
 @section('content')
 
 <div class="container">
+
     <div class="space2"></div>
+
+    <h1 class="green-bg" id="section1">【Laravel制作実績】</h1>
+
+    <div class="double-space"></div>
+
+    <div>
+        <div class="double-space2"></div>
+
+        <h5>
+            <i class="fa-solid fa-sync-alt" style="color: #ffce47;"></i>
+            <strong class="p3">
+                <!-- 稼働中のLaravelアプリは -->
+                <!-- インターネット上に公開中です。 -->
+                <!-- データベースがシンガポールのため通信速度が遅くなることがあります。 -->
+                <!-- Vercel + Supabase + Laravel 12 + Vue.js 3 -->
+                バックエンド：Laravel 12 / フロントエンド：Vue.js 3.3 + Bootstrap 5.3 / データベース：Supabase / デプロイ先：Vercel
+            </strong>
+            <!-- <br>
+            <span class="p-l"></span>
+            <span class="m-t">
+                サーバー: Vercel | データベース: Neon (PostgreSQL) | バックエンド: Laravel | フロントエンド: Vue.js Bootstrap
+            </span> -->
+            <br>
+
+            <span class="p-l"></span>
+            <span class="p3" style="font-weight: bold; font-size: 1rem; padding-left: 0.2rem; color: #dc3545;">
+                ※Vercelの無料プランではリソース制限により、504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。
+            </span>
+        </h5>
+
+        <div class="double-space2"></div>
+    </div>
+
+    <div class="double-space"></div>
+
+    <div class="space2"></div>
+
+    <div class="rounded-box" id="section15">
+        <div>
+            <div class="d-m-t"></div>
+
+            <h3>
+                <strong style="margin-right: 5rem;">
+                    <i class="fa-solid fa-clipboard-list" style="color: #2ecc71;"></i> 備品管理アプリ
+                </strong>
+            </h3>
+
+            <!-- <h3 style="text-align: center; margin-left: -1rem;">スクリーンショット一覧</h3> -->
+        </div>
+
+        <div class="double-space"></div>
+
+        <section id="image-carousel" class="splide" aria-label="スクリーンショット">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="description"><h3>トップ画面</h3></div>
+                        <div class="slide-wrapper">
+                            <img class="slide" src="{{ asset("images/image1.png") }}" alt="画像1">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="description"><h3>ログイン画面</h3></div>
+                        <div class="slide-wrapper">
+                            <img class="slide" src="{{ asset("images/image2.png") }}" alt="画像2">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="description"><h3>編集画面</h3></div>
+                        <div class="slide-wrapper">
+                            <img class="slide" src="{{ asset("images/image3.png") }}" alt="画像3">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="description"><h3>オートサジェスト画面</h3></div>
+                        <div class="slide-wrapper">
+                            <img class="slide" src="{{ asset("images/image4.png") }}" alt="画像4">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="description"><h3>AND検索画面</h3></div>
+                        <div class="slide-wrapper">
+                            <img class="slide" src="{{ asset("images/image5.png") }}" alt="画像5">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="description"><h3>AND検索画面をCSVダウンロード</h3></div>
+                        <div class="slide-wrapper">
+                            <img class="slide" src="{{ asset("images/image6.png") }}" alt="画像6">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ナビゲーションインジケーター（ドット） -->
+            <div class="splide__pagination"></div>
+
+            <!-- 前後のナビゲーション矢印 -->
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">前</button>
+                <button class="splide__arrow splide__arrow--next">次</button>
+            </div>
+        </section>
+
+        <div class="double-space4"></div>
+
+        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
+            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
+        </strong>
+
+        <span style="margin-right: 5rem;"></span>
+
+        <!-- <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> アプリの画面
+        </a> -->
+        <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+            <i class="fa-solid fa-desktop"></i> アプリの画面
+        </a>
+
+        <span style="margin-right: 5rem;"></span>
+
+        <!-- <a href="https://github.com/LaravelBasics/lending-system/" target="_blank"
+            style="font-size: 1.5rem;">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a> -->
+        <a href="https://github.com/LaravelBasics/lending-system-apple/tree/main" target="_blank"
+            style="font-size: 1.5rem;">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+
+        <div class="d-m-t2"></div>
+
+
+
+        <p class="gray-bg">
+            このアプリは、備品の貸出管理を行うためのアプリです。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">①&ensp;ログイン機能・ユーザー別データ表示</span>
+            <br>
+            トップページでユーザーを登録することで、備品管理ページにログインできます。
+            備品のデータはユーザーごとに管理されています。
+            <br>
+            ユーザーがパスワードを忘れた場合は、ログイン画面からパスワード再設定メールを送信できます。
+            <br>
+            <span style="color: #6c757d; font-weight: bold;">※テスト用のため、送信先はenvファイルで設定した管理者にのみ、メールが送信されます。</span>
+            <br>
+            ログイン中のユーザーに関連するデータが降順で表示され、ページネーションはその下に配置されています。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">②&ensp;登録機能</span>
+            <br>
+            貸し出し時には、「名前」&ensp;「品名（例：PC、マウス、傘など）」&ensp;「貸出日」の3つを入力して登録します。
+            <br>
+            貸出日は自動で今日の日付が設定されます。変更する場合はボックスをクリックし、カレンダーから選択します。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">③&ensp;返却機能</span>
+            <br>
+            返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">④&ensp;編集機能</span>
+            <br>
+            名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">⑤&ensp;検索機能</span>
+            <br>
+            「名前」&ensp;「品名」&ensp;の検索バーに文字を入力すると、関連する候補が自動的に表示されます。
+            <br>
+            チェックボックスを使って未返却のデータのみを検索できます。
+            <br>
+            また、西暦や月単位での部分検索（例：2025 や 2025-01 など）にも対応しています。
+            <br>
+            貸出日と返却日両方を使用する場合は、AND検索となります。
+            <br>
+            例：貸出日が2025年、返却日が2025年の場合、
+            「2025年に貸し出して」&ensp;「2025年に返却された」&ensp;データが表示されます。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">⑥&ensp;CSVダウンロード機能</span>
+            <br>
+            検索結果に基づいて、データをCSV形式でダウンロードできるボタンを提供しています。
+            <br>
+            ボタンを押すと、データがExcel形式で降順にダウンロードされます。
+            <br>
+            <span style="display: block; margin-bottom: 2em;"></span>
+
+            <span style="color: #007BFF;">⑦&ensp;データ削除機能</span>
+            <br>
+            データ量が増加した場合に備え、削除専用ページを設置しています。不要なデータを簡単に削除できます。
+            <span style="display: block; margin-bottom: 2em;"></span>
+        </p>
+
+        <div class="double-space2"></div>
+
+        <strong style="font-size: 1.2rem;">
+            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
+        </strong>
+        <span class="p2">&ensp;&ensp;制作期間（約3週間）</span>
+
+        <div class="d-m-t2"></div>
+
+        <p class="gray-bg">
+            就労移行支援の職員の要望に基づき、要件定義等を行いながら設計を行いました。
+            <br>
+            必要な機能をすべて実装し、使いやすさと見やすさを重視して開発しました。
+        </p>
+
+        <div class="double-space2"></div>
+
+        <strong style="font-size: 1.2rem;">
+            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
+        </strong>
+        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
+
+        <div class="d-m-t2"></div>
+
+        <p class="gray-bg">
+            アプリをネット上に公開する際、Vercelのデータベースはアクセス時に通信速度に制限があり、動作が遅くなることがありました。
+            <br>
+            そのため、無料プランのデータベースをSupabaseに変更し、通信速度を向上させました。
+            <!-- そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。 -->
+        </p>
+
+        <div class="double-space2"></div>
+
+        <strong style="font-size: 1.2rem;">
+            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
+        </strong>
+
+        <div class="d-m-t2"></div>
+
+        <p class="gray-bg">Windows, Laravel 12, CDN Vuejs 3.3, Bootstrap 5.3</p>
+    </div>
+
+    <div class="double-space"></div>
+
+    <!-- <div class="space2"></div> -->
+    <div class="double-space4"></div>
 
     <h1 class="green-bg" id="section3">【プロフィール】</h1>
 
@@ -886,10 +1274,12 @@
 
         <p class="gray-bg">
             10月&ensp;1日&ensp;〜&ensp;1月19日: Java基礎、アルゴリズム、
+            <strong style="color: #007BFF;">教材 </strong>
             <span @click="showHelpModal2" class="custom-link">二次元配列</span>
             、例外処理、ファイル入出力など（約4ヶ月）
             <br>
             &ensp;1月22日&ensp;〜&ensp;2月13日: エクリプス上で動く
+            <strong style="color: #fd7e14;">自作① </strong>
             <span @click="showHelpModal3" class="custom-link">ブラック・ジャック</span>
             を制作（約3週間）
         </p>
@@ -930,18 +1320,18 @@
             &ensp;5月20日&ensp;〜&ensp;6月24日: Laravel基礎（PHPのフレームワーク）
             <br>
             &ensp;6月25日&ensp;〜&ensp;7月&ensp;4日:
-            <strong style="color: #007BFF;">①</strong>
+            <strong style="color: #007BFF;">教材① </strong>
             <span @click="showModal1" class="custom-link">メルカリ風フリマアプリ</span>制作、
             <i class="fa-solid fa-file-excel" style="color: #217346;"></i> 企業案件Excelデータ入力(一日目10件、二日目20件)
             <br>
             &ensp;7月&ensp;8日&ensp;〜&ensp;7月24日:
-            <strong style="color: #007BFF;">②</strong>
+            <strong style="color: #007BFF;">教材② </strong>
             <span @click="showModal2" class="custom-link">SNS風アプリ</span>
             制作、
             PC4台キッティング作業
             <br>
             &ensp;7月26日&ensp;〜&ensp;7月31日: 職員が作成した基本設計書をもとに、
-            <strong style="color: #007BFF;">③</strong>
+            <strong style="color: #007BFF;">教材③ </strong>
             <span @click="showModal3" class="custom-link">本管理アプリ</span>
             の機能変更、追加。
             <i class="fab fa-react" style="color: #61DBFB;"></i>React学習
@@ -962,7 +1352,8 @@
         <p class="gray-bg">
             &ensp;8月19日&ensp;〜&ensp;9月19日: 企業実習（株式会社リテラル）
             <br>
-            &ensp;9月24日&ensp;〜&ensp;9月27日: 実習のコードを改修に挑戦。<strong style="color: #007BFF;">④</strong>
+            &ensp;9月24日&ensp;〜&ensp;9月27日: 実習のコードを改修に挑戦。
+            <strong style="color: #28a745;">実習① </strong>
             <span @click="showModal4" class="custom-link">顧客管理システムを改修したアプリ</span>、
             <i class="fa-solid fa-file-excel" style="color: #217346;"></i> Excel企業案件データ入力(8件)
             <br>
@@ -970,7 +1361,8 @@
             <br>
             10月&ensp;1日&ensp;〜10月&ensp;7日: 実習に備えて、事前にLinux学習（Ubuntu、LAMP構築）
             <br>
-            10月&ensp;8日&ensp;〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、<strong style="color: #007BFF;">⑤</strong>
+            10月&ensp;8日&ensp;〜10月10日: 企業実習（外部）、Rocky Linux 9 LAMP環境構築、
+            <strong style="color: #28a745;">実習② </strong>
             <span @click="showModal5" class="custom-link">お問い合わせフォームアプリ</span>制作
             <br>
             10月11日&ensp;〜10月16日: 実習の復習
@@ -983,10 +1375,11 @@
         </h5>
 
         <p class="gray-bg">
-            10月17日&ensp;〜10月19日: 職員が制作中の教材をデバッグ。Docker学習。<strong style="color: #007BFF;">⑥</strong>
+            10月17日&ensp;〜10月19日: 職員が制作中の教材をデバッグ。Docker学習。<strong style="color: #007BFF;">教材(仮)④ </strong>
             <span @click="showHelpModal1" class="custom-link"> 試験的にアプリをネット上に公開する取り組み</span>。成功したので職員へフィードバック
             <br>
-            10月19日&ensp;〜10月29日: ポートフォリオ制作開始、<strong style="color: #007BFF;">①</strong>～<strong style="color: #007BFF;">⑥</strong>デプロイの検証
+            10月19日&ensp;〜10月29日: ポートフォリオ制作開始、<strong style="color: #007BFF;">教材①</strong>～<strong style="color: #007BFF;">④ </strong>
+            <strong style="color: #28a745;">実習①② </strong>デプロイの検証
         </p>
 
         <div class="double-space2"></div>
@@ -1007,13 +1400,13 @@
             12月11日&ensp;〜<span style="display: inline-block; width: 1.185rem;"></span>月<span style="display: inline-block; width: 1.185rem;"></span>日:
             職員からフィードバックを受けて、ポートフォリオのレイアウトを見やすさ重視に一新
             <br>
-            &ensp;3月10日&ensp;〜&ensp;3月23日: Laravel 12 + Vue.js 3を使用して
-            <strong style="color: #007BFF;">⑦</strong>
+            &ensp;3月10日&ensp;〜&ensp;3月23日: Laravel 12
+            <strong style="color: #fd7e14;">自作② </strong>
             <span @click="showModal6" class="custom-link">備品管理アプリ</span>
             を開発
             <br>
             &ensp;3月24日&ensp;〜&ensp;4月&ensp;6日:
-            <strong style="color: #007BFF;">⑦</strong>にオートサジェスト機能、ログイン機能、パスワード再設定（envで設定した、メールトラップのアドレスに送信される）を追加
+            <strong style="color: #fd7e14">②</strong>にオートサジェスト機能、ログイン機能、パスワード再設定（envで設定したメールアドレスに送信される）を追加、レイアウト調整
             <br>
         </p>
     </div>
@@ -1107,213 +1500,7 @@
 
     <!--  -->
 
-    <div class="double-space4"></div>
 
-    <h1 class="green-bg" id="section1">【Laravel制作実績】</h1>
-
-    <div class="double-space"></div>
-
-    <div>
-        <div class="double-space2"></div>
-
-        <h5>
-            <i class="fa-solid fa-sync-alt" style="color: #ffce47;"></i>
-            <strong class="p3">
-                <!-- 稼働中のLaravelアプリは -->
-                インターネット上に公開中です。
-                <!-- データベースがシンガポールのため通信速度が遅くなることがあります。 -->
-                Vercel + Supabase + Laravel 12 + Vue.js 3
-            </strong>
-            <!-- <br>
-            <span class="p-l"></span>
-            <span class="m-t">
-                サーバー: Vercel | データベース: Neon (PostgreSQL) | バックエンド: Laravel | フロントエンド: Vue.js Bootstrap
-            </span> -->
-            <br>
-
-            <span class="p-l"></span>
-            <span class="p3" style="font-weight: bold; font-size: 1rem; padding-left: 0.2rem; color: #dc3545;">
-                ※Vercelの無料プランではリソース制限により、504エラーが発生する場合があります。エラー時は少し時間を置いて再試行してください。
-            </span>
-        </h5>
-
-        <div class="double-space2"></div>
-    </div>
-
-    <div class="double-space"></div>
-
-    <div class="space2"></div>
-
-    <div class="rounded-box" id="section15">
-        <div>
-            <div class="d-m-t"></div>
-
-            <h3>
-                <strong style="margin-right: 5rem;">
-                    <i class="fa-solid fa-clipboard-list" style="color: #2ecc71;"></i> 備品管理アプリ
-                </strong>
-            </h3>
-        </div>
-
-        <div class="double-space"></div>
-
-        <strong style="font-size: 1.2rem; position: relative; top: 0.05rem; display: inline-block;">
-            <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
-        </strong>
-
-        <span style="margin-right: 5rem;"></span>
-
-        <!-- <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> アプリの画面
-        </a> -->
-        <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
-            <i class="fa-solid fa-desktop"></i> アプリの画面
-        </a>
-
-        <span style="margin-right: 5rem;"></span>
-
-        <!-- <a href="https://github.com/LaravelBasics/lending-system/" target="_blank"
-            style="font-size: 1.5rem;">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a> -->
-        <a href="https://github.com/LaravelBasics/lending-system-apple/tree/main" target="_blank"
-            style="font-size: 1.5rem;">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            <!-- このアプリは、備品の貸出管理を行うためのアプリです。
-            <br>
-            貸し出し時には、名前、品名（例：PC、マウス、傘など）、貸出日が設定できます。
-            <br>
-            貸出日は自動で今日の日付が設定されますが、変更する場合はボックスをクリックし、カレンダーから選択します。
-            <br>
-            返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
-            <br>
-            名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
-            <br>
-            最新のデータは降順で表示され、ページネーションは一番下に配置されています。
-            <br>
-            チェックボックスを使って未返却のデータのみ検索することが可能で、
-            <br>
-            西暦や月単位での部分検索（例：2025 や 2025-01 など）もサポートしています。
-            <br>
-            検索結果に基づいたデータを、CSV形式でダウンロードできるボタンを提供しています。
-            <br>
-            CSVダウンロードボタンを押すと、データをExcel形式で降順にダウンロードできます。
-            <br>
-            データ量の増加に備えて、削除専用ページを設置し、不要なデータを簡単に削除できます。 -->
-            このアプリは、備品の貸出管理を行うためのアプリです。
-            <br>
-            <span style="display: block; margin-bottom: 2em;"></span>
-
-            <span style="color: #007BFF;">①&ensp;ログイン機能・ユーザー別データ表示</span>
-            <br>
-            トップページでユーザーを登録することで、備品管理ページにログインできます。
-            備品のデータはユーザーごとに管理されています。
-            <br>
-            ユーザーがパスワードを忘れた場合は、ログイン画面からパスワード再設定メールを送信できます。
-            <br>
-            <span style="color: #6c757d; font-weight: bold;">※テスト用のため、送信先はenvファイルで設定した管理者にのみ、メールが送信されます。</span>
-            <br>
-            ログイン中のユーザーに関連するデータが降順で表示され、ページネーションはその下に配置されています。
-            <br>
-            <span style="display: block; margin-bottom: 2em;"></span>
-
-            <span style="color: #007BFF;">②&ensp;登録機能</span>
-            <br>
-            貸し出し時には、「名前」&ensp;「品名（例：PC、マウス、傘など）」&ensp;「貸出日」の3つを入力して登録します。
-            <br>
-            貸出日は自動で今日の日付が設定されます。変更する場合はボックスをクリックし、カレンダーから選択します。
-            <br>
-            <span style="display: block; margin-bottom: 2em;"></span>
-
-            <span style="color: #007BFF;">③&ensp;返却機能</span>
-            <br>
-            返却時には「即日返却」ボタンを押すと自動的に今日の日付が入力され、入力ミスを防ぎます。
-            <br>
-            <span style="display: block; margin-bottom: 2em;"></span>
-
-            <span style="color: #007BFF;">④&ensp;編集機能</span>
-            <br>
-            名前や品名に誤りがあった場合や、登録時に日付を誤って選択した場合は、編集ボタンで修正できます。
-            <br>
-            <span style="display: block; margin-bottom: 2em;"></span>
-
-            <span style="color: #007BFF;">⑤&ensp;検索機能</span>
-            <br>
-            「名前」&ensp;「品名」&ensp;の検索バーに文字を入力すると、関連する候補が自動的に表示されます。
-            <br>
-            チェックボックスを使って未返却のデータのみを検索できます。
-            <br>
-            また、西暦や月単位での部分検索（例：2025 や 2025-01 など）にも対応しています。
-            <br>
-            貸出日と返却日両方を使用する場合は、AND検索となります。
-            <br>
-            例：貸出日が2025年、返却日が2025年の場合、
-            「2025年に貸し出して」&ensp;「2025年に返却された」&ensp;データが表示されます。
-            <br>
-            <span style="display: block; margin-bottom: 2em;"></span>
-
-            <span style="color: #007BFF;">⑥&ensp;CSVダウンロード機能</span>
-            <br>
-            検索結果に基づいて、データをCSV形式でダウンロードできるボタンを提供しています。
-            <br>
-            ボタンを押すと、データがExcel形式で降順にダウンロードされます。
-            <br>
-            <span style="display: block; margin-bottom: 2em;"></span>
-
-            <span style="color: #007BFF;">⑦&ensp;データ削除機能</span>
-            <br>
-            データ量が増加した場合に備え、削除専用ページを設置しています。不要なデータを簡単に削除できます。
-            <span style="display: block; margin-bottom: 2em;"></span>
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-undo-alt" style="color: #ffce47;"></i> 振り返り
-        </strong>
-        <span class="p2">&ensp;&ensp;制作期間（約3週間）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            就労移行支援の職員の要望に基づき、要件定義等を行いながら設計を行いました。
-            <br>
-            必要な機能をすべて実装し、使いやすさと見やすさを重視して開発しました。
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fa-solid fa-cloud-upload-alt" style="color: #ffce47;"></i> デプロイ
-        </strong>
-        <span class="p2">&ensp;（アプリをネット上に公開すること）</span>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">
-            アプリをネット上に公開する際、Vercelのデータベースはアクセス時に通信速度に制限があり、動作が遅くなることがありました。
-            <br>
-            そのため、無料プランのデータベースをSupabaseに変更し、通信速度を向上させました。
-            <!-- そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。 -->
-        </p>
-
-        <div class="double-space2"></div>
-
-        <strong style="font-size: 1.2rem;">
-            <i class="fab fa-laravel" style="color: #F65314;"></i> 開発環境
-        </strong>
-
-        <div class="d-m-t2"></div>
-
-        <p class="gray-bg">Windows, Laravel 12, CDN Vuejs 3.3, Bootstrap 5.3</p>
-    </div>
-
-    <div class="double-space"></div>
 
     <!--  -->
 
@@ -2530,6 +2717,18 @@
             // ページがロードされたときにスクロールイベントを監視開始
             window.addEventListener('scroll', this.checkVisibility); // スクロール時に`checkVisibility`メソッドを呼び出す
             this.checkVisibility(); // 初期ロード時にも`checkVisibility`メソッドを呼び出し、現在の要素の位置を確認
+
+            // Vueインスタンスがマウントされた後にSplideを初期化
+            new Splide('#image-carousel', {
+                type: 'loop',
+                autoplay: true,
+                interval: 3000, // 3秒ごとに切り替わる
+                pauseOnHover: true,
+                pauseOnFocus: true,
+                speed: 800,
+                arrows: true, // 矢印の有効化
+                pagination: true, // ドットインジケーターの有効化
+            }).mount();
         },
         unmounted() {
             // コンポーネントが破棄されるときにスクロールイベントの監視を解除
