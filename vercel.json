@@ -23,6 +23,10 @@
         {
             "src": "/favicon.png",
             "dest": "/public/favicon.png"
+        },
+        {
+            "src": "/videos/(.*)",
+            "dest": "/public/videos/$1"
         }
     ],
     "env": {
