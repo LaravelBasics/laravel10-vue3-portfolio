@@ -831,10 +831,10 @@
             <i class="fa-solid fa-sync-alt" style="color: #ffce47;"></i>
             <strong class="p3">
                 <!-- 稼働中のLaravelアプリは -->
-                <!-- インターネット上に公開中です。 -->
+                インターネット上に公開中です。
                 <!-- データベースがシンガポールのため通信速度が遅くなることがあります。 -->
-                <!-- Vercel + Supabase + Laravel 12 + Vue.js 3 -->
-                バックエンド：Laravel 12 / フロントエンド：Vue.js 3.3 + Bootstrap 5.3 / データベース：Supabase / デプロイ先：Vercel
+                Vercel + Supabase + Laravel 12 + Vue.js 3
+                <!-- バックエンド：Laravel 12 / フロントエンド：Vue.js 3.3 + Bootstrap 5.3 / データベース：Supabase / デプロイ先：Vercel -->
             </strong>
             <!-- <br>
             <span class="p-l"></span>
@@ -856,7 +856,8 @@
 
     <div class="space2"></div>
 
-    <div class="rounded-box" id="section15">
+    <div class="rounded-box" id="section15" style="max-width: 100%; width: 100%; margin: auto;">
+        <!-- <div class="rounded-box" id="section15"> -->
         <div>
             <div class="d-m-t"></div>
 
@@ -864,14 +865,32 @@
                 <strong style="margin-right: 5rem;">
                     <i class="fa-solid fa-clipboard-list" style="color: #2ecc71;"></i> 備品管理アプリ
                 </strong>
-            </h3>
 
+                <!-- <span style="margin-right: 2rem;"></span> -->
+
+                <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+                    <i class="fa-solid fa-desktop"></i> アプリの画面
+                </a>
+
+                <span style="margin-right: 5rem;"></span>
+
+                <a href="https://github.com/LaravelBasics/lending-system-apple/tree/main" target="_blank"
+                    style="font-size: 1.5rem;">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </h3>
             <!-- <h3 style="text-align: center; margin-left: -1rem;">スクリーンショット一覧</h3> -->
         </div>
 
         <div class="double-space"></div>
 
-        <section id="image-carousel" class="splide" aria-label="スクリーンショット">
+        <video controls style="width: 100%; height: auto; display: block; background: #000; border: 4px solid rgb(222, 222, 222); border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+            <source src="{{ asset('videos/sample.webm') }}?v={{ time() }}" type="video/webm">
+            <source src="{{ asset('videos/sample.mp4') }}?v={{ time() }}" type="video/mp4">
+            お使いのブラウザは video タグをサポートしていません。
+        </video>
+
+        <!-- <section id="image-carousel" class="splide" aria-label="スクリーンショット">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
@@ -916,24 +935,24 @@
                     </li>
                     <li class="splide__slide">
                         <div class="description">
-                            <h3>AND検索画面をCSVダウンロード</h3>
+                            <h3>AND検索結果をCSVダウンロード</h3>
                         </div>
                         <div class="slide-wrapper">
                             <img class="slide" src="{{ asset("images/image6.png") }}" alt="画像6">
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
-            <!-- ナビゲーションインジケーター（ドット） -->
-            <div class="splide__pagination"></div>
+        <!-- ナビゲーションインジケーター（ドット） -->
+        <!-- <div class="splide__pagination"></div> -->
 
-            <!-- 前後のナビゲーション矢印 -->
-            <div class="splide__arrows">
+        <!-- 前後のナビゲーション矢印 -->
+        <!-- <div class="splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">前</button>
                 <button class="splide__arrow splide__arrow--next">次</button>
             </div>
-        </section>
+        </section> -->
 
         <div class="double-space4"></div>
 
@@ -941,25 +960,25 @@
             <i class="fa-solid fa-chalkboard-teacher" style="color: #ffce47;"></i> アプリの説明
         </strong>
 
-        <span style="margin-right: 5rem;"></span>
+        <!-- <span style="margin-right: 5rem;"></span> -->
 
         <!-- <a href="https://lending-system-livid.vercel.app/lendings" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> アプリの画面
         </a> -->
-        <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
+        <!-- <a href="https://lending-system-apple.vercel.app/" target="_blank" style="font-size: 1.5rem;">
             <i class="fa-solid fa-desktop"></i> アプリの画面
-        </a>
+        </a> -->
 
-        <span style="margin-right: 5rem;"></span>
+        <!-- <span style="margin-right: 5rem;"></span> -->
 
         <!-- <a href="https://github.com/LaravelBasics/lending-system/" target="_blank"
             style="font-size: 1.5rem;">
             <i class="fa-brands fa-github"></i> GitHub
         </a> -->
-        <a href="https://github.com/LaravelBasics/lending-system-apple/tree/main" target="_blank"
+        <!-- <a href="https://github.com/LaravelBasics/lending-system-apple/tree/main" target="_blank"
             style="font-size: 1.5rem;">
             <i class="fa-brands fa-github"></i> GitHub
-        </a>
+        </a> -->
 
         <div class="d-m-t2"></div>
 
@@ -968,7 +987,7 @@
         <p class="gray-bg">
             このアプリは、備品の貸出管理を行うためのアプリです。
             <br>
-            <span style="display: block; margin-bottom: 2em;"></span>
+            <span style="display: block; margin-bottom: 1em;"></span>
 
             <span style="color: #007BFF;">①&ensp;ログイン機能・ユーザー別データ表示</span>
             <br>
@@ -2733,16 +2752,21 @@
             this.checkVisibility(); // 初期ロード時にも`checkVisibility`メソッドを呼び出し、現在の要素の位置を確認
 
             // Vueインスタンスがマウントされた後にSplideを初期化
-            new Splide('#image-carousel', {
-                type: 'loop',
-                autoplay: true,
-                interval: 3000, // 3秒ごとに切り替わる
-                pauseOnHover: true,
-                pauseOnFocus: true,
-                speed: 800,
-                arrows: true, // 矢印の有効化
-                pagination: true, // ドットインジケーターの有効化
-            }).mount();
+            // new Splide('#image-carousel', {
+            //     type: 'loop',
+            //     autoplay: true,
+            //     interval: 3000, // 3秒ごとに切り替わる
+            //     pauseOnHover: true,
+            //     pauseOnFocus: true,
+            //     speed: 800,
+            //     arrows: true, // 矢印の有効化
+            //     pagination: true, // ドットインジケーターの有効化
+            // }).mount();
+
+            const video = document.querySelector("video");
+            if (video) {
+                video.load(); // 強制的に再読込してボタンを出す
+            }
         },
         unmounted() {
             // コンポーネントが破棄されるときにスクロールイベントの監視を解除
