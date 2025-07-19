@@ -833,7 +833,8 @@
                 <!-- 稼働中のLaravelアプリは -->
                 インターネット上に公開中です。
                 <!-- データベースがシンガポールのため通信速度が遅くなることがあります。 -->
-                Vercel + Supabase + Laravel 12 + Vue.js 3
+                <!-- Vercel + Supabase + Laravel 12 + Vue.js 3 -->
+                Vercel + Neon + Laravel 12 + Vue.js 3
                 <!-- バックエンド：Laravel 12 / フロントエンド：Vue.js 3.3 + Bootstrap 5.3 / データベース：Supabase / デプロイ先：Vercel -->
             </strong>
             <!-- <br>
@@ -1078,8 +1079,8 @@
         <p class="gray-bg">
             アプリをネット上に公開する際、Vercelのデータベースはアクセス時に通信速度に制限があり、動作が遅くなることがありました。
             <br>
-            そのため、無料プランのデータベースをSupabaseに変更し、通信速度を向上させました。
-            <!-- そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。 -->
+            <!-- そのため、無料プランのデータベースをSupabaseに変更し、通信速度を向上させました。 -->
+            そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。
         </p>
 
         <div class="double-space2"></div>
@@ -1180,8 +1181,8 @@
 
                 <span style="margin-right: 7.5rem;"></span>
 
-                <a href="#" target="_blank" style="font-size: 1.5rem; color: #32CD32;">
-                    <i class="fa-solid fa-desktop"></i> 最新の画面
+                <a href="https://laravel10-vue3-portfolio-fj59ti1r3-laravelbasics-projects.vercel.app/" target="_blank" style="font-size: 1.5rem; color: #32CD32;">
+                    <i class="fa-solid fa-desktop"></i> 改良版の画面
                 </a>
 
 
@@ -1206,7 +1207,7 @@
                 <br>
                 <span style="margin-top: 1em; display: block;"></span>
 
-                <strong style="font-size: 1.125rem;">最新の構成:</strong>
+                <strong style="font-size: 1.125rem;">改良版の構成:</strong>
                 <br>
                 図形に影をつけ、タイトルの順番を変更。&lt;p&gt;や&lt;h&gt;タグのフォントや行間をCSSで調整、視認性を向上。
                 <br>
@@ -1432,7 +1433,16 @@
             <br>
             12月11日&ensp;〜<span style="display: inline-block; width: 1.185rem;"></span>月<span style="display: inline-block; width: 1.185rem;"></span>日:
             職員からフィードバックを受けて、ポートフォリオのレイアウトを見やすさ重視に一新
-            <br>
+        </p>
+
+        <div class="double-space2"></div>
+
+        <h5 style="font-size: 1.2rem;">
+            <!-- <i class="fas fa-user-tie" style="color: black;"></i> -->
+             <img src="/images/logo.ico" alt="icon" style="width: 20px; height: 20px; vertical-align: middle;"> 2025年8月: ポートフォリオ不定期更新
+        </h5>
+
+        <p class="gray-bg">
             &ensp;3月10日&ensp;〜&ensp;3月23日: Laravel 12
             <strong style="color: #fd7e14;">自作② </strong>
             <span @click="showModal6" class="custom-link">備品管理アプリ</span>
@@ -1441,6 +1451,11 @@
             &ensp;3月24日&ensp;〜&ensp;4月&ensp;6日:
             <strong style="color: #fd7e14">②</strong>にオートサジェスト機能、ログイン機能、パスワード再設定（envで設定したメールアドレスに送信される）を追加、レイアウト調整
             <br>
+            &ensp;5月28日&ensp;〜&ensp;7月&ensp;3日: 企業見学(5/28)・面接(6/12)・実習(7/3)・内定(7/4)
+            <br>
+            &ensp;7月18日&ensp;〜&ensp;7月19日: Node.js 18 は2025/9/1でサポート終了のため、ポートフォリオをNode.js 22に変更 <span style="color: #dc3545;">※閲覧できない場合はご了承ください</span>
+            <br>
+            &ensp;8月&ensp;1日&ensp;〜&ensp;&ensp;月&ensp;&ensp;日: トライアル雇用
         </p>
     </div>
 
@@ -2702,8 +2717,8 @@
                         <p class="gray-bg">
                             アプリをネット上に公開する際、Vercelのデータベースは通信速度に制限があり、動作が遅くなることがありました。
                             <br>
-                            そのため、無料プランのデータベースをSupabaseに変更し、通信速度を向上させました。
-                            <!-- そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。 -->
+                            <!-- そのため、無料プランのデータベースをSupabaseに変更し、通信速度を向上させました。 -->
+                            そのため、無料プランのデータベースをNeonに変更し、通信速度を向上させました。
                         </p>
 
                         <div class="double-space2"></div>

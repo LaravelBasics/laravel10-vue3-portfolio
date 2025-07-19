@@ -2,13 +2,13 @@
     <div class="container-fluid d-flex flex-wrap align-items-center">
         <!-- 左側のコンテンツ -->
         <div class="me-auto">
-            <h3 class="mb-0">就労移行支援</h3>
-            <small class="form-text text-muted" style="margin-left: 0ch;">アップル梅田</small>
+            <h3 class="mb-0">ポートフォリオ</h3>
+            <small class="form-text text-muted" style="margin-left: 0ch;">自主制作</small>
         </div>
 
         <!-- 右側のコンテンツ -->
         <div class="d-flex ms-auto align-items-center">
-            <span class="me-4">更新日: 2025-04-13</span>
+            <span class="me-4">更新日: 2025-07-19</span>
             <!-- <a href="/" class="btn btn-outline-primary btnHidden"
                 style="background-color: white; color: #0d6efd; border-color: #0d6efd; margin-top: 0.3rem;">
                 トップページ
